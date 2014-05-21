@@ -4,7 +4,54 @@
         <meta charset="utf-8">
         <meta name="description" content="ANTS: silently, we're building">
 
+        <style data-better-defaults>
+            *{
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+
+                box-sizing: border-box;
+                border-collapse: collapse;
+            }
+
+            [hidden] { /* http://lists.whatwg.org/pipermail/whatwg-whatwg.org/2014-May/254198.html */
+                display: none !important;
+            }
+
+
+            html, body{
+                padding: 0;
+                margin: 0;
+            }
+
+            /* For non-documents */
+            ul, ol, menu{
+                list-style: none;
+
+                margin: 0;
+                padding: 0;
+            }
+
+            li{
+                margin: 0;
+                padding: 0;
+            }
+
+            .table-layout{
+                display: table;
+            }
+            .table-layout > *{
+                display: table-row;
+            }
+            .table-layout > * > *{
+                display: table-cell;
+            }
+
+        </style>
+        
+        
         <link rel="stylesheet" href="stylesheets/stylesheet.css">
+
 
         <style>
             strong{
@@ -12,7 +59,7 @@
                 color: #D51A11;
                 text-shadow: none;
             }
-            
+
             a.top-link{
                 display: inline;
                 padding: 10px;
@@ -22,17 +69,17 @@
                 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
                 border-bottom-left-radius: 3px;
                 border-bottom-right-radius: 3px;
-                
+
                 position: absolute;
                 top: 0;
-                
+
                 left: 40%;
                 right: 40%;
                 text-align: center;
             }
-            
+
         </style>
-        
+
         <title>ANTS: silently, we're building</title>
     </head>
 
@@ -40,12 +87,12 @@
 
         <!-- HEADER -->
         <!--
-            many classes
-                        such HTML complexity
-                wow
-        very need to simplify
-                        super soon
-        -->
+many classes
+such HTML complexity
+wow
+very need to simplify
+super soon
+-->
         <header class="inner">
             <a class="top-link" href="https://github.com/anthill/">View Projects</a>
             <h1 id="project_title">ANTS</h1>
@@ -58,31 +105,31 @@
 
                 <h4>ANTS is an <strong>open-innovation lab</strong> powered by people ranging from <strong>data-scientists, hackers and makers to artists or thinkers</strong>.</h4>
                 <h4>We all share one belief: cutting edge technology should serve the Public Good</strong>.</h4>
-                <p>As we are better at doing than speeking, check out <a href="https://github.com/anthill/">our projects</a> to learn what we do.</p>
+            <p>As we are better at doing than speeking, check out <a href="https://github.com/anthill/">our projects</a> to learn what we do.</p>
 
-                
 
-            </section>
-        </div>
 
-        <!-- FOOTER  -->
-        <div id="footer_wrap" class="outer">
-            <footer class="inner">
-                <p class="copyright">ANTS belongs to everyone</p>
-                
-                <!--
-                
-                Uncomment when we're ready. No need to mislead people.
+        </section>
+    </div>
 
-                <a href="https://twitter.com/ants" class="twitter-follow-button" data-show-count="false">Follow @ants</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                &nbsp; <iframe src="http://ghbtns.com/github-btn.html?user=ants&repo=ants&type=watch&count=true&size=small"
-                               allowtransparency="true" frameborder="0" scrolling="0" width="120" height="21"></iframe>
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+        <footer class="inner">
+            <p class="copyright">ANTS belongs to everyone</p>
 
-                -->
+            <!--
 
-            </footer>
-        </div>
+Uncomment when we're ready. No need to mislead people.
 
-    </body>
+<a href="https://twitter.com/ants" class="twitter-follow-button" data-show-count="false">Follow @ants</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+&nbsp; <iframe src="http://ghbtns.com/github-btn.html?user=ants&repo=ants&type=watch&count=true&size=small"
+allowtransparency="true" frameborder="0" scrolling="0" width="120" height="21"></iframe>
+
+-->
+
+        </footer>
+    </div>
+
+</body>
 </html>
