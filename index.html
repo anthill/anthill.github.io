@@ -48,8 +48,8 @@
             }
 
         </style>
-        
-        
+
+
         <link rel="stylesheet" href="stylesheets/stylesheet.css">
 
 
@@ -78,6 +78,31 @@
                 text-align: center;
             }
 
+            
+            
+            ul.people li{
+                height: 200px;
+            }
+            ul.people li img{
+                height: 150px;
+            }
+            
+            ul.people li > *{
+                vertical-align: top;
+            }
+            ul.people li > div{
+                padding-left: 1em;
+            }
+            ul.people li > div .name{
+                display: block;
+                font-weight: bold;
+            }
+            ul.people li > div .name{
+                font-weight: bold;
+            }
+                
+                
+            
         </style>
 
         <title>ANTS: silently, we're building</title>
@@ -104,20 +129,35 @@ super soon
             <section id="main_content" class="inner">
 
                 <h4>ANTS is an <strong>open-innovation lab</strong> powered by people ranging from <strong>data-scientists, hackers and makers to artists or thinkers</strong>.</h4>
-                <h4>We all share one belief: cutting edge technology should serve the Public Good</strong>.</h4>
-            <p>As we are better at doing than speeking, check out <a href="https://github.com/anthill/">our projects</a> to learn what we do.</p>
+                <h4>We all share one belief: cutting edge technology should serve the Public Good.</h4>
+                <p>As we are better at doing than speeking, check out <a href="https://github.com/anthill/">our projects</a> to learn what we do.</p>
+                
+                <h3>People</h3>
+                <ul class="people table-layout">
+                    <li>
+                        <img src="https://avatars0.githubusercontent.com/u/371303?s=400">
+                        <div>
+                            <span class="name">Alexandre Vallette</span>
+                            <span class="bio">He made a couple of cool stuffs</span>
+                        </div>
+                    <li>
+                        <img src="https://avatars1.githubusercontent.com/u/165829?s=460">
+                        <div>
+                            <span class="name">David Bruant</span>
+                            <span class="bio">He made a couple of cool stuffs</span>
+                        </div>
+                        
+                </ul>
 
+            </section>
+        </div>
 
+        <!-- FOOTER  -->
+        <div id="footer_wrap" class="outer">
+            <footer class="inner">
+                <p class="copyright">ANTS belongs to everyone</p>
 
-        </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-        <footer class="inner">
-            <p class="copyright">ANTS belongs to everyone</p>
-
-            <!--
+                <!--
 
 Uncomment when we're ready. No need to mislead people.
 
@@ -128,8 +168,8 @@ allowtransparency="true" frameborder="0" scrolling="0" width="120" height="21"><
 
 -->
 
-        </footer>
-    </div>
+            </footer>
+        </div>
 
-</body>
+    </body>
 </html>
