@@ -1,54 +1,175 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="ANTS: silently, we're building">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="ANTS: silently, we're building">
 
-    <link rel="stylesheet" href="stylesheets/stylesheet.css">
+        <style data-better-defaults>
+            *{
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
 
-    <title>ANTS: silently, we're building</title>
-  </head>
+                box-sizing: border-box;
+                border-collapse: collapse;
+            }
 
-  <body>
-  
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
+            [hidden] { /* http://lists.whatwg.org/pipermail/whatwg-whatwg.org/2014-May/254198.html */
+                display: none !important;
+            }
+
+
+            html, body{
+                padding: 0;
+                margin: 0;
+            }
+
+            /* For non-documents */
+            ul, ol, menu{
+                list-style: none;
+
+                margin: 0;
+                padding: 0;
+            }
+
+            li{
+                margin: 0;
+                padding: 0;
+            }
+
+            .table-layout{
+                display: table;
+            }
+            .table-layout > *{
+                display: table-row;
+            }
+            .table-layout > * > *{
+                display: table-cell;
+            }
+
+        </style>
+
+
+        <link rel="stylesheet" href="stylesheets/stylesheet.css">
+
+
+        <style>
+            strong{
+                text-decoration: none;
+                color: #D51A11;
+                text-shadow: none;
+            }
+
+            a.top-link{
+                display: inline;
+                padding: 10px;
+                color: #FFF;
+                background: rgb(213,26,17);
+                font-weight: 700;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+                border-bottom-left-radius: 3px;
+                border-bottom-right-radius: 3px;
+
+                position: absolute;
+                top: 0;
+
+                left: 40%;
+                right: 40%;
+                text-align: center;
+            }
+
+            
+            
+            ul.people li{
+                height: 200px;
+            }
+            ul.people li img{
+                height: 150px;
+            }
+            
+            ul.people li > *{
+                vertical-align: top;
+            }
+            ul.people li > div{
+                padding-left: 1em;
+            }
+            ul.people li > div .name{
+                display: block;
+                font-weight: bold;
+            }
+            ul.people li > div .name{
+                font-weight: bold;
+            }
+                
+                
+            
+        </style>
+
+        <title>ANTS: silently, we're building</title>
+    </head>
+
+    <body>
+
+        <!-- HEADER -->
+        <!--
+many classes
+such HTML complexity
+wow
+very need to simplify
+super soon
+-->
         <header class="inner">
-          <a id="forkme_banner" href="https://github.com/anthill/">View Projects</a>
-          <h1 id="project_title">ANTS</h1>
-          <h2 id="project_tagline">silently, we're building</h2>
-          <img id="ants_banner" src="images/ants_banner.png" />
+            <a class="top-link" href="https://github.com/anthill/">View Projects</a>
+            <h1 id="project_title">ANTS</h1>
+            <h2 id="project_tagline">silently, we're building</h2>
+            <img id="ants_banner" src="images/ants_banner.png" />
         </header>
-    </div>
 
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
+        <div id="main_content_wrap" class="outer">
+            <section id="main_content" class="inner">
 
+                <h4>ANTS is an <strong>open-innovation lab</strong> powered by people ranging from <strong>data-scientists, hackers and makers to artists or thinkers</strong>.</h4>
+                <h4>We all share one belief: cutting edge technology should serve the Public Good.</h4>
+                <p>As we are better at doing than speeking, check out <a href="https://github.com/anthill/">our projects</a> to learn what we do.</p>
+                
+                <h3>People</h3>
+                <ul class="people table-layout">
+                    <li>
+                        <img src="https://avatars.githubusercontent.com/u/371303?">
+                        <div>
+                            <span class="name">Alexandre Vallette</span>
+                            <span class="bio">He made a couple of cool stuffs</span>
+                        </div>
+                    <li>
+                        <img src="https://avatars.githubusercontent.com/u/165829?">
+                        <div>
+                            <span class="name">David Bruant</span>
+                            <span class="bio">He made a couple of cool stuffs</span>
+                        </div>
+                        
+                </ul>
 
-<h4>ANTS is an <a>open-innovation lab</a> powered by heterogenous people ranging from <a>data-scientists, hackers and makers</a> to artists or thinkers.</h4>
+            </section>
+        </div>
 
+        <!-- FOOTER  -->
+        <div id="footer_wrap" class="outer">
+            <footer class="inner">
+                <p class="copyright">ANTS belongs to everyone</p>
 
-<h4>We all share one belief: <strong>cutting edge technology should serve public good challenges</strong>.</h4>
+                <!--
 
+Uncomment when we're ready. No need to mislead people.
 
-
-<p>As we are better at doing than speeking, check out our projects to learn what we do.</p>
-
-
-
-</section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">ANTS belongs to everyone</p>
-        <a href="https://twitter.com/ants" class="twitter-follow-button" data-show-count="false">Follow @ants</a>
+<a href="https://twitter.com/ants" class="twitter-follow-button" data-show-count="false">Follow @ants</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-        &nbsp; <iframe src="http://ghbtns.com/github-btn.html?user=ants&repo=ants&type=watch&count=true&size=small"
-  allowtransparency="true" frameborder="0" scrolling="0" width="120" height="21"></iframe>
-    </footer>
-    </div>
+&nbsp; <iframe src="http://ghbtns.com/github-btn.html?user=ants&repo=ants&type=watch&count=true&size=small"
+allowtransparency="true" frameborder="0" scrolling="0" width="120" height="21"></iframe>
 
-  </body>
+-->
+
+            </footer>
+        </div>
+
+    </body>
 </html>
