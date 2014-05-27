@@ -54,6 +54,27 @@
 
 
         <style>
+            body{
+                background: hsl(0, 0%, 13%);
+            }
+            
+            header{
+                height: 200px;
+                width: 100%;
+                background: -moz-linear-gradient(center top , hsl(0, 0%, 30%), hsl(0, 0%, 13%)) repeat scroll 0% 0% transparent;;
+                padding: 20px 25%;
+                
+                position: relative; /* for ant image */
+            }
+            
+            
+            header #ants_banner {
+              display: block;
+              position: absolute;
+              bottom: 0;
+              right: 10%;
+            }
+            
             strong{
                 text-decoration: none;
                 color: #D51A11;
@@ -73,9 +94,11 @@
                 position: absolute;
                 top: 0;
 
-                left: 40%;
-                right: 40%;
+                left: 42%;
+                right: 42%;
                 text-align: center;
+                
+                z-index: 2;
             }
 
             
@@ -118,7 +141,7 @@ wow
 very need to simplify
 super soon
 -->
-        <header class="inner">
+        <header>
             <a class="top-link" href="https://github.com/anthill/">View Projects</a>
             <h1 id="project_title">ANTS</h1>
             <h2 id="project_tagline">silently, we're building</h2>
@@ -143,7 +166,7 @@ super soon
                         <img src="https://avatars.githubusercontent.com/u/165829?">
                         <div>
                             <span class="name">David Bruant</span>
-                            <span class="bio">He made a couple of cool stuffs</span>
+                            <span class="bio">Open web and open source contributor. Conference Speaker. </span>
                         </div>
                         
                 </ul>
@@ -157,7 +180,7 @@ super soon
         <!-- FOOTER  -->
         <div id="footer_wrap" class="outer">
             <footer class="inner">
-                <p class="copyright">Copyright: ANTS is open to everyone</p>
+                <p class="copyright">ANTS is open to everyone</p>
 
                 <!--
 

@@ -285,13 +285,6 @@ Full-Width Styles
   color: #2D2D2D;
 }
 
-#ants_banner {
-  display: block;
-  position: absolute;
-  bottom:0;
-  right:-300px;
-  z-index: 9;
-}
 
 #header_wrap {
   background: #4d4d4d;
