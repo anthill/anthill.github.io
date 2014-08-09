@@ -1,0 +1,12 @@
+# Site
+name: ants
+subtitle: Crafting with Web technologies and human beings.
+description: ""
+author: David Bruant and Alexandre Vallette
+email: alexandre.vallette@ants.builders
+
+exclude: [ CNAME, Gemfile, Gemfile.lock ]
+
+default_layout: post
+
+layout: default
