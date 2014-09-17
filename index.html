@@ -59,6 +59,24 @@
                 width: 100%;
             }
             
+            nav{
+                position: fixed;
+                width: 100%;
+                height: 3em;
+            }
+            
+            nav span{
+                float: left;
+            }
+            
+            nav ul{
+                float: right;
+            }
+            
+            nav ul li{
+                display: inline-block;
+            }
+            
             .page{
                 display: block;
                 
@@ -156,13 +174,20 @@
     <body>
         <header>
             <nav>
+                <span>ANTS, Collective intelligence</span>
+                <ul>
+                    <li><a href="#about">About</a>
+                    <li>Projects
+                    <li>Team
+                    <li>Blog
+                </ul>
             </nav>
         </header>
         <main>
             <header class="page">
                 <!-- Ants banner -->
             </header>
-            <div class="page why-how">
+            <div id="about" class="page why-how">
                 <div>
                     <h2>Why?</h2>
                     <ul>
