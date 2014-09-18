@@ -52,125 +52,198 @@
         </style>
 
 
-        <link rel="stylesheet" href="stylesheets/stylesheet.css">
-
-
         <style>
-     
+            body{
+                background: white;
+            }
             
-            header{
-                height: 210px;
+            main{
                 width: 100%;
-                background: linear-gradient(to bottom, hsl(0, 0%, 30%), hsl(0, 0%, 13%));
-                padding: 20px 25%;
-                position: relative; /* for ant image */
+            }
+            
+            nav{
+                position: fixed;
+                width: 100%;
+                height: 3em;
+                padding: 1em;
+                background-color: white;
+                border-bottom: 1px solid black;
+            }
+            
+            nav span{
+                float: left;
+            }
+            
+            nav ul{
+                float: right;
+            }
+            
+            nav ul li{
+                display: inline-block;
+                margin: 0 1em;
+            }
+            
+            header img{
+                display: block;
+                margin: 0 auto;
+            }
+            
+            .page{
+                display: block;
                 
+                width: 100%;
+                min-height: 50em; /* for older browser that do not understand the vh unit */
+                min-height: 100vh;
+                
+                /* border: 1px solid black; */ /* for debugging purposes to be sure the page takes a full screen */
             }
             
             
-            header #ants_banner {
-              display: block;
-              position: absolute;
-              bottom: 0;
-              right: 0;
-            }
-            
-            strong{
-                text-decoration: none;
-                color: #D51A11;
-                text-shadow: none;
-            }
-
-            a.top-link{
-                display: inline;
-                padding: 10px;
-                color: #FFF;
-                background: rgb(213,26,17);
-                font-weight: 700;
-                font-size: 0.7em;
-                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-                border-bottom-left-radius: 3px;
-                border-bottom-right-radius: 3px;
-
-                position: absolute;
-                top: 0;
-
-                left: 42%;
-                right: 42%;
+            .page h2{
+                font-size: 3rem;
+                
+                text-decoration: underline;
+                color: #7b7bef;
                 text-align: center;
+            }
+            
+            
+            
+            .why-how{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            
+            .why-how > div{
+                background-color: hsl(200, 100%, 70%);
                 
-                z-index: 2;
-            }
-
-            
-            
-            ul.people li{
-                height: 200px;
-            }
-            ul.people li img{
-                height: 150px;
+                font-size: 2em;
+                width: 35%;
+                padding: 1em;
             }
             
-            ul.people li > *{
+            .what ul{
+                /*display: flex;*/
+                text-align: center;
+            }
+            .what ul li{
+                display: inline-block;
+                
+                max-width: 30em;
+                padding: 1em;
+                margin: 1em 3em;
+                
+                background-color: hsl(39, 100%, 70%);
+            }
+            .what ul li img{
+                display: inline-block;
+                
+                width: 100%;
+            }
+            
+            
+            
+            .who ul.people{
+                width: 40em;
+                margin: 0 auto;
+            }
+            .who ul.people li{
+                clear:both;
+                height: 10em;
+            }
+            .who ul.people li{
+            }
+            .who ul.people li img{
+                max-width: 9em;
+                float: left;
+                margin-right: 1em;
+            }
+            
+            .who ul.people li > *{
                 vertical-align: top;
             }
-            ul.people li > div{
+            .who ul.people li > div{
                 padding-left: 1em;
             }
-            ul.people li > div .name{
+            .who ul.people li > div .name{
                 display: block;
                 font-weight: bold;
                 font-size: 0.9em;
             }
-            ul.people li > div .bio{
+            .who ul.people li > div .bio{
                 font-size: 0.7em;
             }
-			.social{
-			display:inline-block;
-			 float: right;
-                            }
-            .copyright{
-       
-            }
-            .contact{
-      
-            }
-            
-            a.same { color: inherit;}
-          
             
         </style>
 
-        <title>ANTS, Collective Intelligence</title>
-
+        <title>ANTS, collective intelligence</title>
+        
+        <script defer src="js/polyfills/harmony-collections.js"></script>
+        <script defer src="app.js"></script>
     </head>
 
     <body>
-
-        <!-- HEADER -->
-        <!--
-many classes
-such HTML complexity
-wow
-very need to simplify
-super soon
--->
         <header>
-            <a class="top-link" href="https://github.com/anthill/">View Projects</a>
-            <br/>
-            <h1 id="project_title">ANTS</h1>
-            <h2 id="project_tagline">Collective Intelligence</h2>
-            <img id="ants_banner" src="images/ants_banner.png" />
+            <nav>
+                <span>ANTS, Collective intelligence</span>
+                <ul>
+                    <li><a href="#about">About</a>
+                    <li>Projects
+                    <li>Team
+                    <li>Blog
+                </ul>
+            </nav>
         </header>
-
-        <div id="main_content_wrap" class="outer">
-            <section id="main_content" class="inner">
-
-                <div class="important">ANTS is an <strong>open-innovation lab</strong> powered by people ranging from data-scientists, hackers and makers to artists or thinkers.</div>
-
-                <br />
-                <h6>People</h6>
-                <ul class="people table-layout">
+        <main>
+            <header class="page">
+                <img hidden src="images/ant-colony-fallback.png">
+            </header>
+            <div id="about" class="page why-how">
+                <div>
+                    <h2>Why?</h2>
+                    <ul>
+                        <li>for more happiness</li>
+                        <li>to move the public good forward</li>
+                        <li>as an attempt to figure it all out</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>How?</h2>
+                    <ul>
+                        <li>Open source</li>
+                        <li>Working with you on innovating projects</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page what">
+                <h2>What?</h2>
+                <ul>
+                    <li>
+                        <h3>6element</h3>
+                        <img src="https://o.twimg.com/2/proxy.jpg?t=HBhwaHR0cHM6Ly9kMjYyaWxiNTFobHR4MC5jbG91ZGZyb250Lm5ldC9tYXgvODAwL2Rlc2F0L211bHRpcGx5L3llbGxvdy9vdmVybGF5L3llbGxvdy8xKlNudVdoWmlDRXVoa0VzVGNlTHFpZGcuanBlZxTABxTaBAAWABIA&s=Qi2lwyzCbtf1l5GpQR7ArpmoxXnbBvU7oZyXclCt9IU">
+                        <p>6element is a project aiming at reducing waste arriving in recycling centers</p>
+                    </li>
+                    <li>
+                        <h3>6element</h3>
+                        <img src="https://o.twimg.com/2/proxy.jpg?t=HBhwaHR0cHM6Ly9kMjYyaWxiNTFobHR4MC5jbG91ZGZyb250Lm5ldC9tYXgvODAwL2Rlc2F0L211bHRpcGx5L3llbGxvdy9vdmVybGF5L3llbGxvdy8xKlNudVdoWmlDRXVoa0VzVGNlTHFpZGcuanBlZxTABxTaBAAWABIA&s=Qi2lwyzCbtf1l5GpQR7ArpmoxXnbBvU7oZyXclCt9IU">
+                        <p>6element is a project aiming at reducing waste arriving in recycling centers</p>
+                    </li>
+                    <li>
+                        <h3>6element</h3>
+                        <img src="https://o.twimg.com/2/proxy.jpg?t=HBhwaHR0cHM6Ly9kMjYyaWxiNTFobHR4MC5jbG91ZGZyb250Lm5ldC9tYXgvODAwL2Rlc2F0L211bHRpcGx5L3llbGxvdy9vdmVybGF5L3llbGxvdy8xKlNudVdoWmlDRXVoa0VzVGNlTHFpZGcuanBlZxTABxTaBAAWABIA&s=Qi2lwyzCbtf1l5GpQR7ArpmoxXnbBvU7oZyXclCt9IU">
+                        <p>6element is a project aiming at reducing waste arriving in recycling centers</p>
+                    </li>
+                    <li>
+                        <h3>6element</h3>
+                        <img src="https://o.twimg.com/2/proxy.jpg?t=HBhwaHR0cHM6Ly9kMjYyaWxiNTFobHR4MC5jbG91ZGZyb250Lm5ldC9tYXgvODAwL2Rlc2F0L211bHRpcGx5L3llbGxvdy9vdmVybGF5L3llbGxvdy8xKlNudVdoWmlDRXVoa0VzVGNlTHFpZGcuanBlZxTABxTaBAAWABIA&s=Qi2lwyzCbtf1l5GpQR7ArpmoxXnbBvU7oZyXclCt9IU">
+                        <p>6element is a project aiming at reducing waste arriving in recycling centers</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="page who">
+                <h2>Who?</h2>
+                <ul class="people">
                     <li>
                         <img src="https://avatars.githubusercontent.com/u/371303?">
                         <div>
@@ -178,51 +251,28 @@ super soon
                             <span class="bio"><strong>Data-scientist</strong>, co-founder of <a class="same" href="http://snips.net/">SNIPS</a>, his passion for machine-learning applied to geographical data and networks comes from his Phd in chaos theory. Open-data enthusiast, he is committed to show how <strong>open-innovation</strong> can lead to a better governance and economy.</span>
 							
                         </div>
+                    </li>
                     <li>
                         <img src="https://avatars.githubusercontent.com/u/165829?">
                         <div>
                             <span class="name">David Bruant <div class="social"><a href="https://github.com/DavidBruant"><i class="fa fa-github-square"></i></a> <a href="https://twitter.com/DavidBruant"><i class="fa fa-twitter"></i></a></div></span>
                             <span class="bio">David is a leader in <strong>front-end </strong>development, especially in javascript and standards specification. Contributor to Mozilla, he believes deeply in open web and open source. He teaches coding to young children and <strong>datavisualization</strong> in design schools.</span>
                         </div>
+                    </li>
                     <li>
                         <img src="https://avatars.githubusercontent.com/u/7767926?">
                         <div>
                             <span class="name">David Schwandt <div class="social"><a href="https://github.com/CIaviCI"><i class="fa fa-github-square"></i></a></div></span>
                             <span class="bio">Started hacking his TI-92 at the age of 13 to measure and visualize distances by ultrasound. PhD in theoretical physics by designing <strong>High Performance Computing</strong> algorithms to discover exotic quantum matter. Passionated about the sheer possibilities of <strong>open hardware</strong> combined with low-cost sensors.</span>
                         </div>                        
+                    </li>
                 </ul>
-
-                <div class="important">We all share one belief: cutting edge technology should address<br /><strong>civic</strong> and <strong>environmental</strong> challenges.</div><br />
-                <p class="center">Check out <a href="https://github.com/anthill/">our projects</a> to learn what we do.</p>
-
-            </section>
-        </div>
-
-        <!-- FOOTER  -->
-        <div id="footer_wrap" class="outer">
-            <footer class="inner">
-               <p class="contact">
-                <i class="fa fa-envelope"></i> <a href="mailto:contact@ants.builders">contact@ants.builders</a>
-                </p>
-                <p class="copyright">ANTS is open to everyone<br>
-                    Copyright &copy; 2014, ANTS<br>
-                    <a href="http://opensource.org/licenses/MIT">MIT License</a>
-                </p>
             
-
-                <!--
-
-Uncomment when we're ready. No need to mislead people.
-
-<a href="https://twitter.com/ants" class="twitter-follow-button" data-show-count="false">Follow @ants</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-&nbsp; <iframe src="http://ghbtns.com/github-btn.html?user=ants&repo=ants&type=watch&count=true&size=small"
-allowtransparency="true" frameborder="0" scrolling="0" width="120" height="21"></iframe>
-
--->
-
-            </footer>
-        </div>
-
+            </div>
+        </main>
+        
+        <footer>
+        
+        </footer> 
     </body>
 </html>
