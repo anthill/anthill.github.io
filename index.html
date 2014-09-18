@@ -47,12 +47,37 @@
                 display: table-cell;
             }
 
+            @font-face {
+              font-family: 'Raleway';
+              font-style: normal;
+              font-weight: 400;
+              src: local('Raleway'), url(./fonts/Raleway-Regular.ttf) format('ttf');
+              unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+            }
+            /* latin */
+            @font-face {
+              font-family: 'Raleway';
+              font-style: normal;
+              font-weight: 700;
+              src: local('Raleway Bold'), local('Raleway-Bold'), url(./fonts/Raleway-Bold.ttf) format('ttf');
+              unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+            }
+            /* latin */
+            @font-face {
+              font-family: 'Raleway';
+              font-style: normal;
+              font-weight: 900;
+              src: local('Raleway Heavy'), local('Raleway-Heavy'), url(./fonts/Raleway-Heavy.ttf) format('ttf');
+              unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+            }
+
         </style>
 
 
         <style>
             body{
                 background: white;
+                font-family: 'Raleway', sans-serif;
             }
             
             main{
@@ -188,6 +213,16 @@
             <header class="page">
                 <img hidden src="ant-colony-fallback.jpg">
             </header>
+            <div class="page">
+                <p>Complexity is what stops us from being creative.</p>
+                <p>We use technology to make things simple in order to act and innovate.</p>
+
+                <p>We do it openly.</p>
+
+                <p>Because we believe best solutions will emerge from the crowd if people can share easily.</p>
+
+                <p>That’s what we call collective intelligence.</p>
+            </div>
             <div id="about" class="page why-how">
                 <div>
                     <h2>Why?</h2>
