@@ -5,7 +5,6 @@
         <meta charset="utf-8">
         <meta name="description" content="ANTS, collective intelligence">
 		<link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway">
         <style data-better-defaults>
             *{
                 background-repeat: no-repeat;
@@ -58,7 +57,7 @@
             }
             /* latin */
             @font-face {
-              font-family: 'Raleway';
+              font-family: 'Raleway-Bold';
               font-style: normal;
               font-weight: 700;
               src: local('Raleway Bold'), local('Raleway-Bold'), url(./fonts/Raleway-Bold.ttf) format('ttf');
@@ -66,7 +65,7 @@
             }
             /* latin */
             @font-face {
-              font-family: 'Raleway';
+              font-family: 'Raleway-Heavy';
               font-style: normal;
               font-weight: 900;
               src: local('Raleway Heavy'), local('Raleway-Heavy'), url(./fonts/Raleway-Heavy.ttf) format('ttf');
@@ -81,9 +80,20 @@
                 background: white;
                 font-family: 'Raleway', sans-serif;
             }
+
+            a, a:visited{ 
+                color: currentColor;
+                text-decoration: none;
+            }
             
             main{
                 width: 100%;
+            }
+
+            main header h1{
+                position: absolute;
+                top: 60%;
+                left: 27%;
             }
             
             nav{
@@ -91,8 +101,10 @@
                 width: 100%;
                 height: 3em;
                 padding: 1em;
-                background-color: white;
+                background-color: rgb(82,82,82);
+                color: white;
                 border-bottom: 1px solid black;
+                z-index: 1;
             }
             
             nav span{
@@ -112,6 +124,10 @@
                 display: block;
                 margin: 0 auto;
             }
+            span.ants{
+                font-family: 'Raleway-Heavy', sans-serif;
+                margin: 0 10px;
+            }
             
             .page{
                 display: block;
@@ -123,16 +139,24 @@
                 /* border: 1px solid black; */ /* for debugging purposes to be sure the page takes a full screen */
             }
             
-            
-            .page h2{
+            .page h1{
                 font-size: 3rem;
-                
-                text-decoration: underline;
-                color: #7b7bef;
+                color: rgb(180,180,180);
                 text-align: center;
             }
             
-            
+            .page#about{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1rem;
+                color: rgb(83,83,83);
+                text-align: center;
+            }
+
+            .page strong{
+                font-family: 'Raleway-Bold', sans-serif;
+            }
             
             .why-how{
                 display: flex;
@@ -211,11 +235,11 @@
     <body>
         <header>
             <nav>
-                <span>ANTS, Collective intelligence</span>
+                <span class="ants">ANTS</span> <span>Collective intelligence</span>
                 <ul>
                     <li><a href="#about">About</a>
-                    <li>Projects
-                    <li>Team
+                    <li><a href="#projects">Projects</a>
+                    <li><a href="#team">Team</a>
                     <li>Blog
                 </ul>
             </nav>
@@ -223,18 +247,21 @@
         <main>
             <header class="page">
                 <img hidden src="images/ant-colony-fallback.png">
+                <h1>Collective Intelligence</h1>
             </header>
-            <div class="page">
-                <p>Complexity is what stops us from being creative.</p>
-                <p>We use technology to make things simple in order to act and innovate.</p>
+            <div id="about" class="page">
+                <div class="why">
+                    <p>Complexity is what stops us from being creative.</p>
+                    <p>We use technology to <strong>make things simple</strong> in order to act and innovate.</p>
 
-                <p>We do it openly.</p>
+                    <p>We do it <strong>openly</strong>.</p>
 
-                <p>Because we believe best solutions will emerge from the crowd if people can share easily.</p>
+                    <p>Because we believe best solutions will emerge from the <strong>crowd</strong> if people can share easily.</p>
 
-                <p>That’s what we call collective intelligence.</p>
+                    <p>That’s what we call <strong>collective intelligence</strong>.</p>
+                </div>
             </div>
-            <div id="about" class="page why-how">
+            <div class="page why-how">
                 <div>
                     <h2>Interface</h2>
                     <p>Most big things do work in our daily urban life. Train are scheduled, garbage is being collected, we can pay taxes on internet.</p>
@@ -261,7 +288,7 @@
                     <p>It takes grit and boldness to innovate and we  focus on impossible projects to prove they aren’t.</p>
                 </div>
             </div>
-            <div class="page what">
+            <div id="projects" class="page what">
                 <ul>
                     <li>
                         <h3>6element</h3>
@@ -285,13 +312,14 @@
                     </li>
                 </ul>
             </div>
-            <div class="page who">
-                <h2>Who?</h2>
+            <div id="team" class="page who">
                 <ul class="people">
                     <li>
                         <img src="https://avatars.githubusercontent.com/u/371303?">
                         <div>
-                            <span class="name">Alexandre Vallette <div class="social"><a href="https://github.com/vallettea"><i class="fa fa-github-square"></i></a> <a href="https://twitter.com/vallettea"><i class="fa fa-twitter"></i></a></div></span>
+                            <span class="name">Alexandre Vallette <div class="social">
+                            <a href="https://github.com/vallettea"><i class="fa fa-github-square"></i></a>
+                            <a href="https://twitter.com/vallettea"><i class="fa fa-twitter"></i></a></div></span>
                             <span class="bio"><strong>Data-scientist</strong>, co-founder of <a class="same" href="http://snips.net/">SNIPS</a>, his passion for machine-learning applied to geographical data and networks comes from his Phd in chaos theory. Open-data enthusiast, he is committed to show how <strong>open-innovation</strong> can lead to a better governance and economy.</span>
 							
                         </div>
@@ -299,21 +327,26 @@
                     <li>
                         <img src="https://avatars.githubusercontent.com/u/165829?">
                         <div>
-                            <span class="name">David Bruant <div class="social"><a href="https://github.com/DavidBruant"><i class="fa fa-github-square"></i></a> <a href="https://twitter.com/DavidBruant"><i class="fa fa-twitter"></i></a></div></span>
+                            <span class="name">David Bruant <div class="social">
+                            <a href="https://github.com/DavidBruant"><i class="fa fa-github-square"></i></a>
+                            <a href="https://twitter.com/DavidBruant"><i class="fa fa-twitter"></i></a></div></span>
                             <span class="bio">David is a leader in <strong>front-end </strong>development, especially in javascript and standards specification. Contributor to Mozilla, he believes deeply in open web and open source. He teaches coding to young children and <strong>datavisualization</strong> in design schools.</span>
                         </div>
                     </li>
                     <li>
                         <img src="https://avatars.githubusercontent.com/u/7767926?">
                         <div>
-                            <span class="name">David Schwandt <div class="social"><a href="https://github.com/CIaviCI"><i class="fa fa-github-square"></i></a></div></span>
+                            <span class="name">David Schwandt <div class="social">
+                            <a href="https://github.com/CIaviCI"><i class="fa fa-github-square"></i></a></div></span>
                             <span class="bio">Started hacking his TI-92 at the age of 13 to measure and visualize distances by ultrasound. PhD in theoretical physics by designing <strong>High Performance Computing</strong> algorithms to discover exotic quantum matter. Passionated about the sheer possibilities of <strong>open hardware</strong> combined with low-cost sensors.</span>
                         </div>                        
                     </li>
                     <li>
                         <img src="https://avatars2.githubusercontent.com/u/8417814?">
                         <div>
-                            <span class="name">Romain Crestey</span>
+                            <span class="name">Romain Crestey<div class="social">
+                            <a href="https://github.com/iOiurson"><i class="fa fa-github-square"></i></a>
+                            <a href="https://twitter.com/OursonEnPeluche"><i class="fa fa-twitter"></i></a></div></span>
                             <span class="bio">Musician, drawer, gamer, engineer, Romain is a creative geek, convinced that the best technology is half useless without a well-thought <strong>design</strong>. With a growing UX interest, he works on developing <strong>ergonomic</strong> solutions to help give the users back the control on their data.</span>
                         </div>                        
                     </li>
