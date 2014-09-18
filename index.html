@@ -49,12 +49,37 @@
                 display: table-cell;
             }
 
+            @font-face {
+              font-family: 'Raleway';
+              font-style: normal;
+              font-weight: 400;
+              src: local('Raleway'), url(./fonts/Raleway-Regular.ttf) format('ttf');
+              unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+            }
+            /* latin */
+            @font-face {
+              font-family: 'Raleway';
+              font-style: normal;
+              font-weight: 700;
+              src: local('Raleway Bold'), local('Raleway-Bold'), url(./fonts/Raleway-Bold.ttf) format('ttf');
+              unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+            }
+            /* latin */
+            @font-face {
+              font-family: 'Raleway';
+              font-style: normal;
+              font-weight: 900;
+              src: local('Raleway Heavy'), local('Raleway-Heavy'), url(./fonts/Raleway-Heavy.ttf) format('ttf');
+              unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+            }
+
         </style>
 
 
         <style>
             body{
                 background: white;
+                font-family: 'Raleway', sans-serif;
             }
             
             main{
@@ -199,25 +224,44 @@
             <header class="page">
                 <img hidden src="images/ant-colony-fallback.png">
             </header>
+            <div class="page">
+                <p>Complexity is what stops us from being creative.</p>
+                <p>We use technology to make things simple in order to act and innovate.</p>
+
+                <p>We do it openly.</p>
+
+                <p>Because we believe best solutions will emerge from the crowd if people can share easily.</p>
+
+                <p>That’s what we call collective intelligence.</p>
+            </div>
             <div id="about" class="page why-how">
                 <div>
-                    <h2>Why?</h2>
-                    <ul>
-                        <li>for more happiness</li>
-                        <li>to move the public good forward</li>
-                        <li>as an attempt to figure it all out</li>
-                    </ul>
+                    <h2>Interface</h2>
+                    <p>Most big things do work in our daily urban life. Train are scheduled, garbage is being collected, we can pay taxes on internet.</p>
+
+                    <p>What often makes a bad service, or a perceived bad infrastructure is the interface with the users. The interface is not a small thing.</p>
+
+                    <p>Solving the UX is a matter of keeping in touch with the citizens or the customers and thus, small things can have a huge impact.</p>
                 </div>
                 <div>
-                    <h2>How?</h2>
-                    <ul>
-                        <li>Open source</li>
-                        <li>Working with you on innovating projects</li>
-                    </ul>
+                    <h2>Data</h2>
+                    <p>Data helps us understand and predict behaviours. Especially because we use contextual data.</p>
+                    <p>Data is also the best way to challenge conventional thinking and status quo.</p>
+                </div>
+                <div>
+                    <h2>Openness</h2>
+                    <p>We crave for transparency because because it is the only way to build trust.</p>
+                    <p>We use and produce open knowledge in general (open data, open source, open hardware etc).</p>
+                    <p>All our civic or environmental project are completely open because we look for impact.</p>
+                </div>
+                <div>
+                    <h2>Attitude</h2>
+                    <p>We live to learn new things, every day. Learning means always taking the unknown path. It is the only way to innovate. We try to innovate in all we do, not only code or design but also in organisation orin the way we hire.</p>
+                    <p>We prototype fast because we start as hackers before engineers.</p>
+                    <p>It takes grit and boldness to innovate and we  focus on impossible projects to prove they aren’t.</p>
                 </div>
             </div>
             <div class="page what">
-                <h2>What?</h2>
                 <ul>
                     <li>
                         <h3>6element</h3>
@@ -264,6 +308,13 @@
                         <div>
                             <span class="name">David Schwandt <div class="social"><a href="https://github.com/CIaviCI"><i class="fa fa-github-square"></i></a></div></span>
                             <span class="bio">Started hacking his TI-92 at the age of 13 to measure and visualize distances by ultrasound. PhD in theoretical physics by designing <strong>High Performance Computing</strong> algorithms to discover exotic quantum matter. Passionated about the sheer possibilities of <strong>open hardware</strong> combined with low-cost sensors.</span>
+                        </div>                        
+                    </li>
+                    <li>
+                        <img src="https://avatars2.githubusercontent.com/u/8417814?">
+                        <div>
+                            <span class="name">Romain Crestey</span>
+                            <span class="bio">Musician, drawer, gamer, engineer, Romain is a creative geek, convinced that the best technology is half useless without a well-thought <strong>design</strong>. With a growing UX interest, he works on developing <strong>ergonomic</strong> solutions to help give the users back the control on their data.</span>
                         </div>                        
                     </li>
                 </ul>
