@@ -1,5 +1,11 @@
 'use strict';
 
 var antColony = require('AntColony');
+var isCanvasAvailable = require('./canvas-detect.js');
 
-antColony(document.querySelector('main header'));
+if(isCanvasAvailable()){
+    antColony(document.querySelector('main header'));
+}
+else{
+    
+}
