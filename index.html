@@ -105,6 +105,7 @@
                 color: white;
                 border-bottom: 1px solid black;
                 z-index: 1;
+                line-height: 1em;
             }
             
             nav span{
@@ -125,6 +126,7 @@
                 margin: 0 auto;
             }
             span.ants{
+                font-size: 1.4rem;
                 font-family: 'Raleway-Heavy', sans-serif;
                 margin: 0 10px;
             }
@@ -149,7 +151,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-size: 1rem;
+                font-size: 1.3rem;
                 color: rgb(83,83,83);
                 text-align: center;
             }
@@ -165,11 +167,32 @@
             }
             
             .why-how > div{
-                background-color: hsl(200, 100%, 70%);
+                background-color: white;
                 
-                font-size: 2em;
+                font-size: 0.8em;
                 width: 35%;
                 padding: 1em;
+
+            }
+
+            footer {
+                margin-left: auto;
+                margin-right: auto;
+                background: #f2f2f2;
+                height: 3em;
+                padding: 1em;
+                z-index: 1;
+            }
+
+            footer p{
+                text-align: center;
+                margin: 0 1em;
+            }
+
+
+            .why-how div.pillar{
+                margin: 30px;
+                border-top: 1px solid #d6d6d6;
             }
             
             .what ul{
@@ -179,11 +202,11 @@
             .what ul li{
                 display: inline-block;
                 
-                max-width: 30em;
+                max-width: 25em;
                 padding: 1em;
                 margin: 1em 3em;
                 
-                background-color: hsl(39, 100%, 70%);
+                background-color: white;
             }
             .what ul li img{
                 display: inline-block;
@@ -254,61 +277,58 @@
                     <p>Complexity is what stops us from being creative.</p>
                     <p>We use technology to <strong>make things simple</strong> in order to act and innovate.</p>
 
-                    <p>We do it <strong>openly</strong>.</p>
+                    <p>We do it <strong>openly</strong>,</p>
 
-                    <p>Because we believe best solutions will emerge from the <strong>crowd</strong> if people can share easily.</p>
+                    <p>because we believe best solutions will emerge from the <strong>crowd</strong>.</p>
 
                     <p>That’s what we call <strong>collective intelligence</strong>.</p>
                 </div>
             </div>
             <div class="page why-how">
                 <div>
-                    <h2>Interface</h2>
-                    <p>Most big things do work in our daily urban life. Train are scheduled, garbage is being collected, we can pay taxes on internet.</p>
+                    <div class="pillar">
+                        <h3>Interface</h3>
+                        <p>Most <strong>big things do work</strong> in our daily urban life. Train are scheduled, garbage is being collected, we can pay taxes on internet.</p>
 
-                    <p>What often makes a bad service, or a perceived bad infrastructure is the interface with the users. The interface is not a small thing.</p>
+                        <p>What often makes a bad service, or a perceived bad infrastructure is the interface with the users. The <strong>interface is not a small thing</strong>.</p>
 
-                    <p>Solving the UX is a matter of keeping in touch with the citizens or the customers and thus, small things can have a huge impact.</p>
+                        <p>Solving the UX is a matter of keeping in touch with the citizens or the customers and thus, small things can have a <strong>huge impact</strong>.</p>
+                    </div>
+                    <div class="pillar">
+                        <h3>Data</h3>
+                        <p>Data helps us understand and predict behaviours. Especially because we use <strong>contextual data</strong>. We predict behaviors from the context and not from personnal information. This is efficient and ensures <strong>privacy by design</strong>.</p>
+                        <p>Data is also the best way to <strong>challenge conventional</strong> thinking and status quo.</p>
+                    </div>
                 </div>
                 <div>
-                    <h2>Data</h2>
-                    <p>Data helps us understand and predict behaviours. Especially because we use contextual data.</p>
-                    <p>Data is also the best way to challenge conventional thinking and status quo.</p>
-                </div>
-                <div>
-                    <h2>Openness</h2>
-                    <p>We crave for transparency because because it is the only way to build trust.</p>
-                    <p>We use and produce open knowledge in general (open data, open source, open hardware etc).</p>
-                    <p>All our civic or environmental project are completely open because we look for impact.</p>
-                </div>
-                <div>
-                    <h2>Attitude</h2>
-                    <p>We live to learn new things, every day. Learning means always taking the unknown path. It is the only way to innovate. We try to innovate in all we do, not only code or design but also in organisation orin the way we hire.</p>
-                    <p>We prototype fast because we start as hackers before engineers.</p>
-                    <p>It takes grit and boldness to innovate and we  focus on impossible projects to prove they aren’t.</p>
+                    <div class="pillar">
+                        <h3>Openness</h3>
+                        <p>We crave for <strong>transparency</strong> because it is the only way to build <strong>trust</strong>.</p>
+                        <p>We use and produce <strong>open knowledge</strong> in general (open data, open source, open hardware etc).</p>
+                        <p>All our civic or environmental project are completely open because we look for impact more than profit.</p>
+                    </div>
+                    <div class="pillar">
+                        <h3>Attitude</h3>
+                        <p>We live to <strong>learn</strong> new things, every day. Learning means always taking the unknown path. It is the only way to innovate.</p>
+                        <p>We try to innovate in all we do, not only code or design but also in organisation or in the way we hire.</p>
+                        <p>We <strong>prototype fast</strong> because we start working as hackers, until we prove our solution works, and only then we become engineers to <strong>cope with all the "impossibles"</strong>.</p>
+                        <p>It takes <strong>grit</strong> and <strong>boldness</strong> to innovate and we  focus on impossible projects to prove they aren’t.</p>
+                    </div>
                 </div>
             </div>
             <div id="projects" class="page what">
                 <ul>
                     <li>
                         <h3>6element</h3>
-                        <img src="https://o.twimg.com/2/proxy.jpg?t=HBhwaHR0cHM6Ly9kMjYyaWxiNTFobHR4MC5jbG91ZGZyb250Lm5ldC9tYXgvODAwL2Rlc2F0L211bHRpcGx5L3llbGxvdy9vdmVybGF5L3llbGxvdy8xKlNudVdoWmlDRXVoa0VzVGNlTHFpZGcuanBlZxTABxTaBAAWABIA&s=Qi2lwyzCbtf1l5GpQR7ArpmoxXnbBvU7oZyXclCt9IU">
-                        <p>6element is a project aiming at reducing waste arriving in recycling centers</p>
+                        <img src="images/6element.jpg">
+                        <p>6element is a project aiming at reducing waste arriving in recycling centers. It can be seen as an interface between citizens and recycling centers. We invented <strong>a sensor</strong> that monitors in real time both fluxes and level of each bins.</p>
+                        <p>Then a <strong>predictive model</strong> can tell you when you should go to which recycling center.The information is provided through a mobile app that crowsources waste position in space and time so that <strong>reusers</strong> can take advantage of them.</p>
                     </li>
                     <li>
-                        <h3>6element</h3>
-                        <img src="https://o.twimg.com/2/proxy.jpg?t=HBhwaHR0cHM6Ly9kMjYyaWxiNTFobHR4MC5jbG91ZGZyb250Lm5ldC9tYXgvODAwL2Rlc2F0L211bHRpcGx5L3llbGxvdy9vdmVybGF5L3llbGxvdy8xKlNudVdoWmlDRXVoa0VzVGNlTHFpZGcuanBlZxTABxTaBAAWABIA&s=Qi2lwyzCbtf1l5GpQR7ArpmoxXnbBvU7oZyXclCt9IU">
-                        <p>6element is a project aiming at reducing waste arriving in recycling centers</p>
-                    </li>
-                    <li>
-                        <h3>6element</h3>
-                        <img src="https://o.twimg.com/2/proxy.jpg?t=HBhwaHR0cHM6Ly9kMjYyaWxiNTFobHR4MC5jbG91ZGZyb250Lm5ldC9tYXgvODAwL2Rlc2F0L211bHRpcGx5L3llbGxvdy9vdmVybGF5L3llbGxvdy8xKlNudVdoWmlDRXVoa0VzVGNlTHFpZGcuanBlZxTABxTaBAAWABIA&s=Qi2lwyzCbtf1l5GpQR7ArpmoxXnbBvU7oZyXclCt9IU">
-                        <p>6element is a project aiming at reducing waste arriving in recycling centers</p>
-                    </li>
-                    <li>
-                        <h3>6element</h3>
-                        <img src="https://o.twimg.com/2/proxy.jpg?t=HBhwaHR0cHM6Ly9kMjYyaWxiNTFobHR4MC5jbG91ZGZyb250Lm5ldC9tYXgvODAwL2Rlc2F0L211bHRpcGx5L3llbGxvdy9vdmVybGF5L3llbGxvdy8xKlNudVdoWmlDRXVoa0VzVGNlTHFpZGcuanBlZxTABxTaBAAWABIA&s=Qi2lwyzCbtf1l5GpQR7ArpmoxXnbBvU7oZyXclCt9IU">
-                        <p>6element is a project aiming at reducing waste arriving in recycling centers</p>
+                        <h3>Bordeaux 3d</h3>
+                        <img src="images/bordeaux3d.jpg">
+                        <p>We wanted to make it easy to represent and interact with the city. We created a technology enbaling a precise model of a <strong>whole city accessible through the browser</strong>. Nothing to install, no loading time.</p>
+                        <p>Not only this gives a playground to <strong>visualize infrastructures</strong> like transports in real time, but it is also the best way for the city operator to <strong>communicate with the citizens</strong> so that we get the city we decide.</p>
                     </li>
                 </ul>
             </div>
@@ -356,7 +376,7 @@
         </main>
         
         <footer>
-        
+            <p>Contact us on twitter or at contact@ants.builders</p>
         </footer> 
     </body>
 </html>
