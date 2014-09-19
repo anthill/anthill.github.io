@@ -2,7 +2,6 @@
 
 _site/
 
-app.js
 node_modules
 
 Gemfile.lock
