@@ -5,7 +5,6 @@
         <meta charset="utf-8">
         <meta name="description" content="ANTS, collective intelligence">
 		<link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway">
         <style data-better-defaults>
             *{
                 background-repeat: no-repeat;
@@ -49,180 +48,335 @@
                 display: table-cell;
             }
 
+            @font-face {
+              font-family: 'Raleway';
+              font-style: normal;
+              font-weight: 400;
+              src: local('Raleway'), url(./fonts/Raleway-Regular.ttf) format('ttf');
+              unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+            }
+            /* latin */
+            @font-face {
+              font-family: 'Raleway-Bold';
+              font-style: normal;
+              font-weight: 700;
+              src: local('Raleway Bold'), local('Raleway-Bold'), url(./fonts/Raleway-Bold.ttf) format('ttf');
+              unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+            }
+            /* latin */
+            @font-face {
+              font-family: 'Raleway-Heavy';
+              font-style: normal;
+              font-weight: 900;
+              src: local('Raleway Heavy'), local('Raleway-Heavy'), url(./fonts/Raleway-Heavy.ttf) format('ttf');
+              unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+            }
+
         </style>
 
 
-        <link rel="stylesheet" href="stylesheets/stylesheet.css">
-
-
         <style>
-     
-            
-            header{
-                height: 210px;
-                width: 100%;
-                background: linear-gradient(to bottom, hsl(0, 0%, 30%), hsl(0, 0%, 13%));
-                padding: 20px 25%;
-                position: relative; /* for ant image */
-                
+            body{
+                background: white;
+                font-family: 'Raleway', sans-serif;
             }
-            
-            
-            header #ants_banner {
-              display: block;
-              position: absolute;
-              bottom: 0;
-              right: 0;
-            }
-            
-            strong{
+
+            a, a:visited{ 
+                color: currentColor;
                 text-decoration: none;
-                color: #D51A11;
-                text-shadow: none;
+            }
+            
+            main{
+                width: 100%;
             }
 
-            a.top-link{
-                display: inline;
-                padding: 10px;
-                color: #FFF;
-                background: rgb(213,26,17);
-                font-weight: 700;
-                font-size: 0.7em;
-                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-                border-bottom-left-radius: 3px;
-                border-bottom-right-radius: 3px;
-
+            main header h1{
                 position: absolute;
-                top: 0;
-
-                left: 42%;
-                right: 42%;
-                text-align: center;
+                top: 60%;
+                left: 27%;
+            }
+            
+            nav{
+                position: fixed;
+                width: 100%;
+                height: 3em;
+                padding: 1em;
+                background-color: rgb(82,82,82);
+                color: white;
+                border-bottom: 1px solid black;
+                z-index: 1;
+                line-height: 1em;
+            }
+            
+            nav span{
+                float: left;
+            }
+            
+            nav ul{
+                float: right;
+            }
+            
+            nav ul li{
+                display: inline-block;
+                margin: 0 1em;
+            }
+            
+            header img{
+                display: block;
+                margin: 0 auto;
+            }
+            span.ants{
+                font-size: 1.4rem;
+                font-family: 'Raleway-Heavy', sans-serif;
+                margin: 0 10px;
+            }
+            
+            .page{
+                display: block;
                 
-                z-index: 2;
+                width: 100%;
+                min-height: 50em; /* for older browser that do not understand the vh unit */
+                min-height: 100vh;
+                
+                /* border: 1px solid black; */ /* for debugging purposes to be sure the page takes a full screen */
+            }
+            
+            .page h1{
+                font-size: 3rem;
+                color: rgb(180,180,180);
+                text-align: center;
+            }
+            
+            .page#about{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.3rem;
+                color: rgb(83,83,83);
+                text-align: center;
             }
 
-            
-            
-            ul.people li{
-                height: 200px;
-            }
-            ul.people li img{
-                height: 150px;
+            .page strong{
+                font-family: 'Raleway-Bold', sans-serif;
             }
             
-            ul.people li > *{
+            .why-how{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            
+            .why-how > div{
+                background-color: white;
+                
+                font-size: 0.8em;
+                width: 35%;
+                padding: 1em;
+
+            }
+
+            footer {
+                margin-left: auto;
+                margin-right: auto;
+                background: #f2f2f2;
+                height: 3em;
+                padding: 1em;
+                z-index: 1;
+            }
+
+            footer p{
+                text-align: center;
+                margin: 0 1em;
+            }
+
+
+            .why-how div.pillar{
+                margin: 30px;
+                border-top: 1px solid #d6d6d6;
+            }
+            
+            .what ul{
+                /*display: flex;*/
+                text-align: center;
+            }
+            .what ul li{
+                display: inline-block;
+                
+                max-width: 25em;
+                padding: 1em;
+                margin: 1em 3em;
+                
+                background-color: white;
+            }
+            .what ul li img{
+                display: inline-block;
+                
+                width: 100%;
+            }
+            
+            
+            
+            .who ul.people{
+                width: 40em;
+                margin: 0 auto;
+            }
+            .who ul.people li{
+                clear:both;
+                height: 10em;
+            }
+            .who ul.people li{
+            }
+            .who ul.people li img{
+                max-width: 9em;
+                float: left;
+                margin-right: 1em;
+            }
+            
+            .who ul.people li > *{
                 vertical-align: top;
             }
-            ul.people li > div{
+            .who ul.people li > div{
                 padding-left: 1em;
             }
-            ul.people li > div .name{
+            .who ul.people li > div .name{
                 display: block;
                 font-weight: bold;
                 font-size: 0.9em;
             }
-            ul.people li > div .bio{
+            .who ul.people li > div .bio{
                 font-size: 0.7em;
             }
-			.social{
-			display:inline-block;
-			 float: right;
-                            }
-            .copyright{
-       
-            }
-            .contact{
-      
-            }
-            
-            a.same { color: inherit;}
-          
             
         </style>
 
-        <title>ANTS, Collective Intelligence</title>
-
+        <title>ANTS, collective intelligence</title>
+        
+        <script defer src="js/polyfills/harmony-collections.js"></script>
+        <script defer src="app.js"></script>
     </head>
 
     <body>
-
-        <!-- HEADER -->
-        <!--
-many classes
-such HTML complexity
-wow
-very need to simplify
-super soon
--->
         <header>
-            <a class="top-link" href="https://github.com/anthill/">View Projects</a>
-            <br/>
-            <h1 id="project_title">ANTS</h1>
-            <h2 id="project_tagline">Collective Intelligence</h2>
-            <img id="ants_banner" src="images/ants_banner.png" />
+            <nav>
+                <span class="ants">ANTS</span> <span>Collective intelligence</span>
+                <ul>
+                    <li><a href="#about">About</a>
+                    <li><a href="#projects">Projects</a>
+                    <li><a href="#team">Team</a>
+                    <li>Blog
+                </ul>
+            </nav>
         </header>
+        <main>
+            <header class="page">
+                <img hidden src="images/ant-colony-fallback.png">
+                <h1>Collective Intelligence</h1>
+            </header>
+            <div id="about" class="page">
+                <div class="why">
+                    <p>Complexity is what stops us from being creative.</p>
+                    <p>We use technology to <strong>make things simple</strong> in order to act and innovate.</p>
 
-        <div id="main_content_wrap" class="outer">
-            <section id="main_content" class="inner">
+                    <p>We do it <strong>openly</strong>,</p>
 
-                <div class="important">ANTS is an <strong>open-innovation lab</strong> powered by people ranging from data-scientists, hackers and makers to artists or thinkers.</div>
+                    <p>because we believe best solutions will emerge from the <strong>crowd</strong>.</p>
 
-                <br />
-                <h6>People</h6>
-                <ul class="people table-layout">
+                    <p>That’s what we call <strong>collective intelligence</strong>.</p>
+                </div>
+            </div>
+            <div class="page why-how">
+                <div>
+                    <div class="pillar">
+                        <h3>Interface</h3>
+                        <p>Most <strong>big things do work</strong> in our daily urban life. Train are scheduled, garbage is being collected, we can pay taxes on internet.</p>
+
+                        <p>What often makes a bad service, or a perceived bad infrastructure is the interface with the users. The <strong>interface is not a small thing</strong>.</p>
+
+                        <p>Solving the UX is a matter of keeping in touch with the citizens or the customers and thus, small things can have a <strong>huge impact</strong>.</p>
+                    </div>
+                    <div class="pillar">
+                        <h3>Data</h3>
+                        <p>Data helps us understand and predict behaviours. Especially because we use <strong>contextual data</strong>. We predict behaviors from the context and not from personnal information. This is efficient and ensures <strong>privacy by design</strong>.</p>
+                        <p>Data is also the best way to <strong>challenge conventional</strong> thinking and status quo.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="pillar">
+                        <h3>Openness</h3>
+                        <p>We crave for <strong>transparency</strong> because it is the only way to build <strong>trust</strong>.</p>
+                        <p>We use and produce <strong>open knowledge</strong> in general (open data, open source, open hardware etc).</p>
+                        <p>All our civic or environmental project are completely open because we look for impact more than profit.</p>
+                    </div>
+                    <div class="pillar">
+                        <h3>Attitude</h3>
+                        <p>We live to <strong>learn</strong> new things, every day. Learning means always taking the unknown path. It is the only way to innovate.</p>
+                        <p>We try to innovate in all we do, not only code or design but also in organisation or in the way we hire.</p>
+                        <p>We <strong>prototype fast</strong> because we start working as hackers, until we prove our solution works, and only then we become engineers to <strong>cope with all the "impossibles"</strong>.</p>
+                        <p>It takes <strong>grit</strong> and <strong>boldness</strong> to innovate and we  focus on impossible projects to prove they aren’t.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="projects" class="page what">
+                <ul>
+                    <li>
+                        <h3>6element</h3>
+                        <img src="images/6element.jpg">
+                        <p>6element is a project aiming at reducing waste arriving in recycling centers. It can be seen as an interface between citizens and recycling centers. We invented <strong>a sensor</strong> that monitors in real time both fluxes and level of each bins.</p>
+                        <p>Then a <strong>predictive model</strong> can tell you when you should go to which recycling center.The information is provided through a mobile app that crowsources waste position in space and time so that <strong>reusers</strong> can take advantage of them.</p>
+                    </li>
+                    <li>
+                        <h3>Bordeaux 3d</h3>
+                        <img src="images/bordeaux3d.jpg">
+                        <p>We wanted to make it easy to represent and interact with the city. We created a technology enbaling a precise model of a <strong>whole city accessible through the browser</strong>. Nothing to install, no loading time.</p>
+                        <p>Not only this gives a playground to <strong>visualize infrastructures</strong> like transports in real time, but it is also the best way for the city operator to <strong>communicate with the citizens</strong> so that we get the city we decide.</p>
+                    </li>
+                </ul>
+            </div>
+            <div id="team" class="page who">
+                <ul class="people">
                     <li>
                         <img src="https://avatars.githubusercontent.com/u/371303?">
                         <div>
-                            <span class="name">Alexandre Vallette <div class="social"><a href="https://github.com/vallettea"><i class="fa fa-github-square"></i></a> <a href="https://twitter.com/vallettea"><i class="fa fa-twitter"></i></a></div></span>
+                            <span class="name">Alexandre Vallette <div class="social">
+                            <a href="https://github.com/vallettea"><i class="fa fa-github-square"></i></a>
+                            <a href="https://twitter.com/vallettea"><i class="fa fa-twitter"></i></a></div></span>
                             <span class="bio"><strong>Data-scientist</strong>, co-founder of <a class="same" href="http://snips.net/">SNIPS</a>, his passion for machine-learning applied to geographical data and networks comes from his Phd in chaos theory. Open-data enthusiast, he is committed to show how <strong>open-innovation</strong> can lead to a better governance and economy.</span>
 							
                         </div>
+                    </li>
                     <li>
                         <img src="https://avatars.githubusercontent.com/u/165829?">
                         <div>
-                            <span class="name">David Bruant <div class="social"><a href="https://github.com/DavidBruant"><i class="fa fa-github-square"></i></a> <a href="https://twitter.com/DavidBruant"><i class="fa fa-twitter"></i></a></div></span>
+                            <span class="name">David Bruant <div class="social">
+                            <a href="https://github.com/DavidBruant"><i class="fa fa-github-square"></i></a>
+                            <a href="https://twitter.com/DavidBruant"><i class="fa fa-twitter"></i></a></div></span>
                             <span class="bio">David is a leader in <strong>front-end </strong>development, especially in javascript and standards specification. Contributor to Mozilla, he believes deeply in open web and open source. He teaches coding to young children and <strong>datavisualization</strong> in design schools.</span>
                         </div>
+                    </li>
                     <li>
                         <img src="https://avatars.githubusercontent.com/u/7767926?">
                         <div>
-                            <span class="name">David Schwandt <div class="social"><a href="https://github.com/CIaviCI"><i class="fa fa-github-square"></i></a></div></span>
+                            <span class="name">David Schwandt <div class="social">
+                            <a href="https://github.com/CIaviCI"><i class="fa fa-github-square"></i></a></div></span>
                             <span class="bio">Started hacking his TI-92 at the age of 13 to measure and visualize distances by ultrasound. PhD in theoretical physics by designing <strong>High Performance Computing</strong> algorithms to discover exotic quantum matter. Passionated about the sheer possibilities of <strong>open hardware</strong> combined with low-cost sensors.</span>
                         </div>                        
+                    </li>
+                    <li>
+                        <img src="https://avatars2.githubusercontent.com/u/8417814?">
+                        <div>
+                            <span class="name">Romain Crestey<div class="social">
+                            <a href="https://github.com/iOiurson"><i class="fa fa-github-square"></i></a>
+                            <a href="https://twitter.com/OursonEnPeluche"><i class="fa fa-twitter"></i></a></div></span>
+                            <span class="bio">Musician, drawer, gamer, engineer, Romain is a creative geek, convinced that the best technology is half useless without a well-thought <strong>design</strong>. With a growing UX interest, he works on developing <strong>ergonomic</strong> solutions to help give the users back the control on their data.</span>
+                        </div>                        
+                    </li>
                 </ul>
-
-                <div class="important">We all share one belief: cutting edge technology should address<br /><strong>civic</strong> and <strong>environmental</strong> challenges.</div><br />
-                <p class="center">Check out <a href="https://github.com/anthill/">our projects</a> to learn what we do.</p>
-
-            </section>
-        </div>
-
-        <!-- FOOTER  -->
-        <div id="footer_wrap" class="outer">
-            <footer class="inner">
-               <p class="contact">
-                <i class="fa fa-envelope"></i> <a href="mailto:contact@ants.builders">contact@ants.builders</a>
-                </p>
-                <p class="copyright">ANTS is open to everyone<br>
-                    Copyright &copy; 2014, ANTS<br>
-                    <a href="http://opensource.org/licenses/MIT">MIT License</a>
-                </p>
             
-
-                <!--
-
-Uncomment when we're ready. No need to mislead people.
-
-<a href="https://twitter.com/ants" class="twitter-follow-button" data-show-count="false">Follow @ants</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-&nbsp; <iframe src="http://ghbtns.com/github-btn.html?user=ants&repo=ants&type=watch&count=true&size=small"
-allowtransparency="true" frameborder="0" scrolling="0" width="120" height="21"></iframe>
-
--->
-
-            </footer>
-        </div>
-
+            </div>
+        </main>
+        
+        <footer>
+            <p>Contact us on twitter or at contact@ants.builders</p>
+        </footer> 
     </body>
 </html>
