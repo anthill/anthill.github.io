@@ -24,6 +24,7 @@
             html, body{
                 padding: 0;
                 margin: 0;
+                font-weight:lighter;
             }
 
             /* For non-documents */
@@ -63,6 +64,26 @@
                 color: currentColor;
                 text-decoration: none;
             }
+
+            h2{
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-align-items: center;
+                -webkit-justify-content: center;
+                align-items: center;
+                justify-content: center;
+                font-weight: lighter;
+                font-size: 2.5em;
+                padding: 50px;
+                margin: 0px;
+            }
+
+            h3{
+                font-weight: 600;
+            }
             
             main{
                 width: 100%;
@@ -73,9 +94,9 @@
                 width: 100%;
                 height: 3em;
                 padding: 1em;
-                background-color: rgb(82,82,82);
+                background-color: rgba(77, 77, 77, 0.95);
                 color: white;
-                border-bottom: 1px solid black;
+                /*border-bottom: 1px solid black;*/
                 z-index: 1;
                 line-height: 1em;
             }
@@ -91,16 +112,26 @@
             nav ul li{
                 display: inline-block;
                 margin: 0 1em;
+                height: 3em;
+            }
+
+            nav ul li:hover{
+                background-color: #DBB460;
             }
             
             header img{
                 display: block;
                 margin: 0 auto;
             }
+
             span.ants{
                 font-size: 1.4rem;
                 font-weight: 900;
                 margin: 0 10px;
+                color: #DBB460;
+            }
+
+            span.subants{
             }
             
             .page{
@@ -110,32 +141,72 @@
                 min-height: 50em; /* for older browser that do not understand the vh unit */
                 min-height: 100vh;
                 
-                /* border: 1px solid black; */ /* for debugging purposes to be sure the page takes a full screen */
+                /*border: 1px solid black;*/ /* for debugging purposes to be sure the page takes a full screen */
             }
             
             .page#about{
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
                 display: flex;
                 font-weight: 700;
+                -webkit-align-items: center;
+                -webkit-justify-content: center;
                 align-items: center;
                 justify-content: center;
                 font-size: 1.3rem;
+                font-weight: lighter;
                 color: rgb(83,83,83);
                 text-align: center;
                 background-image: url("images/crowd.jpg");
+                position: relative;
             }
 
             .page#about .highlight {
+                font-weight: lighter;
                 font-size: 2.3rem;
                 color: white;
+                width: 100%;
+                padding: 40px;
+                background-color: rgba(77, 77, 77, 0.4);
             }
 
             .page strong{
-                font-weight: 900;
+                font-weight: 700;
+                color: #DBB460;
+            }
+
+            .photo-credits{
+                margin: 2px;
+                color: rgba(255,255,255,0.6);
+                font-size: 0.5em;
+                display: block;
+                position: absolute;
+                bottom: 0px;
+                right: 0px;
+            }
+
+            /*.highlight strong{
+                font-size: 1.2em;
+                font-weight: lighter;
+                text-transform: uppercase;
+            }*/
+
+            .why{
+                width: 100%;
+                margin-top: 100px;
             }
             
             .why-how{
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
                 display: flex;
+                -webkit-flex-direction: row;
                 flex-direction: row;
+                -webkit-justify-content: space-around;
                 justify-content: space-around;
             }
             
@@ -145,14 +216,35 @@
                 font-size: 0.9em;
                 width: 40%;
                 padding: 1em;
-
             }
 
-
-
             .why-how div.pillar{
+                height: 50%;
                 margin: 30px;
+                margin-top: 25%;
+                margin-bottom: 25%;
                 border-top: 1px solid #d6d6d6;
+                text-align: justify;
+                vertical-align: top;
+            }
+
+            /*.beliefs{
+                display: inline-block;
+            }*/
+
+            .what{
+                background-color: rgb(77, 77, 77);
+                color: white;
+
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-flex-direction: row;
+                flex-direction: row;
+                -webkit-justify-content: space-around;
+                justify-content: space-around;
             }
             
             .what ul{
@@ -164,9 +256,12 @@
                 
                 max-width: 25em;
                 padding: 1em;
-                margin: 1em 3em;
+                margin: 1.5em 1.5em;
                 
-                background-color: white;
+                background-color: rgb(77, 77, 77);
+
+                vertical-align: top;
+                text-align: justify;
             }
             .what ul li img{
                 display: inline-block;
@@ -174,11 +269,23 @@
                 width: 100%;
             }
             
-            
+            .who{
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-flex-direction: row;
+                flex-direction: row;
+                -webkit-justify-content: space-around;
+                justify-content: space-around;
+            }
             
             .who ul.people{
                 width: 40em;
                 margin: 0 auto;
+                margin-top: 8%;
+                margin-bottom: 8%;
             }
             .who ul.people li{
                 clear:both;
@@ -228,8 +335,12 @@
             .terminal {
                 position: absolute;
                 top: 60%;
-                left: 27%;
-                font-size: 2em;
+                left: 1%;
+                font-size: 1em;
+                width: 35%;
+                height: 40%;
+                background-color: rgba(255, 255, 255, 0.5);
+                /*border: 1px solid rgba(0, 0, 0, 0.05);*/
             }
 
             @keyframes blink {
@@ -258,10 +369,12 @@
             }
             .prompt, .command {
               color: rgb(83,83,83);
-              text-shadow: 0 0 3px rgba(0,100,0,50);
+              text-shadow: 0 0 3px #DBB460;
+              /*text-shadow: 0 0 3px rgba(0,100,0,50);*/
             }
             .cursor {
-              background: #0c0;
+              /*background: #0c0;*/
+              background: #DBB460;
               animation: blink 1s linear infinite;
               -webkit-animation: blink 1s infinite linear;
               -ms-animation: blink 1s infinite linear;
@@ -270,7 +383,8 @@
               -moz-box-shadow: 0 0 5px rgba(0,100,0,50);
               -ms-box-shadow: 0 0 5px rgba(0,100,0,50);
               -o-box-shadow: 0 0 5px rgba(0,100,0,50);
-              box-shadow: 0 0 5px rgba(0,100,0,50);
+              /*box-shadow: 0 0 5px rgba(0,100,0,50);*/
+              box-shadow: 0 0 5px #DBB460;
             }
             
         </style>
@@ -317,9 +431,10 @@
     <body>
         <header>
             <nav>
-                <span class="ants">ANTS</span> <span>Open Innovation Lab</span>
+                <span class="ants">ANTS</span> <span class='subants'>Open Innovation Lab</span>
                 <ul>
                     <li><a href="#about">About</a>
+                    <li><a href="#spirit">Spirit</a>
                     <li><a href="#projects">Projects</a>
                     <li><a href="#team">Team</a>
                     <li>Blog
@@ -336,7 +451,7 @@
             <div id="about" class="page">
                 <div class="why">
                     <p>Complexity is what stops people from being <strong>creative</strong>.</p>
-                    <p>We use technology to <strong>make things simple</strong> so that focus remains on ideas.</p>
+                    <p>We use <strong>technology</strong> to make things <strong>simple</strong> so that focus remains on <strong>ideas</strong>.</p>
 
                     <p>We do it <strong>openly</strong>,</p>
 
@@ -345,8 +460,10 @@
                     <br/><br/>
                     <p class="highlight">That’s what we call <strong>collective intelligence</strong>.</p>
                 </div>
+                <div class='photo-credits'>Crowd in Cathedral Square, Christchurch, photographed circa 1920-5 by an unidentified photographer for The Press newspaper. From Wikipedia Commons</div>
             </div>
-            <div class="page why-how">
+            <div id="spirit" class="page why-how">
+                <h2>What we believe in</h2>
                 <div>
                     <div class="pillar">
                         <h3>Interface</h3>
@@ -385,7 +502,7 @@
                     <li>
                         <h3>6element</h3>
                         <img src="images/6element.jpg">
-                        <p>6element is a project aiming at reducing waste arriving in recycling centers. It can be seen as an interface between citizens and recycling centers. We invented <strong>a sensor</strong> that monitors both, customer flows and filling levels for every bin - in real time.</p>
+                        <p>6element is a project aiming at reducing waste arriving in recycling centers. It can be seen as an interface between citizens and recycling centers. We designed <strong>a sensor</strong> that monitors both customer flows and filling levels for every bin - in real time.</p>
                         <p>Then a <strong>predictive model</strong> can tell you when you should go to which recycling center. The information is provided through a mobile app that crowdsources waste position in space and time so that <strong>reusers</strong> can take advantage of it.</p>
                     </li>
                     <li>
@@ -395,8 +512,10 @@
                         <p>Not only this gives a playground to <strong>visualize infrastructures</strong> like transports in real time, but it is also the best way for the city operator to <strong>communicate with the citizens</strong> and adapt the cityscape to their needs and desires.</p>
                     </li>
                 </ul>
+                <h2>What we work on</h2>
             </div>
             <div id="team" class="page who">
+                <h2>What we look like</h2>
                 <ul class="people">
                     <li>
                         <img src="https://avatars.githubusercontent.com/u/371303?">
