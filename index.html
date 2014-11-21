@@ -115,11 +115,18 @@
             
             .page#about{
                 display: flex;
+                font-weight: 700;
                 align-items: center;
                 justify-content: center;
                 font-size: 1.3rem;
                 color: rgb(83,83,83);
                 text-align: center;
+                background-image: url("images/crowd.jpg");
+            }
+
+            .page#about .highlight {
+                font-size: 2.3rem;
+                color: white;
             }
 
             .page strong{
@@ -134,9 +141,9 @@
             
             .why-how > div{
                 background-color: white;
-                
-                font-size: 0.8em;
-                width: 35%;
+                font-weight: 500;
+                font-size: 0.9em;
+                width: 40%;
                 padding: 1em;
 
             }
@@ -250,7 +257,7 @@
               100% { opacity: 1; }
             }
             .prompt, .command {
-              color: #0c0;
+              color: rgb(83,83,83);
               text-shadow: 0 0 3px rgba(0,100,0,50);
             }
             .cursor {
@@ -334,8 +341,9 @@
                     <p>We do it <strong>openly</strong>,</p>
 
                     <p>because we believe <strong>crowdsourcing</strong> spurs innovation.</p>
-
-                    <p>That’s what we call <strong>collective intelligence</strong>.</p>
+                    <br/><br/>
+                    <br/><br/>
+                    <p class="highlight">That’s what we call <strong>collective intelligence</strong>.</p>
                 </div>
             </div>
             <div class="page why-how">
