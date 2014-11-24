@@ -58,6 +58,7 @@
             body{
                 background: white;
                 font-family: 'Raleway', sans-serif;
+                color: rgb(83,83,83);
             }
 
             a, a:visited{ 
@@ -72,17 +73,18 @@
                 display: -webkit-flex;
                 display: flex;
                 -webkit-align-items: center;
-                -webkit-justify-content: center;
                 align-items: center;
-                justify-content: center;
+
                 font-weight: lighter;
                 font-size: 3em;
-                padding: 50px;
-                margin: 0px;
+                padding: 0 1em;
+                margin: auto 0;
+                color: black;
             }
 
             h3{
                 font-weight: 600;
+                color: black;
             }
             
             main{
@@ -132,12 +134,15 @@
             }
 
             span.subants{
+                
             }
             
             .page{
                 display: block;
+                position: relative;
                 
                 width: 100%;
+                padding: 3em 0 0 0;
                 min-height: 50em; /* for older browser that do not understand the vh unit */
                 min-height: 100vh;
                 
@@ -156,10 +161,9 @@
                 justify-content: center;
                 font-size: 1.3rem;
                 font-weight: lighter;
-                color: rgb(83,83,83);
+                /*color: rgb(83,83,83);*/
                 text-align: center;
                 background-image: url("images/crowd.jpg");
-                position: relative;
             }
 
             .page#about .highlight {
@@ -205,8 +209,8 @@
                 display: flex;
                 -webkit-flex-direction: row;
                 flex-direction: row;
-                -webkit-justify-content: space-around;
-                justify-content: space-around;
+                -webkit-justify-content: flex-start;
+                justify-content: flex-start;
             }
             
             .why-how > div{
@@ -214,14 +218,12 @@
                 font-weight: 500;
                 font-size: 0.9em;
                 width: 40%;
-                padding: 1em;
+                padding: 1.5em;
             }
 
             .why-how div.pillar{
                 height: 50%;
-                margin: 30px;
-                margin-top: 25%;
-                margin-bottom: 25%;
+                margin: 1.5em 30px;
                 border-top: 1px solid #d6d6d6;
                 text-align: justify;
                 vertical-align: top;
@@ -243,13 +245,22 @@
                 display: flex;
                 -webkit-flex-direction: row;
                 flex-direction: row;
-                -webkit-justify-content: space-around;
-                justify-content: space-around;
+                -webkit-justify-content: flex-end;
+                justify-content: flex-end;
+            }
+
+            .what h2{
+                color: white;
+            }
+
+            .what h3{
+                color: white;
             }
             
             .what ul{
                 /*display: flex;*/
                 text-align: center;
+                margin-right: 5em;
             }
             .what ul li{
                 display: inline-block;
@@ -257,7 +268,7 @@
                 max-width: 25em;
                 padding: 1em;
                 /*margin: 1.5em 1.5em;*/
-                margin: 20% 0 20% 0;
+                margin: auto 0;
                 
                 background-color: rgb(77, 77, 77);
 
@@ -278,15 +289,18 @@
                 display: flex;
                 -webkit-flex-direction: row;
                 flex-direction: row;
-                -webkit-justify-content: space-around;
-                justify-content: space-around;
+                -webkit-justify-content: flex-start;
+                justify-content: flex-start;
             }
             
             .who ul.people{
-                width: 40em;
-                margin: 0 auto;
-                margin-top: 8%;
-                margin-bottom: 8%;
+                /*width: 40em;*/
+                /*padding: 3% 0 0 0;*/
+                /*margin: 0 auto;*/
+                margin: 0 10em;
+
+                width: 40%;
+                padding: 1.5em;
             }
             .who ul.people li{
                 clear:both;
@@ -310,6 +324,7 @@
                 display: block;
                 font-weight: bold;
                 font-size: 0.9em;
+                color: black;
             }
             .who ul.people li > div .bio{
                 font-size: 0.7em;
@@ -457,8 +472,7 @@
                     <p>We do it <strong>openly</strong>,</p>
 
                     <p>because we believe <strong>crowdsourcing</strong> spurs innovation.</p>
-                    <br/><br/>
-                    <br/><br/>
+                    <br/>
                     <p class="highlight">That’s what we call <strong>collective intelligence</strong>.</p>
                 </div>
                 <div class='photo-credits'>Crowd in Cathedral Square, Christchurch, photographed circa 1920-5 by an unidentified photographer for The Press newspaper. From Wikipedia Commons</div>
@@ -516,7 +530,7 @@
                 <h2>What we work on</h2>
             </div>
             <div id="team" class="page who">
-                <h2>What we look like</h2>
+                <h2>What we <br/> look like</h2>
                 <ul class="people">
                     <li>
                         <img src="https://avatars.githubusercontent.com/u/371303?">
