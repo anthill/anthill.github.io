@@ -1,22 +1,22 @@
 {
-    "name": "anthill.github.io",
-    "version": "0.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/anthill/anthill.github.io.git"
-    },
-    "author": "ANTS",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/anthill/anthill.github.io/issues"
-    },
-    "dependencies" : {
-        "AntColony": "https://github.com/anthill/AntColony/archive/v1.1.8.tar.gz",
-        "jquery" : "~1.11.1"
-    }
+  "name": "anthill.github.io",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/anthill/anthill.github.io.git"
+  },
+  "author": "ANTS",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anthill/anthill.github.io/issues"
+  },
+  "dependencies": {
+    "AntColony": "https://github.com/anthill/AntColony/archive/v1.1.8.tar.gz",
+    "jquery": "^1.11.1"
+  }
 }
