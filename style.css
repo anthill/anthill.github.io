@@ -1,0 +1,361 @@
+/*General*/
+
+body{
+	background: white;
+	font-family: 'Raleway', sans-serif;
+	color: rgb(83,83,83);
+}
+
+
+
+main{
+	width: 100%;
+}
+
+/*Links and titles*/
+
+a, a:visited{ 
+	color: currentColor;
+	text-decoration: none;
+}
+
+h2{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+
+	font-weight: lighter;
+	font-size: 3em;
+	padding: 0 1em;
+	margin: auto 0;
+	color: black;
+}
+
+h3{
+	font-weight: 600;
+	color: black;
+}
+
+/*Header and Navigation*/
+
+nav{
+	position: fixed;
+	width: 100%;
+	height: 3em;
+	padding: 1em;
+	background-color: rgba(77, 77, 77, 0.95);
+	color: white;
+	/*border-bottom: 1px solid black;*/
+	z-index: 1;
+	line-height: 1em;
+}
+
+nav span{
+	float: left;
+}
+
+nav ul{
+	float: right;
+}
+
+nav ul li{
+	display: inline-block;
+	margin: 0 1em;
+	height: 3em;
+}
+
+nav ul li:hover{
+	background-color: #DBB460;
+}
+
+header img{
+	display: block;
+	margin: 0 auto;
+}
+
+span.ants{
+	font-size: 1.4rem;
+	font-weight: 900;
+	margin: 0 10px;
+	color: #DBB460;
+}
+
+span.subants{
+	
+}
+
+/*Pages*/
+
+.page{
+	display: block;
+	position: relative;
+	
+	width: 100%;
+	padding: 3em 0 0 0;
+	min-height: 50em; /* for older browser that do not understand the vh unit */
+	min-height: 100vh;
+	
+	/*border: 1px solid black;*/ /* for debugging purposes to be sure the page takes a full screen */
+}
+
+.page strong{
+	font-weight: 700;
+	color: #DBB460;
+}
+
+/*Page About*/
+
+.page#about{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-webkit-justify-content: center;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.3rem;
+	font-weight: lighter;
+	/*color: rgb(83,83,83);*/
+	text-align: center;
+	background-image: url("images/crowd.jpg");
+}
+
+.page#about .highlight {
+	font-weight: 300;
+	font-size: 2.3rem;
+	color: white;
+	width: 100%;
+	padding: 40px;
+	background-color: rgba(77, 77, 77, 0.5);
+}
+
+
+
+.photo-credits{
+	margin: 2px;
+	color: rgba(255,255,255,0.6);
+	font-size: 0.5em;
+	display: block;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+
+/*Page Why*/
+
+.why{
+	width: 100%;
+	margin-top: 100px;
+}
+
+/*Page How*/
+
+.how{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	
+}
+
+.how > div{
+	background-color: white;
+	font-weight: 500;
+	font-size: 0.9em;
+	width: 40%;
+	padding: 1.5em;
+}
+
+.how div.pillar{
+	height: 50%;
+	margin: 1.5em 30px;
+	border-top: 1px solid #d6d6d6;
+	text-align: justify;
+	vertical-align: top;
+}
+
+@media screen and (max-width: 640px) {
+	.how{
+		-webkit-flex-direction: row;
+		flex-direction: row;
+		-webkit-justify-content: flex-start;
+		justify-content: flex-start;
+	}
+}
+
+/*Page What*/
+
+.what{
+	font-size: 0.9em;
+	background-color: rgb(77, 77, 77);
+	color: white;
+
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-justify-content: flex-end;
+	justify-content: flex-end;
+}
+
+.what h2{
+	color: white;
+}
+
+.what h3{
+	color: white;
+}
+
+.what ul{
+	text-align: center;
+	margin-right: 5em;
+}
+.what ul li{
+	display: inline-block;
+	
+	max-width: 25em;
+	padding: 1em;
+	margin: auto 0;
+	
+	background-color: rgb(77, 77, 77);
+
+	vertical-align: top;
+	text-align: justify;
+}
+.what ul li img{
+	display: inline-block;
+	
+	width: 100%;
+}
+
+/*Page Who*/
+
+.who{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
+}
+
+.who ul.people{
+	margin: 0 10em;
+
+	width: 40%;
+	padding: 1.5em;
+}
+.who ul.people li{
+	clear:both;
+	height: 10em;
+}
+.who ul.people li{
+}
+.who ul.people li img{
+	max-width: 9em;
+	float: left;
+	margin-right: 1em;
+}
+
+.who ul.people li > *{
+	vertical-align: top;
+}
+.who ul.people li > div{
+	padding-left: 1em;
+}
+.who ul.people li > div .name{
+	display: block;
+	font-weight: bold;
+	font-size: 0.9em;
+	color: black;
+}
+.who ul.people li > div .bio{
+	font-size: 0.7em;
+}
+
+/*Footer*/
+
+footer {
+	background: #f2f2f2;
+	padding: 1em;
+	z-index: 1;
+}
+
+footer p{
+	text-align: center;
+}
+
+/*Terminal*/
+
+.discrete{
+	font-size: 0.8em;
+	color: #BBB;
+}
+
+.terminal {
+	position: absolute;
+	top: 60%;
+	left: 1%;
+	font-size: 1em;
+	width: 35%;
+	height: 40%;
+	background-color: rgba(255, 255, 255, 0.5);
+	/*border: 1px solid rgba(0, 0, 0, 0.05);*/
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  25% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-webkit-keyframes blink {
+  0% { opacity: 1; }
+  25% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-ms-keyframes blink {
+  0% { opacity: 1; }
+  25% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes blink {
+  0% { opacity: 1; }
+  25% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.prompt, .command {
+  color: rgb(83,83,83);
+  text-shadow: 0 0 3px #DBB460;
+  /*text-shadow: 0 0 3px rgba(0,100,0,50);*/
+}
+.cursor {
+  /*background: #0c0;*/
+  background: #DBB460;
+  animation: blink 1s linear infinite;
+  -webkit-animation: blink 1s infinite linear;
+  -ms-animation: blink 1s infinite linear;
+  -moz-animation: blink 1s infinite linear;
+  -webkit-box-shadow: 0 0 5px rgba(0,100,0,50);
+  -moz-box-shadow: 0 0 5px rgba(0,100,0,50);
+  -ms-box-shadow: 0 0 5px rgba(0,100,0,50);
+  -o-box-shadow: 0 0 5px rgba(0,100,0,50);
+  /*box-shadow: 0 0 5px rgba(0,100,0,50);*/
+  box-shadow: 0 0 5px #DBB460;
+}
