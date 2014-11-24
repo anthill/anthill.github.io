@@ -358,13 +358,14 @@ footer p{
 		width: 100%;
 		height: 40%;
 		font-size: 0.7em;
+		padding: 0 15px;
 	}
 
 	nav ul li{
 		height: 1.5em;
-		margin: 0;
+		margin: 0 auto;
 		padding: 0;
-		width: 20%;
+		width: 60px;
 		height: 100%;
 		text-align: center;
 	}
@@ -417,6 +418,14 @@ footer p{
 		width: 100%;
 		margin: 15px auto;
 		padding: 1em;
+	}
+
+	.pillar p{
+		display: none;
+	}
+
+	.pillar:hover{
+		display: block;
 	}
 
 	.what{
