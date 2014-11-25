@@ -249,9 +249,9 @@ header img{
 }
 
 .who ul.people{
-	margin: 0 10em;
+	margin: 0 5em;
 
-	width: 40%;
+	width: 60%;
 	padding: 1.5em;
 }
 .who ul.people li{
@@ -358,7 +358,7 @@ footer p{
 
 /*Responsiveness*/
 
-@media all and (max-width: 60em) {
+@media all and (max-width: 65em) {
 	
 /*	nav{
 		height: 3.5em;
