@@ -142,6 +142,7 @@ header img{
 	/*color: rgb(83,83,83);*/
 	text-align: center;
 	background-image: url("images/crowd.jpg");
+	position: relative;
 }
 
 .page#about strong{
@@ -408,7 +409,7 @@ footer p{
 		-webkit-justify-content: flex-start;
 		justify-content: flex-start;
 		height: auto;
-		padding: 3.5em 0;
+		/*padding: 3em 0;*/
 	}
 
 	h2{
@@ -481,7 +482,7 @@ footer p{
 }
 
 
-@media all and (max-device-width: 30em) {
+@media all and (max-width: 30em) {
 	
 	nav{
 		height: 4em;
@@ -522,6 +523,10 @@ footer p{
 	}
 
 	.subants{
+		display: none;
+	}
+
+	#terminal{
 		display: none;
 	}
 
