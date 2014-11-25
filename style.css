@@ -481,7 +481,7 @@ footer p{
 }
 
 
-@media all and (max-width: 30em) {
+@media all and (max-device-width: 30em) {
 	
 	nav{
 		height: 4em;
