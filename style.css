@@ -346,7 +346,7 @@ footer p{
 
 /*Responsiveness*/
 
-@media all and (max-width: 640px) {
+@media all and (max-device-width: 640px) {
 	
 	nav{
 		height: 3.5em;
@@ -418,14 +418,6 @@ footer p{
 		width: 100%;
 		margin: 15px auto;
 		padding: 1em;
-	}
-
-	.pillar p{
-		display: none;
-	}
-
-	.pillar:hover{
-		display: block;
 	}
 
 	.what{
