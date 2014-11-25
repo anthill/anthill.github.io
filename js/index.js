@@ -1,6 +1,7 @@
 'use strict';
 var antColony = require('AntColony');
 var isCanvasAvailable = require('./canvas-detect.js');
+var terminal = require('./terminal.js')();
 
 
 if(isCanvasAvailable()){
