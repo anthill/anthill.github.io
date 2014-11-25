@@ -146,10 +146,11 @@ header img{
 }
 
 .page#about strong{
-	text-shadow: 0 0 10px #000;
+	color: #DBB460;
+	text-shadow: 0 0 10px #FFF;
 }
 
-.page#about .highlight {
+.page#about .highlight{
 	font-weight: 300;
 	font-size: 2.3rem;
 	color: white;
@@ -158,7 +159,9 @@ header img{
 	background-color: rgba(77, 77, 77, 0.5);
 }
 
-
+/*.page#about .highlight strong{
+	text-shadow: none;
+}*/
 
 .photo-credits{
 	margin: 2px;
