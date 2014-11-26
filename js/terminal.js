@@ -1,39 +1,74 @@
 'use strict';
-// var $ = require('jQuery');
 
 module.exports = function(){
 
 	var terminal = document.getElementById('terminal');
 
+	var suppr = 34;
+	var baseText = '<br><span class="prompt">ants&gt;&nbsp;</span><span class="cursor">&nbsp;</span>';
+
 	function preventEscape(event){
-		if (event.keyCode === 8)
-			event.preventDefault();
+
+		var key = parseInt(event.keyCode);
+
+		switch (key){
+			case 8: // backspace
+				event.preventDefault();
+				keyHandler(event);
+				break;
+			case 32: // return
+				event.preventDefault();
+				keyHandler(event);
+				break;
+			default:
+				break;
+		}
+		
 	}
 
 	function keyHandler(event){
+
 		var key = parseInt(event.keyCode);
 
 		console.log('key pressed ', key);
 
-		if( key === 8 ){ // 8 == backspace
-			var text = event.target.innerHTML;
-			console.log('text ', text.splice(text.length, -1));
-			event.target.innerHTML = text.splice(text.length, -1);
-		}
+		switch (key){
+			case 8: // backspace
+				var text = event.target.innerHTML;
+				event.target.innerHTML = text.slice(0, -1);
+				break;
+			case 13: // return
+				var content = event.target.innerHTML;
+				var length = content.length - suppr;
 
-		if( key === 13 ){ // 13 == return
-			event.preventDefault();
-			var text = event.target.innerHTML;
-			console.log('text ', text.splice(text.length, -1));
-			event.target.innerHTML = text.splice(text.length, -1);
-		}
-		
-		if( key === 32 ) // 32 == spacebar
-			event.preventDefault();
-		// if( key === 32 ) // 32 == spacebar
-		// 	event.preventDefault();
+				var content = content.slice(0, length);
 
-		event.target.innerHTML += String.fromCharCode(key);
+				console.log('Rcontent :', content + baseText);
+				
+				event.target.innerHTML = content + baseText;
+
+				break;
+			// case 13:
+			// case 13:
+			// case 32:
+			// case 32: // spacebar
+
+			default:
+				var content = event.target.innerHTML;
+				var length = content.length - suppr;
+				
+				var cursor = content.slice(-suppr);
+
+				console.log('content :', content);
+				
+				var content = content.slice(0, length);
+
+				console.log('cursor :', cursor);
+				console.log('content :', content);
+
+				event.target.innerHTML = content + String.fromCharCode(key) + cursor;
+				break;
+		}
 	}
 
 	function activateTerminal(event){
@@ -42,8 +77,6 @@ module.exports = function(){
 		event.target.focus();
 		event.target.addEventListener('keypress', keyHandler);
 		window.addEventListener('keydown', preventEscape);
-
-		// $(document).bind("keypress", escapeBehaviour);
 	}
 
 	function deactivateTerminal(event){
@@ -52,8 +85,6 @@ module.exports = function(){
 		event.target.blur();
 		event.target.removeEventListener('keypress', keyHandler);
 		window.removeEventListener('keydown', preventEscape);
-
-		// $(document).unbind("keypress", escapeBehaviour);
 	}
 
 	terminal.addEventListener('mouseover', activateTerminal);
