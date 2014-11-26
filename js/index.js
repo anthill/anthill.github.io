@@ -11,16 +11,6 @@ else{
 	fallback.removeAttribute('hidden');
 }
 
-function activatePage(){
-	tabs[0].className = 'tab'; 
-	tabs[1].className = 'tab'; 
-	tabs[2].className = 'tab'; 
-	tabs[3].className = 'tab'; 
-	tabs[4].className = 'tab'; 
-
-	event.target.classname += ' active';
-}
-
 function findPage() {
 	var currentY = window.scrollY;
 
@@ -84,9 +74,3 @@ var pages = rects.map(function(rect){
 
 
 window.addEventListener("scroll", findPage);
-// tabs[0].addEventListener("click", activatePage);
-// tabs[1].addEventListener("click", activatePage);
-// tabs[2].addEventListener("click", activatePage);
-// tabs[3].addEventListener("click", activatePage);
-// tabs[4].addEventListener("click", activatePage);
-
