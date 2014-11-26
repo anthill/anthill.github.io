@@ -25,11 +25,7 @@ function findPage() {
 			
 	});
 
-	console.log('Ratios :', ratios);
-
 	var i = ratios.indexOf(Math.max.apply(Math, ratios)) - 1;
-
-	console.log('i :', i);
 
 	if (i === -1){
 		tabs[0].className = 'tab'; 
