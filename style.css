@@ -312,10 +312,9 @@ footer p{
 	left: 1%;
 	font-size: 1em;
 	width: 35%;
-	height: 40%;
-	/*background-color: rgba(255, 255, 255, 0.5);*/
+	height: 10%;
 	text-shadow: 0 0 3px #DBB460;
-	/*border: 1px solid rgba(0, 0, 0, 0.05);*/
+	overflow-y: auto;
 }
 
 #terminal:focus{

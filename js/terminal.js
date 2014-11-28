@@ -5,7 +5,8 @@ module.exports = function(){
 	var terminal = document.getElementById('terminal');
 
 	var suppr = 34;
-	var baseText = '<br><span class="prompt">ants&gt;&nbsp;</span><span class="cursor">&nbsp;</span>';
+	var baseText = '<br><span class="prompt">ants&gt;&nbsp;</span>';
+	var cursor = '<span class="cursor">&nbsp;</span>';
 
 	function preventEscape(event){
 
@@ -16,11 +17,12 @@ module.exports = function(){
 				event.preventDefault();
 				keyHandler(event);
 				break;
-			case 32: // return
+			case 32: // spacebar
 				event.preventDefault();
 				keyHandler(event);
 				break;
 			default:
+				// keyHandler(event);
 				break;
 		}
 		
@@ -34,8 +36,10 @@ module.exports = function(){
 
 		switch (key){
 			case 8: // backspace
-				var text = event.target.innerHTML;
-				event.target.innerHTML = text.slice(0, -1);
+				var text = event.target.innerHTML.slice(0, -suppr);
+				event.target.innerHTML = text.slice(0, -1) + cursor;
+				console.log('cursor :', cursor);
+				console.log('baseText :', baseText);
 				break;
 			case 13: // return
 				var content = event.target.innerHTML;
@@ -43,9 +47,10 @@ module.exports = function(){
 
 				var content = content.slice(0, length);
 
-				console.log('Rcontent :', content + baseText);
+				// console.log('Rcontent :', content + baseText);
 				
-				event.target.innerHTML = content + baseText;
+				event.target.innerHTML = content + baseText + cursor;
+				terminal.scrollTop = terminal.scrollHeight;
 
 				break;
 			// case 13:
@@ -56,17 +61,13 @@ module.exports = function(){
 			default:
 				var content = event.target.innerHTML;
 				var length = content.length - suppr;
-				
-				var cursor = content.slice(-suppr);
-
-				console.log('content :', content);
-				
+				// console.log('content :', content);
 				var content = content.slice(0, length);
-
-				console.log('cursor :', cursor);
-				console.log('content :', content);
+				// console.log('cursor :', cursor);
+				// console.log('content :', content);
 
 				event.target.innerHTML = content + String.fromCharCode(key) + cursor;
+
 				break;
 		}
 	}
