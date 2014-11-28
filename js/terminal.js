@@ -10,7 +10,8 @@ module.exports = function(){
 
 	function preventEscape(event){
 
-		var key = parseInt(event.keyCode);
+		var key = event.keyCode;
+		console.log('key :', key);
 
 		switch (key){
 			case 8: // backspace
@@ -21,8 +22,22 @@ module.exports = function(){
 				event.preventDefault();
 				keyHandler(event);
 				break;
+			case 37: // left
+				event.preventDefault();
+				break;
+			case 38: // up
+				event.preventDefault();
+				terminal.scrollTop -= 19; // 19 should be the actual computed font-size
+				break;
+			case 39: // right
+				event.preventDefault();
+				break;
+			case 40: // bottom
+				event.preventDefault();
+				terminal.scrollTop += 19; // 19 should be the actual computed font-size
+				break;
+
 			default:
-				// keyHandler(event);
 				break;
 		}
 		
@@ -30,7 +45,9 @@ module.exports = function(){
 
 	function keyHandler(event){
 
-		var key = parseInt(event.keyCode);
+		var key = (event.which) ? event.which : 
+					((event.charCode) ? event.charCode : 
+						((event.keyCode) ? event.keyCode : 0));
 
 		console.log('key pressed ', key);
 
@@ -38,8 +55,8 @@ module.exports = function(){
 			case 8: // backspace
 				var text = event.target.innerHTML.slice(0, -suppr);
 				event.target.innerHTML = text.slice(0, -1) + cursor;
-				console.log('cursor :', cursor);
-				console.log('baseText :', baseText);
+				// console.log('cursor :', cursor);
+				// console.log('baseText :', baseText);
 				break;
 			case 13: // return
 				var content = event.target.innerHTML;
@@ -53,11 +70,7 @@ module.exports = function(){
 				terminal.scrollTop = terminal.scrollHeight;
 
 				break;
-			// case 13:
-			// case 13:
-			// case 32:
-			// case 32: // spacebar
-
+			
 			default:
 				var content = event.target.innerHTML;
 				var length = content.length - suppr;
