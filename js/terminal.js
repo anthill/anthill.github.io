@@ -4,9 +4,10 @@ module.exports = function(){
 
 	var terminal = document.getElementById('terminal');
 
-	var suppr = 34;
-	var baseText = '<br><span class="prompt">ants&gt;&nbsp;</span>';
+	var baseText = '<br/><span class="prompt">ants&gt;&nbsp;</span>';
 	var cursor = '<span class="cursor">&nbsp;</span>';
+	var baseTextLength = baseText.length;
+	var cursorLength = cursor.length;
 
 	function preventEscape(event){
 
@@ -43,6 +44,10 @@ module.exports = function(){
 		
 	}
 
+	function terminalSays(text){
+		return '<br/>' + text;
+	}
+
 	function keyHandler(event){
 
 		var key = (event.which) ? event.which : 
@@ -53,27 +58,32 @@ module.exports = function(){
 
 		switch (key){
 			case 8: // backspace
-				var text = event.target.innerHTML.slice(0, -suppr);
+				var text = event.target.innerHTML.slice(0, -cursorLength);
 				event.target.innerHTML = text.slice(0, -1) + cursor;
 				// console.log('cursor :', cursor);
 				// console.log('baseText :', baseText);
 				break;
 			case 13: // return
 				var content = event.target.innerHTML;
-				var length = content.length - suppr;
+				var length = content.length - cursorLength;
 
-				var content = content.slice(0, length);
+				var previousContent = content.slice(0, length);
 
+				var input = content.slice(baseTextLength+1, length);
+				// console.log('raw :', content.slice(baseTextLength+1, length));
 				// console.log('Rcontent :', content + baseText);
-				
-				event.target.innerHTML = content + baseText + cursor;
-				terminal.scrollTop = terminal.scrollHeight;
 
+				// Check for keywords and launch appropriate function
+				var answer = terminalSays('Vous avez entré : ' + input, event.target);
+				
+				event.target.innerHTML = previousContent + answer + baseText + cursor;
+				baseTextLength = previousContent.length + answer.length + baseText.length -3; // MAIS POURQUOI -3 ???????
+				terminal.scrollTop = terminal.scrollHeight;
 				break;
 			
 			default:
 				var content = event.target.innerHTML;
-				var length = content.length - suppr;
+				var length = content.length - cursorLength;
 				// console.log('content :', content);
 				var content = content.slice(0, length);
 				// console.log('cursor :', cursor);
