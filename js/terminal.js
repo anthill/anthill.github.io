@@ -11,8 +11,9 @@ module.exports = function(){
 
 	var helpText = "<br/>Hereunder are listed the main functions you can use in this terminal:<br/>'help': display help message<br/>'romain': describe who is romain";
 
-	var history = [];
-	var current = 0;
+	var history = [''];
+	var currentLine = 0;
+	var currentLetter = 0;
 
 	function preventEscape(event){
 
@@ -133,10 +134,15 @@ module.exports = function(){
 
 		switch (key){
 			case 8: // backspace
-				var text = event.target.innerHTML.slice(0, - cursorLength);
-				event.target.innerHTML = text.slice(0, -1) + cursor;
-				// console.log('cursor :', cursor);
-				// console.log('baseText :', baseText);
+				if (currentLetter > 0) { // check if there are letters to delete
+					var text = event.target.innerHTML.slice(0, - cursorLength);
+					event.target.innerHTML = text.slice(0, -1) + cursor;
+
+					currentLetter --;
+					// console.log('cursor :', cursor);
+					// console.log('baseText :', baseText);
+				}
+				
 				break;
 			case 13: // return
 				var content = event.target.innerHTML;
@@ -147,7 +153,7 @@ module.exports = function(){
 				var input = content.slice(baseTextLength+1, length); // hit 'enter' seems to add 1 to string
 				
 				history.push(input);
-				current = history.length;
+				currentLine = history.length;
 				// console.log('raw :', content.slice(baseTextLength+1, length));
 				// console.log('Rcontent :', content + baseText);
 
@@ -162,27 +168,27 @@ module.exports = function(){
 				var content = event.target.innerHTML;
 				var previousContent = content.slice(0, baseTextLength + 1);
 
-				current -= 1;
+				currentLine -= 1;
 
-				if (current < 0)
-					current = 0;
+				if (currentLine < 0)
+					currentLine = 0;
 
-				event.target.innerHTML = previousContent + history[current] + cursor;
+				event.target.innerHTML = previousContent + history[currentLine] + cursor;
 				break;
 
 			case 40: // down
 				var content = event.target.innerHTML;
 				var previousContent = content.slice(0, baseTextLength + 1);
 
-				current += 1;
+				currentLine += 1;
 
-				console.log('current ', current);
+				console.log('current ', currentLine);
 				console.log('history length ', history.length);
 
-				if (current >= history.length)
-					current = history.length - 1;
+				if (currentLine >= history.length)
+					currentLine = history.length - 1;
 
-				event.target.innerHTML = previousContent + history[current] + cursor;
+				event.target.innerHTML = previousContent + history[currentLine] + cursor;
 				break;
 			
 			default:
@@ -192,6 +198,7 @@ module.exports = function(){
 				var content = content.slice(0, length);
 				// console.log('cursor :', cursor);
 				// console.log('content :', content);
+				currentLetter ++; // letter count
 
 				event.target.innerHTML = content + String.fromCharCode(key) + cursor;
 
