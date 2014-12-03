@@ -13,12 +13,12 @@ module.exports = function(){
 
 	var history = [''];
 	var currentLine = 0;
-	var currentLetter = 0;
+	var letterCount = 0;
 
 	function preventEscape(event){
 
 		var key = event.keyCode;
-		console.log('key :', key);
+		// console.log('key :', key);
 
 		switch (key){
 			case 8: // backspace
@@ -134,11 +134,12 @@ module.exports = function(){
 
 		switch (key){
 			case 8: // backspace
-				if (currentLetter > 0) { // check if there are letters to delete
+				if (letterCount > 0) { // check if there are letters to delete
 					var text = event.target.innerHTML.slice(0, - cursorLength);
 					event.target.innerHTML = text.slice(0, -1) + cursor;
 
-					currentLetter --;
+					letterCount --;
+					console.log('letter Count :', letterCount);
 					// console.log('cursor :', cursor);
 					// console.log('baseText :', baseText);
 				}
@@ -154,6 +155,8 @@ module.exports = function(){
 				
 				history.push(input);
 				currentLine = history.length;
+				letterCount = 0;
+				console.log('letter Count :', letterCount);
 				// console.log('raw :', content.slice(baseTextLength+1, length));
 				// console.log('Rcontent :', content + baseText);
 
@@ -198,7 +201,8 @@ module.exports = function(){
 				var content = content.slice(0, length);
 				// console.log('cursor :', cursor);
 				// console.log('content :', content);
-				currentLetter ++; // letter count
+				letterCount ++; // letter count
+				console.log('letter Count :', letterCount);
 
 				event.target.innerHTML = content + String.fromCharCode(key) + cursor;
 
