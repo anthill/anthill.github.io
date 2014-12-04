@@ -27,7 +27,16 @@ module.exports = function(container){
 	// var baseTextLength = baseText.length; // 5 is for the <br/>
 	var cursorLength = cursor.length;
 
-	var helpText = "Hereunder are listed the main functions you can use in this terminal:<br/>'help': display help message<br/>'romain': describe who is romain";
+	var helpText = "Hereunder are listed the main functions you can use in this terminal:\
+	<br/>'help': display help message\
+	<br/>'speed #': change ants speed to # \
+	<br/>'nbAnts #': change ants number to # \
+	<br/>'weight #': change pheromon weight to # \
+	<br/>'repSize #': change repulsion size to # \
+	<br/>'repSpeed #': change repulsion speed # \
+	<br/>'nbRand #': change random points number to # \
+	<br/>'nbStart #': change start points number to # \
+	"
 
 	var history = [''];
 	var currentLine = 0;
@@ -94,9 +103,9 @@ module.exports = function(container){
 
 			case 'speed':
 				if (!checkLength(input, 1))
-					return '<br/>This function needs ' + 1 + ' argument';
+					return 'This function needs ' + 1 + ' argument';
 				if (!checkFloat(input[1], 0.0005, 0.005))
-					return '<br/>This function needs a float between ' + 0.0005 + ' and ' + 0.005;
+					return 'This function needs a float between ' + 0.0005 + ' and ' + 0.005;
 
 				Object.assign(options, {velocity: parseFloat(input[1])});
 				options.nbStart = undefined;
