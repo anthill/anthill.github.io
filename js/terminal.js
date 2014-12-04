@@ -99,7 +99,7 @@ module.exports = function(container){
 					return '<br/>This function needs a float between ' + 0.0005 + ' and ' + 0.005;
 
 				Object.assign(options, {velocity: parseFloat(input[1])});
-				options.nbStart = 0;
+				options.nbStart = undefined;
 				options.nbRand = undefined;
 				console.log("options :", options);
 				antColony.changeOptions(options);
@@ -113,7 +113,7 @@ module.exports = function(container){
 					return 'This function needs an integer between ' + 1 + ' and ' + 10000;
 
 				Object.assign(options, {nbAnts: parseInt(input[1])});
-				options.nbStart = 0;
+				options.nbStart = undefined;
 				options.nbRand = undefined;
 				console.log("options :", options);
 				antColony.changeOptions(options);
@@ -127,6 +127,8 @@ module.exports = function(container){
 					return 'This function needs an integer between ' + 1 + ' and ' + 500;
 
 				Object.assign(options, {nbStart: parseInt(input[1])});
+				if (options.nbRand === undefined)
+					options.nbRand = defaultOptions.nbRand;
 				console.log("options :", options);
 				antColony.changeOptions(options);
 
@@ -139,6 +141,8 @@ module.exports = function(container){
 					return 'This function needs an integer between ' + 0 + ' and ' + 10000;
 
 				Object.assign(options, {nbRand: parseInt(input[1])});
+				if (options.nbStart === undefined)
+					options.nbStart = defaultOptions.nbRand;
 				console.log("options :", options);
 				antColony.changeOptions(options);
 
@@ -151,7 +155,7 @@ module.exports = function(container){
 					return 'This function needs an integer between ' + 0.01 + ' and ' + 0.1;
 
 				Object.assign(options, {repSize: parseFloat(input[1])});
-				options.nbStart = 0;
+				options.nbStart = undefined;
 				options.nbRand = undefined;
 				console.log("options :", options);
 				antColony.changeOptions(options);
@@ -165,7 +169,7 @@ module.exports = function(container){
 					return 'This function needs an integer between ' + 0.001 + ' and ' + 0.01;
 
 				Object.assign(options, {repSpeed: parseFloat(input[1])});
-				options.nbStart = 0;
+				options.nbStart = undefined;
 				options.nbRand = undefined;
 				console.log("options :", options);
 				antColony.changeOptions(options);
@@ -179,7 +183,7 @@ module.exports = function(container){
 					return 'This function needs an integer between ' + 1 + ' and ' + 1000;
 
 				Object.assign(options, {repSpeed: parseInt(input[1])});
-				options.nbStart = 0;
+				options.nbStart = undefined;
 				options.nbRand = undefined;
 				console.log("options :", options);
 				antColony.changeOptions(options);
