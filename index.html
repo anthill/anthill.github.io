@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 		<meta name="description" content="ANTS, collective intelligence">
 		<link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="./style.css">
+		<link rel="stylesheet" href="./css/style.css">
 		<link href='http://fonts.googleapis.com/css?family=Raleway:400,700,900' rel='stylesheet' type='text/css'>
 		<style data-better-defaults>
 			*{
@@ -55,6 +55,34 @@
 		</style>
 
 		<title>ANTS, collective intelligence</title>
+
+		<script> // Polyfill Object.assign()
+			if (!Object.assign) {
+				Object.defineProperty(Object, "assign", {
+					enumerable: false,
+					configurable: true,
+					writable: true,
+					value: function(target, firstSource) {
+						"use strict";
+						if (target === undefined || target === null)
+							throw new TypeError("Cannot convert first argument to object");
+						var to = Object(target);
+						for (var i = 1; i < arguments.length; i++) {
+							var nextSource = arguments[i];
+							if (nextSource === undefined || nextSource === null) continue;
+							var keysArray = Object.keys(Object(nextSource));
+							for (var nextIndex = 0, len = keysArray.length; nextIndex < len; nextIndex++) {
+								var nextKey = keysArray[nextIndex];
+								var desc = Object.getOwnPropertyDescriptor(nextSource, nextKey);
+								if (desc !== undefined && desc.enumerable) to[nextKey] = nextSource[nextKey];
+							}
+						}
+						return to;
+					}
+				});
+			}
+
+		</script>
 		
 		<script>
 		// http://paulirish.com/2011/requestanimationframe-for-smart-animating/
@@ -111,8 +139,8 @@
 		<main>
 			<header id="header" class="page">
 				<img hidden src="images/ant-colony-fallback.png">
-				<div id="terminal">
-					<span class="prompt">repl&gt;&nbsp;collective intelligence</span><span class="cursor">&nbsp;</span>
+				<div id="terminal" tabindex="-1">
+					<div id="currentLine"><span class="prompt">ants&gt;&nbsp;</span><span class="cursor">&nbsp;</span></div>
 				</div>
 			</header>
 			<div id="about" class="page">
