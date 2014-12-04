@@ -1,10 +1,12 @@
 'use strict';
-var antColony = require('AntColony');
+// var _antColony = require('AntColony');
 var isCanvasAvailable = require('./canvas-detect.js');
+var terminal = require('./terminal.js');
 
+var container = document.querySelector('.colony');
 
 if(isCanvasAvailable()){
-	antColony(document.querySelector('main header'));
+	terminal(document.querySelector('main header'));
 }
 else{
 	var fallback = document.querySelector('main header img[hidden]');
