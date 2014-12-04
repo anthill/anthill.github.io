@@ -3,7 +3,7 @@
 body{
 	background: white;
 	font-family: 'Raleway', sans-serif;
-	color: rgb(83,83,83);
+	color: rgb(110,110,110);
 }
 
 
@@ -20,17 +20,10 @@ a, a:visited{
 }
 
 h2{
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-align-items: center;
-	align-items: center;
-
 	font-weight: lighter;
-	font-size: 3em;
-	padding: 0 1em;
+	font-size: 4em;
+	width: 25%;
+	
 	margin: auto 0;
 	color: black;
 }
@@ -38,7 +31,11 @@ h2{
 h3{
 	font-weight: 600;
 	color: black;
+	text-transform: uppercase;
+	font-size: 1.5em;
 }
+
+
 
 /*Header and Navigation*/
 
@@ -46,10 +43,10 @@ nav{
 	position: fixed;
 	width: 100%;
 	height: 3em;
-	/*padding: 1em;*/
+
 	background-color: rgba(77, 77, 77, 0.95);
 	color: white;
-	/*border-bottom: 1px solid black;*/
+
 	z-index: 1;
 	line-height: 1em;
 }
@@ -68,24 +65,19 @@ span.ants{
 }
 
 nav span{
-	/*float: left;*/
-	/*display: inline-block;*/
+
 }
 
 nav ul{
-	/*float: right;*/
 	display: inline-block;
 	position: absolute;
 	right: 0;
 	height: 100%;
-	/*padding: 1em;*/
 }
 
 .tab{
 	display: inline-block;
-	/*margin: 0 1em;*/
 	height: 100%;
-	/*width: 20%;*/
 	padding: 1em;
 }
 
@@ -112,6 +104,9 @@ header img{
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
+
+	-webkit-flex-direction: row;
+	flex-direction: row;
 	
 	width: 100%;
 	padding: 3em 0 0 0;
@@ -137,31 +132,44 @@ header img{
 	-webkit-justify-content: center;
 	align-items: center;
 	justify-content: center;
-	font-size: 1.3rem;
+
+	/*font-size: 1.3rem;*/
 	font-weight: lighter;
-	/*color: rgb(83,83,83);*/
+	color: black;
+	text-shadow: 0 0 10px white;
 	text-align: center;
-	background-image: url("../images/crowd.jpg");
+
+	background-image: url("images/crowd.jpg");
 	position: relative;
 }
 
+.why{
+	width: 100%;
+	font-size: 1.5em;
+	margin-top: 100px;
+}
+
 .page#about strong{
-	color: #DBB460;
-	text-shadow: 0 0 10px #FFF;
+	color: white;
+	text-shadow: 0 0 10px #DBB460;
 }
 
 .page#about .highlight{
 	font-weight: 300;
 	font-size: 2.3rem;
-	color: white;
+	
+	color: black;
+
 	width: 100%;
 	padding: 40px;
+	text-shadow: 0 0 10px white;
 	background-color: rgba(77, 77, 77, 0.5);
 }
 
-/*.page#about .highlight strong{
-	text-shadow: none;
-}*/
+.page#about .highlight strong{
+	color: white;
+	text-shadow: 0 0 10px #DBB460;
+}
 
 .photo-credits{
 	margin: 2px;
@@ -171,47 +179,72 @@ header img{
 	position: absolute;
 	bottom: 0px;
 	right: 0px;
-}
-
-/*Page Why*/
-
-.why{
-	width: 100%;
-	margin-top: 100px;
+	text-shadow: 0 0 5px black;
 }
 
 /*Page How*/
 
 .how{
+}
 
-	
+h2.left{
+	padding: 0 0 0 0.5em;
+	margin-right: 1em;
+}
+
+h2.right{
+	text-align: right;
+	padding: 0 0.5em 0 0;
 }
 
 .how > div{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+
+	justify-content: space-around;
+
 	background-color: white;
 	font-weight: 500;
-	font-size: 0.9em;
-	width: 40%;
+	font-size: 0.8em;
+	width: 80%;
+	height: 100%;
+
+	margin: auto 0;
 	padding: 1.5em;
 }
 
-.how div.pillar{
-	height: 50%;
+.cell h3{
+	
+	/*border-bottom: 1px solid black;*/
+	border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+.how div.cell{
+	width: 40%;
 	margin: 1.5em 30px;
-	border-top: 1px solid #d6d6d6;
+
 	text-align: justify;
 	vertical-align: top;
+	display: inline-block;
+
 }
 
 /*Page What*/
 
 .what{
-	font-size: 0.9em;
+	/*font-size: 0.8em;*/
 	background-color: rgb(77, 77, 77);
 	color: white;
 
-	-webkit-justify-content: flex-end;
-	justify-content: flex-end;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-align-items: center;
+	align-items: center;
 }
 
 .what h2{
@@ -219,30 +252,61 @@ header img{
 }
 
 .what h3{
+	color: rgb(160, 160, 160);
+	border-bottom: 1px solid white;
+}
+
+.what strong{
 	color: white;
 }
 
 .what ul{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;	
+
+	width: 90%;
+	font-size: 0.8em;
+
 	text-align: center;
-	margin-right: 5em;
+	margin: 0 1em;
 }
-.what ul li{
-	display: inline-block;
+.what ul a{
+	/*display: inline-block;*/
 	
 	max-width: 25em;
-	width: 100%;
-	padding: 1em;
-	margin: auto 0;
+	/*width: 30%;*/
+	/*padding: 1em;*/
+	margin: 0 2.5em;
+
+	color: rgb(160, 160, 160);
 	
 	background-color: rgb(77, 77, 77);
 
 	vertical-align: top;
 	text-align: justify;
 }
-.what ul li img{
+.what img{
 	display: inline-block;
 	
 	width: 100%;
+}
+
+.what ul a:hover{
+	color: white;
+}
+
+.what ul a:hover h3{
+	color: white;
+	border-bottom: 1px solid #DBB460;
+}
+
+.what ul a:hover strong{
+	color: #DBB460;
 }
 
 /*Page Who*/
@@ -279,11 +343,11 @@ header img{
 .who ul.people li > div .name{
 	display: block;
 	font-weight: bold;
-	font-size: 0.9em;
+	/*font-size: 0.9em;*/
 	color: black;
 }
 .who ul.people li > div .bio{
-	font-size: 0.7em;
+	font-size: 0.8em;
 }
 
 /*Footer*/
@@ -307,23 +371,21 @@ footer p{
 
 #terminal {
 	position: absolute;
-	padding: 2px;
 	top: 60%;
 	left: 1%;
 	font-size: 1em;
 	width: 35%;
-	height: 30%;
-	text-shadow: 0 0 3px #DBB460;
-	overflow-y: auto;
+	height: 40%;
+	/*background-color: rgba(255, 255, 255, 0.5);*/
+}
+
+#terminal:focus{
+	outline: 0;
 }
 
 #terminal:hover{
 	background-color: rgba(0, 0, 0, 0.5);
 	color: white;
-}
-
-#terminal:focus{
-	outline: 0;
 }
 
 @keyframes blink {
@@ -351,7 +413,7 @@ footer p{
   100% { opacity: 1; }
 }
 .prompt, .command {
-  /*color: rgb(83,83,83);*/
+  color: rgb(83,83,83);
   text-shadow: 0 0 3px #DBB460;
   /*text-shadow: 0 0 3px rgba(0,100,0,50);*/
 }
@@ -397,8 +459,6 @@ footer p{
 	}*/
 
 	#logo{
-		/*height: 60%;*/
-		/*width: 204px;*/
 		margin: 0 auto;
 		padding: 0.7em 0 0 1em;
 	}
@@ -422,17 +482,31 @@ footer p{
 		-webkit-justify-content: flex-start;
 		justify-content: flex-start;
 		height: auto;
-		/*padding: 3em 0;*/
+		padding-top: 6em;
 	}
 
 	h2{
 		font-size: 2em;
-		margin: 20px auto;
+		width: auto;
 	}
+
+	h2.left{
+		padding: 0;
+		margin: 0;
+		text-align: center;
+	}
+
+	h2.right{
+		padding: 0;
+		margin: 0;
+		text-align: center;
+	}	
 
 	.how{
 		-webkit-justify-content: center;
 		justify-content: center;
+
+		align-items: center;
 	}
 
 	.how div{
@@ -441,7 +515,7 @@ footer p{
 		padding: 0;
 	}
 
-	.how div.pillar{
+	.how div.cell{
 		width: 100%;
 		margin: 15px auto;
 		padding: 1em;
@@ -455,18 +529,22 @@ footer p{
 	}
 
 	.what ul{
+		-webkit-flex-direction: column;
+		flex-direction: column;
+
 		width: 80%;
-		margin: 0 auto;
+		margin: 2em auto;
 	}
 
-	.what ul li{
-		max-width: 100%;
+	.what ul a{
+		max-width: none;
+		width: 100%;
 	}
 
 	.what ul li img{
 		float: left;
 		margin: 0 15px 10px 0;
-		width: 40%;
+		width: 20%;
 	}
 
 	.who{
@@ -486,7 +564,7 @@ footer p{
 	}
 
 	.who ul.people li img{
-		width: 40%;
+		width: 30%;
 	}
 	
 	.who ul.people li div{
@@ -558,8 +636,18 @@ footer p{
 
 	h2{
 		font-size: 2em;
-		margin: 20px auto;
+		width: auto;
 	}
+
+	h2.left{
+		padding: 0;
+		margin: 0;
+	}
+
+	h2.right{
+		padding: 0;
+		margin: 0;
+	}	
 
 	.how{
 		-webkit-justify-content: center;
@@ -572,7 +660,7 @@ footer p{
 		padding: 0;
 	}
 
-	.how div.pillar{
+	.how div.cell{
 		width: 100%;
 		margin: 15px auto;
 		padding: 1em;
@@ -590,14 +678,25 @@ footer p{
 		margin: 0 auto;
 	}
 
-	.what ul li{
+	.what ul a{
+		color: white;
+		margin: 1em 0;
 		max-width: 100%;
 	}
 
-	.what ul li img{
+	.what ul a img{
 		float: left;
 		margin: 0 15px 10px 0;
 		width: 40%;
+	}
+
+	.what ul a h3{
+		color: white;
+		border-bottom: 1px solid #DBB460;
+	}
+
+	.what ul a strong{
+		color: #DBB460;
 	}
 
 	.who{

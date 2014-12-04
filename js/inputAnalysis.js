@@ -20,6 +20,17 @@ function checkFloat(nb, value1, value2){
 	return ((!isNaN(nb)) && (nb >= value1) && (nb <= value2));
 }
 
+var helpText = "Hereunder are listed the main functions you can use in this terminal:\
+	<br/>'help': display help message\
+	<br/>'speed #': change ants speed to # \
+	<br/>'nbAnts #': change ants number to # \
+	<br/>'weight #': change pheromon weight to # \
+	<br/>'repSize #': change repulsion size to # \
+	<br/>'repSpeed #': change repulsion speed # \
+	<br/>'nbRand #': change random points number to # \
+	<br/>'nbStart #': change start points number to # \
+	"
+
 module.exports = function(string, options, antColony){
 	var input = string.split(' ');
 
