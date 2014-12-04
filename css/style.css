@@ -371,12 +371,14 @@ footer p{
 
 #terminal {
 	position: absolute;
-	top: 60%;
+	top: 55%;
 	left: 1%;
 	font-size: 1em;
 	width: 35%;
 	height: 40%;
-	/*background-color: rgba(255, 255, 255, 0.5);*/
+	overflow: auto;
+	color: rgb(83,83,83);
+  	text-shadow: 0 0 3px #DBB460;
 }
 
 #terminal:focus{
@@ -387,6 +389,12 @@ footer p{
 	background-color: rgba(0, 0, 0, 0.5);
 	color: white;
 }
+
+#terminal:hover .prompt, .command{
+	color: white;
+}
+
+
 
 @keyframes blink {
   0% { opacity: 1; }
