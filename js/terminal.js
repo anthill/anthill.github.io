@@ -27,7 +27,7 @@ module.exports = function(container){
 	// var baseTextLength = baseText.length; // 5 is for the <br/>
 	var cursorLength = cursor.length;
 
-	var helpText = "<br/>Hereunder are listed the main functions you can use in this terminal:<br/>'help': display help message<br/>'romain': describe who is romain";
+	var helpText = "Hereunder are listed the main functions you can use in this terminal:<br/>'help': display help message<br/>'romain': describe who is romain";
 
 	var history = [''];
 	var currentLine = 0;
