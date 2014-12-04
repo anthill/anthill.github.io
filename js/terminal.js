@@ -28,17 +28,6 @@ module.exports = function(container){
 	// var baseTextLength = baseText.length; // 5 is for the <br/>
 	var cursorLength = cursor.length;
 
-	var helpText = "Hereunder are listed the main functions you can use in this terminal:\
-	<br/>'help': display help message\
-	<br/>'speed #': change ants speed to # \
-	<br/>'nbAnts #': change ants number to # \
-	<br/>'weight #': change pheromon weight to # \
-	<br/>'repSize #': change repulsion size to # \
-	<br/>'repSpeed #': change repulsion speed # \
-	<br/>'nbRand #': change random points number to # \
-	<br/>'nbStart #': change start points number to # \
-	"
-
 	var history = [''];
 	var currentLine = 0;
 	var letterCount = 0;
