@@ -139,7 +139,7 @@ header img{
 	text-shadow: 0 0 10px white;
 	text-align: center;
 
-	background-image: url("images/crowd.jpg");
+	background-image: url("../images/crowd.jpg");
 	position: relative;
 }
 
