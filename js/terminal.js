@@ -32,13 +32,16 @@ module.exports = function(container){
 	var currentLine = 0;
 	var letterCount = 0;
 
-	function preventEscape(event){
+	function preventDefault(event){
 
 		var key = event.keyCode;
-		// console.log('key :', key);
 
 		switch (key){
 			case 8: // backspace
+				event.preventDefault();
+				keyHandler(event);
+				break;
+			case 13: // enter
 				event.preventDefault();
 				keyHandler(event);
 				break;
@@ -66,7 +69,6 @@ module.exports = function(container){
 			default:
 				break;
 		}
-		
 	}
 
 	function keyHandler(event){
@@ -75,7 +77,8 @@ module.exports = function(container){
 					((event.charCode) ? event.charCode : 
 						((event.keyCode) ? event.keyCode : 0));
 
-		// console.log('key pressed ', key);
+		console.log('key pressed ', key);
+		// event.preventDefault();
 
 		var line = document.getElementById('currentLine');
 
@@ -178,17 +181,15 @@ module.exports = function(container){
 	function activateTerminal(event){
 		event.target.focus();
 		
-		event.target.addEventListener('keypress', keyHandler);
-		window.addEventListener('keydown', preventEscape);
-		event.stopPropagation();
+		window.addEventListener('keypress', keyHandler);
+		window.addEventListener('keydown', preventDefault);
 	}
 
 	function deactivateTerminal(event){
 		event.target.blur();
 
-		event.target.removeEventListener('keypress', keyHandler);
-		window.removeEventListener('keydown', preventEscape);
-		event.stopPropagation();
+		window.removeEventListener('keypress', keyHandler);
+		window.removeEventListener('keydown', preventDefault);
 	}
 
 	terminal.addEventListener('mouseover', activateTerminal);
