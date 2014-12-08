@@ -19,7 +19,7 @@ module.exports = function(container){
 
 	// launch animation
 	var antColony = _antColony(container, defaultOptions);
-
+	container.addEventListener('click', antColony.togglePlayPause);
 
 	var terminal = document.getElementById('terminal');
 

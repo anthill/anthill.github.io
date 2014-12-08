@@ -16,7 +16,7 @@
     "url": "https://github.com/anthill/anthill.github.io/issues"
   },
   "dependencies": {
-    "AntColony": "https://github.com/anthill/AntColony/archive/v1.2.tar.gz",
+    "AntColony": "git://github.com/iOiurson/AntColony.git#options",
     "jquery": "^1.11.1"
   }
 }
