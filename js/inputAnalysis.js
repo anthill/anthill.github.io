@@ -50,7 +50,7 @@ module.exports = function(string, options, antColony){
 			if (!checkLength(input, 1))
 				return 'This function needs ' + 1 + ' argument';
 			if (!checkFloat(input[1], 0.0005, 0.005))
-				return 'This function needs a float between ' + 0.0005 + ' and ' + 0.005;
+				return 'This function needs a number between ' + 0.0005 + ' and ' + 0.005;
 
 			Object.assign(options, {velocity: parseFloat(input[1])});
 			console.log("options :", options);
@@ -98,7 +98,7 @@ module.exports = function(string, options, antColony){
 			if (!checkLength(input, 1))
 				return 'This function needs ' + 1 + ' argument';
 			if (!checkFloat(input[1], 0.01, 0.1))
-				return 'This function needs an integer between ' + 0.01 + ' and ' + 0.1;
+				return 'This function needs a number between ' + 0.01 + ' and ' + 0.1;
 
 			Object.assign(options, {repSize: parseFloat(input[1])});
 			console.log("options :", options);
@@ -110,7 +110,7 @@ module.exports = function(string, options, antColony){
 			if (!checkLength(input, 1))
 				return 'This function needs ' + 1 + ' argument';
 			if (!checkFloat(input[1], 0.001, 0.01))
-				return 'This function needs an integer between ' + 0.001 + ' and ' + 0.01;
+				return 'This function needs a number between ' + 0.001 + ' and ' + 0.01;
 
 			Object.assign(options, {repSpeed: parseFloat(input[1])});
 			console.log("options :", options);
