@@ -6,8 +6,6 @@ body{
 	color: rgb(110,110,110);
 }
 
-
-
 main{
 	width: 100%;
 }
@@ -94,7 +92,51 @@ header img{
 	margin: 0 auto;
 }
 
+/*Colony Monitoring*/
 
+.monitor{
+	position: absolute;
+	font-family: arial;
+	font-size: 0.8em;
+	height: 20px;
+	width: 100px;
+	padding: 2px;
+	text-align: center;
+	right: 10px;
+	background-color: rgba(77, 77, 77, 0.95);
+	color: white;
+	top: 96%;
+}
+
+#dT{
+	right: 130px;
+}
+
+#FPS{
+	right: 10px;
+}
+
+#warning{
+	font-family: arial;
+	font-size: 0.7em;
+	font-weight: bold;
+	color: rgba(240, 0, 0, 0.6);
+	height: 20px;
+	position: absolute;
+	width: auto;
+	right: 10px;
+	top: 93%;
+}
+
+.invisible{
+	transition: opacity 8s;
+	opacity: 0;
+}
+
+.visible{
+	transition: opacity 1s;
+	opacity: 1;
+}
 
 /*Pages*/
 

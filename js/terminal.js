@@ -1,19 +1,9 @@
 'use strict';
 var _antColony = require('AntColony');
 var inputAnalysis = require('./inputAnalysis.js');
+var defaultOptions = require('./defaultOptions.js');
 
 module.exports = function(container){
-
-	var defaultOptions = {
-		velocity: 0.001,
-		nbAnts: 4000,
-		weight: 10,
-		repSize: 0.05,
-		repSpeed: 0.002,
-		nbStart: 20,
-		nbRand: 500
-		// obj par defaut
-	};
 
 	var options = defaultOptions;
 
