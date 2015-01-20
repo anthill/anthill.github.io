@@ -1,17 +1,7 @@
 'use strict';
 
 var _antColony = require('AntColony');
-
-var defaultOptions = {
-	velocity: 0.001,
-	nbAnts: 4000,
-	weight: 10,
-	repSize: 0.05,
-	repSpeed: 0.002,
-	nbStart: 20,
-	nbRand: 500
-	// obj par defaut
-};
+var defaultOptions = require('./defaultOptions.js');
 
 function checkLength(array, nb){
 	return (array.length != nb);
@@ -33,7 +23,8 @@ function checkFloat(nb, value1, value2){
 var helpText = "Hereunder are listed the main functions you can use in this terminal:\
 	<br/>'help': display help message\
 	<br/>'speed #': change ants speed to # \
-	<br/>'nbAnts #': change ants number to # \
+	<br/>'smart #': change ants intelligence to # \
+	<br/>'nb #': change ants number to # \
 	<br/>'repSize #': change repulsion size to # \
 	<br/>'repSpeed #': change repulsion speed to # \
 	<br/>'nbRand #': change random points number to # \
@@ -58,7 +49,7 @@ module.exports = function(string, options, antColony){
 
 			break;
 
-		case 'nbAnts':
+		case 'nb':
 			if (!checkLength(input, 1))
 				return 'This function needs ' + 1 + ' argument';
 			if (!checkInt(parseFloat(input[1]), 1, 10000))
@@ -118,13 +109,13 @@ module.exports = function(string, options, antColony){
 
 			break;
 		
-		case 'weight':
+		case 'smart':
 			if (!checkLength(input, 1))
 				return 'This function needs ' + 1 + ' argument';
-			if (!checkInt(parseFloat(input[1]), 1, 1000))
-				return 'This function needs an integer between ' + 1 + ' and ' + 1000;
+			if (!checkFloat(parseFloat(input[1]), 0, 1))
+				return 'This function needs a float between ' + 0 + ' and ' + 1;
 
-			Object.assign(options, {repSpeed: parseInt(input[1])});
+			Object.assign(options, {intelligence: parseFloat(input[1])});
 			console.log("options :", options);
 			antColony.changeOptions(options);
 
