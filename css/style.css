@@ -1,9 +1,19 @@
 /*General*/
 
+@font-face {
+	font-family: 'RemingtonNoiseless';
+	src: url('fonts/RemingtonNoiseless-webfont.eot');
+	src: local('RemingtonNoiseless'), local('Remington'), url('fonts/RemingtonNoiseless-webfont.ttf') format('truetype');
+}
+
 body{
 	background: white;
 	font-family: 'Raleway', sans-serif;
-	color: rgb(110,110,110);
+	color: black;
+}
+
+body.noscroll{
+	overflow: hidden;
 }
 
 main{
@@ -34,6 +44,73 @@ h3{
 }
 
 
+/*SplashScreen*/
+#splashScreen{
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	opacity: 1;
+	background-color: white;
+	z-index: 2;
+	transition: opacity 2s;
+}
+
+#bandeau{
+	position: absolute;
+	width: 80%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#bandeau div, #bandeau img{
+	display: inline-block;
+	width: 33%;
+	height: 100%;
+	font-size: 0.75em;
+	text-align: justify;
+	vertical-align: top;
+}
+
+#bandeau span{
+	font-weight: bold;
+}
+
+div#we_are{
+	display: block;
+	width: auto;
+	font-size: 6em;
+	font-weight: lighter;
+	text-align: right;
+}
+
+div#enter{
+	position: absolute;
+	bottom: 15%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	font-size: 1em;
+	font-weight: lighter;
+
+	border: 2px solid #005BAE;
+	padding: 5px;
+	cursor: pointer;
+}
+
+#enter:hover{
+	color: #005BAE;
+}
+
+#bandeau img{
+	padding: 3em 5em 0 5em;
+}
+
+div#wiki-credits{
+	font-size: 0.7em;
+	width: 100%;
+	text-align: right;
+}
+
 
 /*Header and Navigation*/
 
@@ -42,54 +119,62 @@ nav{
 	width: 100%;
 	height: 3em;
 
-	background-color: rgba(77, 77, 77, 0.95);
-	color: white;
+	background-color: white;
+	color: black;
 
 	z-index: 1;
 	line-height: 1em;
+
+	/*box-shadow: 0px 1px 25px 0px rgba(0,0,0,1);*/
+
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	/*padding: 12px 10px;*/
 }
 
 #logo{
-	padding: 1em;
 	display: inline-block;
 	height: 100%;
+	padding: 12px 10px;
+	margin-left: 0.5em;
 }
 
-span.ants{
-	font-size: 1.4rem;
-	font-weight: 900;
-	margin: 0 10px;
-	color: #DBB460;
+.ants{
+	height: 24px;
 }
 
 nav span{
-
+	margin-left: 2px;
+	font-size: 0.8em;
 }
 
 nav ul{
-	display: inline-block;
-	position: absolute;
-	right: 0;
-	height: 100%;
+	margin-right: 10px;
 }
 
 .tab{
 	display: inline-block;
-	height: 100%;
-	padding: 1em;
+	padding: 0 0.5em;
+	font-size: 0.8em;
 }
 
 .tab:hover{
-	background-color: #DBB460;
+	/*background-color: #005BAE;*/
+	color: #005BAE;
+	font-size: 1em;
 }
 
 .active{
-	background-color: #DBB460;
+	/*background-color: #005BAE;*/
+	color: #005BAE;
+	font-size: 1em;
+
 }
 
 header img{
-	display: block;
-	margin: 0 auto;
+	/*display: block;*/
+	/*margin: 0 auto;*/
 }
 
 /*Colony Monitoring*/
@@ -103,7 +188,7 @@ header img{
 	padding: 2px;
 	text-align: center;
 	right: 10px;
-	background-color: rgba(77, 77, 77, 0.95);
+	background-color: rgba(77, 77, 77, 0.6);
 	color: white;
 	top: 96%;
 }
@@ -164,7 +249,7 @@ header img{
 
 .page strong{
 	font-weight: lighter;
-	color: #DBB460;
+	color: #005BAE;
 }
 
 /*Page About*/
@@ -193,7 +278,7 @@ header img{
 
 .page#about strong{
 	color: white;
-	text-shadow: 0 0 10px #DBB460;
+	text-shadow: 0 0 10px #005BAE;
 }
 
 .page#about .highlight{
@@ -210,7 +295,7 @@ header img{
 
 .page#about .highlight strong{
 	color: white;
-	text-shadow: 0 0 10px #DBB460;
+	text-shadow: 0 0 10px #005BAE;
 }
 
 .photo-credits{
@@ -280,7 +365,7 @@ h2.right{
 
 .what{
 	/*font-size: 0.8em;*/
-	background-color: rgb(77, 77, 77);
+	background-color: rgb(0, 0, 0);
 	color: white;
 
 	-webkit-justify-content: space-between;
@@ -294,8 +379,19 @@ h2.right{
 }
 
 .what h3{
+	font-weight: lighter;
 	color: rgb(160, 160, 160);
 	border-bottom: 1px solid white;
+	text-align: right;
+	position: relative;
+}
+
+#dataconnexion{
+	display: block;
+	position: absolute;
+	bottom: 5px;
+	height: 30px;
+	width: 60px;
 }
 
 .what strong{
@@ -319,6 +415,7 @@ h2.right{
 }
 .what ul a{
 	/*display: inline-block;*/
+	position: relative;
 	
 	max-width: 25em;
 	/*width: 30%;*/
@@ -327,7 +424,7 @@ h2.right{
 
 	color: rgb(160, 160, 160);
 	
-	background-color: rgb(77, 77, 77);
+	background-color: rgb(0, 0, 0);
 
 	vertical-align: top;
 	text-align: justify;
@@ -344,11 +441,11 @@ h2.right{
 
 .what ul a:hover h3{
 	color: white;
-	border-bottom: 1px solid #DBB460;
+	border-bottom: 1px solid #005BAE;
 }
 
 .what ul a:hover strong{
-	color: #DBB460;
+	color: #005BAE;
 }
 
 /*Page Who*/
@@ -387,6 +484,7 @@ h2.right{
 	font-weight: bold;
 	/*font-size: 0.9em;*/
 	color: black;
+	font-family: RemingtonNoiseless;
 }
 .who ul.people li > div .bio{
 	font-size: 0.8em;
@@ -420,7 +518,7 @@ footer p{
 	height: 40%;
 	overflow: auto;
 	color: rgb(83,83,83);
-  	text-shadow: 0 0 3px #DBB460;
+  	text-shadow: 0 0 3px #005BAE;
 }
 
 #terminal:focus{
@@ -428,7 +526,7 @@ footer p{
 }
 
 #terminal:hover{
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.2);
 	color: white;
 }
 
@@ -464,12 +562,12 @@ footer p{
 }
 .prompt, .command {
   color: rgb(83,83,83);
-  text-shadow: 0 0 3px #DBB460;
+  text-shadow: 0 0 3px #005BAE;
   /*text-shadow: 0 0 3px rgba(0,100,0,50);*/
 }
 .cursor {
   /*background: #0c0;*/
-  background: #DBB460;
+  background: #005BAE;
   animation: blink 1s linear infinite;
   -webkit-animation: blink 1s infinite linear;
   -ms-animation: blink 1s infinite linear;
@@ -479,7 +577,7 @@ footer p{
   -ms-box-shadow: 0 0 5px rgba(0,100,0,50);
   -o-box-shadow: 0 0 5px rgba(0,100,0,50);
   /*box-shadow: 0 0 5px rgba(0,100,0,50);*/
-  box-shadow: 0 0 5px #DBB460;
+  box-shadow: 0 0 5px #005BAE;
 }
 
 /*Responsiveness*/
@@ -742,11 +840,11 @@ footer p{
 
 	.what ul a h3{
 		color: white;
-		border-bottom: 1px solid #DBB460;
+		border-bottom: 1px solid #005BAE;
 	}
 
 	.what ul a strong{
-		color: #DBB460;
+		color: #005BAE;
 	}
 
 	.who{
