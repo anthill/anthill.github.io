@@ -1,0 +1,52 @@
+/*Page How*/
+
+.how{
+}
+
+h2.left{
+	padding: 0 0 0 0.5em;
+	margin-right: 1em;
+}
+
+h2.right{
+	text-align: right;
+	padding: 0 0.5em 0 0;
+}
+
+.how > div{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+
+	justify-content: space-around;
+
+	background-color: white;
+	font-weight: 500;
+	font-size: 0.8em;
+	width: 80%;
+	height: 100%;
+
+	margin: auto 0;
+	padding: 1.5em;
+}
+
+.cell h3{
+	
+	/*border-bottom: 1px solid black;*/
+	border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+.how div.cell{
+	width: 40%;
+	margin: 1.5em 30px;
+
+	text-align: justify;
+	vertical-align: top;
+	display: inline-block;
+
+}
+
