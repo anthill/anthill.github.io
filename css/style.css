@@ -59,7 +59,9 @@ nav{
 	box-shadow: 0px 1px 10px 0px rgba(0,0,0,1);
 
 	display: flex;
+	-webkit-justify-content: space-between;
 	justify-content: space-between;
+	-webkit-align-items: baseline;
 	align-items: baseline;
 	/*padding: 12px 10px;*/
 }
@@ -81,6 +83,7 @@ nav span{
 }
 
 nav ul{
+	display: inline-block;
 	margin-right: 10px;
 }
 
