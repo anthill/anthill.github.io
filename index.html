@@ -8,6 +8,13 @@
 		<link rel="icon" href="/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="./css/style.css">
+		<link rel="stylesheet" href="./css/screen.css">
+		<link rel="stylesheet" href="./css/about.css">
+		<link rel="stylesheet" href="./css/how.css">
+		<link rel="stylesheet" href="./css/what.css">
+		<link rel="stylesheet" href="./css/who.css">
+		<link rel="stylesheet" href="./css/terminal.css">
+		<link rel="stylesheet" href="./css/responsive.css">
 		<link href='http://fonts.googleapis.com/css?family=Raleway:400,700,900' rel='stylesheet' type='text/css'>
 		<style data-better-defaults>
 			*{
@@ -123,12 +130,35 @@
 		<script defer src="app.js"></script>
 	</head>
 
-	<body>
-		<header>
+	<body class='noscroll'>
+		<div id='splashScreen'>
+			<div id='bandeau'>
+				<div id='left'>
+					<span>We</span> are eusocial insects of the family Formicidae /fɔrˈmɪsɨdiː/ and, along with the related wasps and bees, belong to the order Hymenoptera. <span>We</span> evolved from wasp-like ancestors in the mid-Cretaceous period between 110 and 130 million years ago and diversified after the rise of flowering plants. More than 12,500 of an estimated total of 22,000 species have been classified. <span>We</span> are easily identified by <span>our</span> elbowed antennae and the distinctive node-like structure that forms <span>our</span> slender waists.
+					<span>We</span> form colonies that range in size from a few dozen predatory individuals living in small natural cavities to highly organised colonies that may occupy large territories and consist of millions of individuals. Larger colonies consist mostly of sterile, wingless females forming castes of "workers", "soldiers", or other specialised groups. Nearly all of <span>our</span> colonies also have some fertile males called "drones" and one or more fertile females called "queens". <span>Our</span> colonies are described as superorganisms because <span>we</span> appear to operate as a unified entity, <span>collectively working together</span> to support the colony.*
+					<div id='we_are'>
+						We are
+					</div>
+				</div>
+				
+				<img src='/images/Logo_Rom_nospace.png' alt='ants logo'/>
+				<div id='right'>
+					<span>We</span> have colonised almost every landmass on Earth. The only places lacking indigenous ants are Antarctica and a few remote or inhospitable islands. <span>We</span> thrive in most ecosystems and may form 15–25% of the terrestrial animal biomass. <span>Our success in so many environments</span> has been attributed to <span>our social organisation</span> and <span>our ability to modify habitats</span>, tap resources, and defend <span>ourselves</span>. <span>Our</span> long co-evolution with other species has led to mimetic, commensal, parasitic, and mutualistic relationships.
+					<span>Our</span> societies have <span>division of labour</span>, <span>communication between individuals</span>, and an <span>ability to solve complex problems</span>. These parallels with human societies have long been an inspiration and subject of study. Many human cultures make use of <span>us</span> in cuisine, medication, and rituals. Some of <span>our</span> species are valued in their role as biological pest control agents. <span>Our</span> ability to exploit resources may bring <span>us</span> into conflict with humans, however, as <span>we</span> can damage crops and invade buildings. Some of <span>our</span> species, such as the red imported fire one (Solenopsis invicta), are regarded as invasive species, establishing themselves in areas where they have been introduced accidentally.*
+					<div id='wiki-credits'><a href ='http://en.wikipedia.org/wiki/Ant'>* freely adapted from wikipedia content </a></div>
+				</div>
+			</div>
+			<div id='enter'>
+				Enter anthill
+			</div>
+			
+		</div>
+		<div>
 			<nav>
 				<div id="logo">
-					<a href="#header"><span class="ants">ANTS</span></a> <span class='subants'>Open Innovation Lab</span>
+					<a href="#header"><img src='/images/ants_romain.png' alt='ants logo' class="ants"/></a><span class='subants'>/Open Innovation Lab</span>
 				</div>
+
 				<ul>
 					<a href="#about"><li class='tab'>About</li></a>
 					<a href="#spirit"><li class='tab'>Spirit</li></a>
@@ -137,8 +167,9 @@
 					<a href="http://ants.builders/blog" target="_blank"><li class='tab'>Blog</li></a>
 				</ul>
 			</nav>
-		</header>
+		</div>
 		<main>
+
 			<header id="header" class="page">
 				<img hidden src="images/ant-colony-fallback.png">
 				<div id="terminal" tabindex="-1">
@@ -210,7 +241,7 @@
 					</a>
 					<a href="https://bordeaux3d.ants.builders" target="_blank">
 						<li>
-							<h3>Bordeaux 3d</h3>
+							<h3><img id='dataconnexion' src='images/dataconnexions5-logo-3-100x49.png'/>Bordeaux 3d</h3>
 							<img src="images/bordeaux3d.jpg">
 							<p>We wanted to make it easy to represent and interact with the city. We created a technology enbaling a precise model of a <strong>whole city accessible through the browser</strong>. Nothing to install, no loading time.</p>
 							<p>Not only this gives a playground to <strong>visualize infrastructures</strong> like transports in real time, but it is also the best way for the city operator to <strong>communicate with the citizens</strong> and adapt the cityscape to their needs and desires.</p>

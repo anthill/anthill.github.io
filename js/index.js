@@ -13,6 +13,18 @@ else{
 	fallback.removeAttribute('hidden');
 }
 
+var splashScreen = document.getElementById('splashScreen');
+var enterButton = document.getElementById('enter');
+
+
+enterButton.addEventListener('click', function(){
+	body.className = ''; 
+	splashScreen.style.opacity = 0;
+	splashScreen.addEventListener('transitionend', function(){
+	    splashScreen.remove();
+	});
+});
+
 function findPage() {
 	var currentY = window.scrollY;
 
@@ -68,7 +80,5 @@ var pages = rects.map(function(rect){
 		bottom: rect.bottom + window.scrollY
 	};
 });
-
-
 
 window.addEventListener("scroll", findPage);
