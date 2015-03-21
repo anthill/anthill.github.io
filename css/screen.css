@@ -10,6 +10,14 @@
 	transition: opacity 1s;
 }
 
+#splashScreen a {
+	color: #005BAE;
+}
+
+#splashScreen a:hover {
+	text-decoration: underline;
+}
+
 #bandeau{
 	position: absolute;
 	width: 80%;

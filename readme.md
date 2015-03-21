@@ -1,12 +1,12 @@
 # Enhancement
 
-- ~~adaptative numbre of ants~~
+- ~~adaptative number of ants~~
 - add beingAnts twitter account
-- add the new logo
+- ~~add the new logo~~
 - progress page for 6element
 - progress page for city
 - page with news
-- background for the animation
+- ~~background for the animation~~(no longer needed)
 
 # Development 
 
