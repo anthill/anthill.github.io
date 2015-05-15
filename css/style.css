@@ -222,6 +222,10 @@ input{
 	display: none; margin: 0;
 }
 
+.page[id="projects"] a{
+	color: #DDD;
+}
+
 .page[id="team"] ul {
 	margin: 0 auto; 
 	list-style: none;
