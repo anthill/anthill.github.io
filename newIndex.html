@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="ANTS, collective intelligence">
+		<link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+		<link rel="icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="./css/normalize.css">
+		<link rel="stylesheet" href="./newCSS/style.css">
+		<link rel="stylesheet" href="./fonts/icons/flaticon.css"> 
+		<link rel="stylesheet" href="./fonts/icons/icomoon.css"> 
+		<!--<link rel="stylesheet" href="./css/screen.css">
+		<link rel="stylesheet" href="./css/about.css">
+		<link rel="stylesheet" href="./css/how.css">
+		<link rel="stylesheet" href="./css/what.css">
+		<link rel="stylesheet" href="./css/who.css">
+		<link rel="stylesheet" href="./css/terminal.css">
+		<link rel="stylesheet" href="./css/responsive.css">
+		<link rel="stylesheet" href="./css/better-defaults.css"> -->
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,700,900' rel='stylesheet' type='text/css'>
+
+		<title>ANTS, collective intelligence</title>
+
+		<script> // Polyfill Object.assign()
+			if (!Object.assign) {
+				Object.defineProperty(Object, "assign", {
+					enumerable: false,
+					configurable: true,
+					writable: true,
+					value: function(target, firstSource) {
+						"use strict";
+						if (target === undefined || target === null)
+							throw new TypeError("Cannot convert first argument to object");
+						var to = Object(target);
+						for (var i = 1; i < arguments.length; i++) {
+							var nextSource = arguments[i];
+							if (nextSource === undefined || nextSource === null) continue;
+							var keysArray = Object.keys(Object(nextSource));
+							for (var nextIndex = 0, len = keysArray.length; nextIndex < len; nextIndex++) {
+								var nextKey = keysArray[nextIndex];
+								var desc = Object.getOwnPropertyDescriptor(nextSource, nextKey);
+								if (desc !== undefined && desc.enumerable) to[nextKey] = nextSource[nextKey];
+							}
+						}
+						return to;
+					}
+				});
+			}
+
+		</script>
+		
+		<script>
+		// http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+		// http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
+
+		// requestAnimationFrame polyfill by Erik MÃ¶ller. fixes from Paul Irish and Tino Zijdel
+
+		// MIT license
+
+		(function() {
+			var lastTime = 0;
+			var vendors = ['ms', 'moz', 'webkit', 'o'];
+			for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+				window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
+				window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] 
+										   || window[vendors[x]+'CancelRequestAnimationFrame'];
+			}
+
+			if (!window.requestAnimationFrame)
+				window.requestAnimationFrame = function(callback, element) {
+					var currTime = new Date().getTime();
+					var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+					var id = window.setTimeout(function() { callback(currTime + timeToCall); }, 
+					  timeToCall);
+					lastTime = currTime + timeToCall;
+					return id;
+				};
+
+			if (!window.cancelAnimationFrame)
+				window.cancelAnimationFrame = function(id) {
+					clearTimeout(id);
+				};
+		}());
+		</script>
+		
+		<script defer src="app.js"></script>
+	</head>
+
+	<body>
+
+		<header>
+			<div>
+				<h1>ant<span>s</span></h1>
+				<em>Innovation Lab</em>
+			</div>
+			<h2>Spirit</h2>
+			<img src="./images/Logo_simple.png" alt='logo ants'>
+			<!-- <i class="icon-LogoPointsPetit"></i>  -->
+		</header>
+
+		<nav>
+			<a href="#about" class='tab'>About</a><!--
+		 --><a href="#spirit" class='tab'>Spirit</a><!--
+		 --><a href="#projects" class='tab'>Projects</a><!--
+		 --><a href="#team" class='tab'>Team</a><!--
+		 --><a href="#contact" class='tab'>Contact</a><!--
+		 --><a href="http://ants.builders/blog" class='tab' target="_blank">Blog</a>
+		</nav>
+
+		<main>
+			<section id='about' class='page'>
+				<div class='column'>
+					<div>
+						<p>
+							Complexity is what stops people from being <strong>creative</strong>.
+						</p>
+						<p>
+							We use <strong>technology</strong> to make things <strong>simple</strong> so that focus remains on <strong>ideas</strong>.
+						</p>
+						<p>
+							We do it <strong>openly</strong>,<br>
+							because we believe <strong>crowdsourcing</strong> spurs innovation.
+						</p>
+					</div>
+					<header>
+						<h2>
+							That’s what we call <br>
+							<strong>collective intelligence</strong>.
+						</h2>
+					</header>
+					<aside>
+						Crowd in Cathedral Square, Christchurch, photographed circa 1920-5 by an unidentified photographer for The Press newspaper. From Wikipedia Commons
+					</aside>
+				</div>
+			</section>
+
+			<section id='spirit' class='page'>
+				<header><h2>What we believe in</h2></header>
+				<div class='column'>
+					<div class='row'>
+						<section>
+							<header><h3>Interface</h3></header>
+							<p>
+								It is amazing to see how we shaped the world to fit our needs, especially in our daily urban life. It works: trains are scheduled, garbage is being collected, taxes can be paid online.
+							</p>
+							<p>
+								But sometimes a service can be <strong>ill perceived</strong> because of <strong>user experience</strong>. We work with the UX always in mind, since the interface should be part of the whole design.
+							</p>
+							<p class='summary'>
+								Solving the UX is a matter of keeping contact with the citizens or the customers and thus, small things can have a <strong>huge impact</strong>.
+							</p>
+						</section>
+						<section>
+							<header><h3>Data</h3></header>
+							<p>
+								Data helps us understand and predict behaviors.
+							</p>
+							<p class='summary'>
+								We predict behaviors from the <strong>context</strong> and not from personal information. This is efficient and ensures <strong>privacy by design</strong>. We think infrastructures should be the first things to adapt themselves, before citizens.
+							</p>
+							<p>
+								Data, seen as facts, are also the best way to <strong>challenge conventional thinking</strong> and status quo.
+							</p>
+							<p>
+								But data is a <strong>tool</strong>.
+							</p>
+						</section>
+					</div>
+					<div class='row'>
+						<section>
+							<header><h3>Openness</h3></header>
+							<p>
+								We crave for <strong>transparency</strong> because we want to be <strong>trusted</strong>.
+							</p>
+							<p>
+								We use and produce <strong>open knowledge</strong> in general (open data, open source, open hardware etc).
+							</p>
+							<p class='summary'>
+								All our civic or environmental projects are completely open because we are interested in <strong>impact more than in profit</strong>.
+							</p>
+						</section>
+						<section>
+							<header><h3>Attitude</h3></header>
+							<p class='summary'>
+								We are <strong>passionate about learning things</strong> and taking the unknown path. We believe this is how innovation is driven. We try to innovate in all we do, not only code or design but also in organisation or in the way we hire.
+							</p>
+							<p>
+								Working as <strong>hackers</strong>, we <strong>prototype fast</strong> to prove our solution works, and only then we become engineers to <strong>cope with all the "impossibles"</strong>.
+							</p>
+							<p>
+								It takes <strong>grit</strong> and <strong>boldness</strong> to innovate and we focus on impossible projects to prove they aren’t.
+							</p>
+						</section>
+					</div>
+				</div>
+
+			</section>
+
+			<section id='projects' class='page'>
+				<header><h2>What we work on</h2></header>
+				<div class='column'>
+					<section>
+						<header>
+							<h3>6element</h3>
+							<h4>Using data to reduce flows towards waste centers</h4>
+						</header>
+						<img src="images/6element.jpg" alt="Ants' sensor">
+						<p>
+							6element is a project aiming at reducing waste arriving in recycling centers. It can be seen as an interface between citizens and recycling centers. We designed <strong>a sensor</strong> that monitors both customer flows and filling levels for every bin - in real time.
+						</p>
+						<p>
+							Then a <strong>predictive model</strong> can tell you when you should go to which recycling center. The information is provided through a mobile app that crowdsources waste position in space and time so that <strong>reusers</strong> can take advantage of it.
+						</p>
+					</section>
+					<section>
+						<header>
+							<img id='dataconnexion' src='images/dataconnexions5-logo-3-100x49.png' alt='logo dataconnexion' class='super'>
+							<h3>Bordeaux3D</h3>
+							<h4>Displaying the city in 3D in your browser</h4>
+						</header>
+						<img src="images/bordeaux3d.jpg">
+						<p>
+							We wanted to make it easy to represent and interact with the city. We created a technology enbaling a precise model of a <strong>whole city accessible through the browser</strong>. Nothing to install, no loading time.
+						</p>
+						<p>
+							Not only this gives a playground to <strong>visualize infrastructures</strong> like transports in real time, but it is also the best way for the city operator to <strong>communicate with the citizens</strong> and adapt the cityscape to their needs and desires.
+						</p>
+					</section>
+				</div>
+			</section>
+
+			<section id='team' class='page'>
+				<header><h2>What we look like</h2></header>
+				<ul class='column'>
+					<li id='alex'>
+						<label for='display-alex'>
+							<input type="checkbox" id="display-alex">
+							<header><h3>Alexandre Vallette</h3></header>
+							<aside>
+								<a href="https://github.com/vallettea"><i class="fa fa-github-square"></i></a>
+								<a href="https://twitter.com/vallettea"><i class="fa fa-twitter"></i></a>
+							</aside>
+							<p>
+								<strong>Data-scientist</strong>, co-founder of <a href="http://snips.net/">SNIPS</a>, his passion for machine-learning applied to geographical data and networks comes from his Phd in chaos theory. Open-data enthusiast, he is committed to show how <strong>open-innovation</strong> can lead to a better governance and economy.
+							</p>
+						</label>
+						
+					</li>
+					<li id='davidB'>
+						<label for='display-davidB'>
+							<input type="checkbox" id="display-davidB">
+							<header><h3>David Bruant</h3></header>
+							<aside>
+								<a href="https://github.com/DavidBruant"><i class="fa fa-github-square"></i></a>
+								<a href="https://twitter.com/DavidBruant"><i class="fa fa-twitter"></i></a>
+							</aside>
+							<p>
+								David is a leader in <strong>front-end </strong>development, especially in javascript and standards specification. Contributor to Mozilla, he believes deeply in open web and open source. He teaches coding to young children and <strong>datavisualization</strong> in design schools.
+							</p>
+						</label>
+						
+					</li>
+					<li id='davidS'>
+						<label for='display-davidS'>
+							<input type="checkbox" id="display-davidS">
+							<header><h3>David Schwandt</h3></header>
+							<aside>
+								<a href="https://github.com/CIaviCI"><i class="fa fa-github-square"></i></a>
+							</aside>
+							<p>
+								Started hacking his TI-92 at the age of 13 to measure and visualize distances by ultrasound. PhD in theoretical physics by designing <strong>High Performance Computing</strong> algorithms to discover exotic quantum matter. Passionated about the sheer possibilities of <strong>open hardware</strong> combined with low-cost sensors.
+							</p>
+						</label>
+					</li>
+					<li id='romain'>
+						<label for='display-romain'>
+							<input type="checkbox" id="display-romain">
+							<header><h3>Romain Crestey</h3></header>
+							<aside>
+								<a href="https://github.com/iOiurson"><i class="fa fa-github-square"></i></a>
+								<a href="https://twitter.com/rCrestey"><i class="fa fa-twitter"></i></a>
+							</aside>
+							<p>
+								Musician, drawer, gamer, engineer, Romain is a creative geek, convinced that the best technology is half useless without a well-thought <strong>design</strong>. With a growing UX interest, he works on developing <strong>ergonomic</strong> solutions to help give the users back the control on their data.
+							</p>
+						</label>
+					</li>
+					<li id='armand'>
+						<label for='display-armand'>
+							<input type="checkbox" id="display-armand">
+							<header><h3>Armand Gilles</h3></header>
+							<aside>
+								<a href="https://github.com/armgilles"><i class="fa fa-github-square"></i></a>
+								<a href="https://twitter.com/arm_gilles"><i class="fa fa-twitter"></i></a>
+							</aside>
+							<p>
+								Data-Scherlock</strong>, barman &amp; runner. Armand holds a master’s degree in computer science, and is excited when it comes to <strong>discovering and understanding hidden patterns in data</strong>. He’s also well known for pushing algorithms to their limits.
+							</p>
+						</label>
+					</li>
+					<li id='fabien'>
+						<label for='display-fabien'>
+							<input type="checkbox" id="display-fabien">
+							<header><h3>Fabien Durand</h3></header>
+							<aside>
+								<a href="https://github.com/fabdrnd"><i class="fa fa-github-square"></i></a>
+								<a href="https://twitter.com/thefabiendurand"><i class="fa fa-twitter"></i></a>
+							</aside>
+							<p>
+								Fabien is a <strong>science and technology enthusiast</strong> with a background in <strong>business administration</strong>. Currently teaching himself data science, he believes in open-source and open-education to spur innovation across society. He is also part of the <strong>organizing team at PAPIs.io</strong>, an international conference in Predictive Analytics.
+							</p>
+						</label>
+						
+					</li>
+				</ul>
+			</section>
+
+			<section id='contact' class='page'>
+				<div class='column'>
+					<i class="icon-twitter"></i>
+					<i class="icon-github"></i>
+					<i class="flaticon-dark4"></i>
+					<i class="flaticon-location54"></i>
+				</div>
+			</section>
+
+		</main>
+
+		<footer>
+			<p class="discrete">
+				This website uses Google Analytics. If that makes you uncomfortable, feel free to install <a href="https://tools.google.com/dlpage/gaoptout?hl=fr">Google's own blocker</a> or use <a href="https://disconnect.me/disconnect">disconnect</a>.
+			</p>
+		</footer>
+
+		<!-- Font generated by <a href="http://www.flaticon.com">flaticon.com</a> and <a href="http://www.icomoon.com">icomoon.com</a>
+ under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY</a>. The authors are: <a href="http://www.finest.graphics">Designerz Base</a>, <a href="http://fontawesome.io">Dave Gandy</a>, <a href="http://www.freepik.com">Freepik</a>, <a href="http://www.icomoon.io">Icomoon</a>, <a href="http://www.elegantthemes.com">Elegant Themes</a>. -->
+
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-57145056-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+	</body>
+</html>
