@@ -1,156 +1,354 @@
-/*General*/
+/*
+// 1. boîte
 
-@font-face {
-	font-family: 'RemingtonNoiseless';
-	src: url('fonts/RemingtonNoiseless-webfont.eot');
-	src: local('RemingtonNoiseless'), local('Remington'), url('fonts/RemingtonNoiseless-webfont.ttf') format('truetype');
+// 2. bordures
+
+// 3. arrière-plan
+
+// 4. texte
+
+// 5. transformations
+
+// 6. transitions
+
+// 7. le reste
+*/
+body {
+	font-family: 'Raleway';
 }
 
-body{
-	background: white;
-	font-family: 'Raleway', sans-serif;
-	color: black;
-}
-
-body.noscroll{
-	overflow: hidden;
-}
-
-main{
-	width: 100%;
-}
-
-/*Links and titles*/
-
-a, a:visited{ 
-	color: currentColor;
-	text-decoration: none;
-}
-
-h2{
-	font-weight: lighter;
-	font-size: 4em;
-	width: 25%;
-	
-	margin: auto 0;
-	color: black;
-}
-
-h3{
-	font-weight: 600;
-	color: black;
-	text-transform: uppercase;
-	font-size: 1.5em;
-}
-
-/*Header and Navigation*/
-
-nav{
-	position: fixed;
-	width: 100%;
-	height: 3em;
-
-	background-color: white;
-	color: black;
-
-	z-index: 1;
-	line-height: 1em;
-
+body > header {
+	position: fixed; top: 0; width: 100%; height: 10vh; z-index: 2;
 	box-shadow: 0px 1px 10px 0px rgba(0,0,0,1);
-
-	display: flex;
-	-webkit-justify-content: space-between;
-	justify-content: space-between;
-	-webkit-align-items: baseline;
-	align-items: baseline;
-	/*padding: 12px 10px;*/
+	background-color: white;
 }
 
-#logo{
-	display: inline-block;
-	height: 100%;
-	padding: 12px 10px;
-	margin-left: 0.5em;
+body > header span {
+	color: #005BAE;
 }
 
-.ants{
-	height: 24px;
+body > header div{
+	display: flex; flex-direction: column; justify-content:center; position: absolute; top: 0; bottom:0; left: 0; margin: 0; margin-left: .6rem;
 }
 
-nav span{
-	margin-left: 2px;
-	font-size: 0.8em;
+body > header h1{
+	margin: 0;
+	font-family: 'Remington Noiseless'; font-size: 2em; line-height: .8em;
 }
 
-nav ul{
-	display: inline-block;
-	margin-right: 10px;
+body > header em{
+	display: block;
+	font-size: 0.6em; font-style: normal;
+	font-weight: lighter; text-align: center;
 }
 
-.tab{
-	display: inline-block;
-	padding: 0 0.5em;
-	font-size: 0.8em;
+body > header img {
+	position: fixed; top: 2vh; bottom: 2vh; right: .6rem; height: 6vh;
+	color: black; font-size: 2rem;
+	transition: transform .5s ease-in-out;
+}
+
+body > header img.active {
+	transform: scale(0.7);
+}
+
+body > header h2{
+	margin: 0; margin-top: 1.5em; width: 100%; position: absolute; bottom: .5rem;
+	font-size: 1em; font-weight: normal; text-align: center;
+}
+
+nav {
+	position: fixed; right: 0; top: -13em; z-index: 1;
+	font-size: 0.9em; text-align: right;
+	background-color: rgba(255, 255, 255, 0.9);
+	transition: top 0.5s ease-in-out;
+}
+
+/*[id="menu"]:checked ~ nav {  Check my handsome teacher there -> http://twikito.com/ 
+	top: 3rem;
+}*/
+
+nav.active{
+	top: 10vh;
+}
+
+nav a {
+	display: block; padding: .7em 1em;
+	color: black; text-decoration: none;
+}
+
+img.super{
+	position: absolute; top:0; right: 0; width: 3em;
+}
+
+h3 {
+	font-family: 'Remington Noiseless';
+}
+
+h4{
+	margin: 1em 0;
+	font-size: 0.8em; font-weight: normal;
+}
+
+section h2 {
+	display: none;
+}
+
+section div {
+	/*margin: 0 auto;*/
+	text-align: justify;
+}
+
+ul {
+	margin: 0; padding: 0;
+}
+
+a {
+	color: #005BAE; text-decoration: none;
+	cursor: pointer;
+}
+
+aside a {
+	color: black;
+}
+
+input{
+	position: absolute; top: 0 left: 0;
+	opacity: 0;
 }
 
 .tab:hover{
-	/*background-color: #005BAE;*/
+	background-color: black;
+	color: white;
+}
+
+.tab.active {
 	color: #005BAE;
+} 
+
+.page {
+	position: relative; min-height: 90vh; padding-top: 10vh;
 	font-size: 1em;
 }
 
-.active{
-	/*background-color: #005BAE;*/
-	color: #005BAE;
+.page p {
+	font-size: .8em; text-align: justify;
+}
+
+.page img {
+	/*display: block; width: 100%;*/
+}
+
+.page h3 {
+	margin: 1em 0 .5em 0;
 	font-size: 1em;
-
 }
 
-header img{
-	/*display: block;*/
-	/*margin: 0 auto;*/
+.page[id="about"] > div {
+	position: absolute; top: 0; bottom: 0; left: 0; right: 0;
+	background-color: rgba(0, 0, 0, 0.3);
+	/*padding-top: 30vh; padding-bottom: 1em;*/
 }
 
-
-/*Pages*/
-
-.page{
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-
-	-webkit-flex-direction: row;
-	flex-direction: row;
-	
-	width: 100%;
-	padding: 3em 0 0 0;
-	min-height: 50em; /* for older browser that do not understand the vh unit */
-	min-height: 100vh;
-	
-	/*border: 1px solid black;*/ /* for debugging purposes to be sure the page takes a full screen */
+.page[id="about"]{
+	position: relative; padding-top: 10vh;
+	/*font-size: 1em;*/
+	background-image: url("../images/crowd.jpg"); background-size: cover;
 }
 
-#header{
-	padding: 0;
-}
-
-.page strong{
-	font-weight: lighter;
-	color: #005BAE;
-}
-
-
-/*Footer*/
-
-footer {
-	background: #f2f2f2;
-	padding: 1em;
-	z-index: 1;
-}
-
-footer p{
+.page[id="about"] p {
+	margin: .5em auto; width: 90%;
 	text-align: center;
 }
 
+.page[id="about"] h2 {
+	display: block; margin-top: 1rem; padding: .5em 1.5em; 
+	/*background-color: rgba(80, 80, 80, 0.5);*/
+	font-size: 1.2em; font-weight: normal; text-align: center; text-shadow: 0 0 10px white;
+}
+
+.page[id="about"] strong {
+	color: white; font-weight: normal; text-shadow: 0 0 10px #005BAE;
+}
+
+
+.page[id="about"] aside{
+	position: absolute; bottom: .6em; right: .6em;
+	color: rgba(255,255,255,0.8);; font-size: .4em; text-align: center; text-shadow: 0 0 5px black;
+}
+
+.column{
+	display: flex; flex-direction: column; justify-content: space-around; min-height: 90vh; width: 80%; padding: 0 10%;
+}
+
+.page[id="about"] .column{
+	justify-content: center;
+}
+
+.row{
+	display: flex; flex-direction: column; justify-content: center; margin: 0;
+}
+
+.page[id="spirit"] .row:first-child{
+	/*padding-top: 3em;*/
+}
+
+.page[id="spirit"] p{
+	display: none; margin: 0;
+}
+
+.page[id="spirit"] .summary{
+	display: block;
+}
+
+.page[id="projects"]{
+	color: #DDD;
+	background-color: #111;
+}
+
+.page[id="projects"] section{
+	margin-bottom: 1em;
+}
+
+.page[id="projects"] section > header {
+	position: relative;
+}
+
+.page[id="projects"] section > img {
+	display: block; height: 7em; width: 7em; border-radius: 50%; margin: 0 auto;
+}
+
+.page[id="projects"] p{
+	display: none; margin: 0;
+}
+
+.page[id="team"] ul {
+	margin: 0 auto; 
+	list-style: none;
+}
+
+.page[id="team"] li {
+	position: relative; margin: 0;
+}
+
+.page[id="team"] ul header {
+	display: inline-block; position: relative; margin-left: 4em;
+}
+
+.page[id="team"] aside {
+	display: inline-block; position: absolute; right: 0; margin: 1em 0;
+}
+
+.page[id="team"] aside i:hover{
+	font-size: 1em;
+}
+
+.page[id="team"] p {
+	display: block; height: 0; margin: 0; z-index: -2;
+	overflow: hidden; text-overflow: ellipsis;
+	transition: height .5s ease-in-out;
+}
+
+.page[id="team"] h3 {
+	margin: 1em 0;
+}
+
+[id|="display"]:checked ~ p { /* Check my handsome teacher there -> http://twikito.com/ */
+	height: 11em;
+}
+
+[id="alex"] header::before {
+	position: absolute; width: 3em; height: 3em; left: -4em; border-radius: 50%;
+	content: '';
+	background-size: cover;
+	background-image: url('https://avatars.githubusercontent.com/u/371303?'); 
+}
+
+[id="davidB"] header::before {
+	position: absolute; width: 3em; height: 3em; left: -4em; border-radius: 50%;
+	content: '';
+	background-size: cover;
+	background-image: url('https://avatars.githubusercontent.com/u/165829?'); 
+}
+
+[id="davidS"] header::before {
+	position: absolute; width: 3em; height: 3em; left: -4em; border-radius: 50%;
+	content: '';
+	background-size: cover;
+	background-image: url('https://avatars.githubusercontent.com/u/7767926?'); 
+}
+
+[id="romain"] header::before {
+	position: absolute; width: 3em; height: 3em; left: -4em; border-radius: 50%;
+	content: '';
+	background-size: cover;
+	background-image: url('https://avatars2.githubusercontent.com/u/8417814?'); 
+}
+
+[id="armand"] header::before {
+	position: absolute; width: 3em; height: 3em; left: -4em; border-radius: 50%;
+	content: '';
+	background-size: cover;
+	background-image: url('https://avatars1.githubusercontent.com/u/8374843?'); 
+}
+
+[id="fabien"] header::before {
+	position: absolute; width: 3em; height: 3em; left: -4em; border-radius: 50%;
+	content: '';
+	background-size: cover;
+	background-image: url('https://avatars3.githubusercontent.com/u/7871295?'); 
+}
+
+.page[id='contact']{
+	background-color: #111;
+}
+
+.page[id='contact'] i {
+	margin: .5rem 0;
+	text-align: center;
+}
+
+.page[id='contact'] i:hover::before{
+	color: #005BAE;
+}
+
+.page[id='contact'] i[class^='flaticon']{
+	color: white;
+	font-size: 5em;
+}
+
+.page[id='contact'] i[class^='icon']{
+	color: white;
+	font-size: 5em;
+}
+
+footer {
+	font-size: 0.5rem; text-align: center;
+}
+
+@media only screen and (min-width: 660px){
+
+	section h2 {
+		display: block;
+	}
+
+	body > header h1{
+		font-size: 3em;
+	}
+
+	body > header em{
+		font-size: .9em;
+	}
+
+	body > header h2{
+		font-size: 1.5em;
+	}
+
+	nav {
+		top: -20em;
+	}
+
+	nav a {
+		font-size: 1.5em;
+	}
+}
