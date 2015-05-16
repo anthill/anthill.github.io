@@ -19,15 +19,32 @@
 var menuButton = document.querySelector('body > header img');
 var menu = document.body.querySelector('nav');
 var currentPage = document.querySelector('body > header h2');
+var mailButton = document.querySelector('#mail');
+var townButton = document.querySelector('#town');
 // var menu = querySelector('body');
 
-// enterButton.addEventListener('click', function(){
-// 	body.className = ''; 
-// 	splashScreen.style.opacity = 0;
-// 	splashScreen.addEventListener('transitionend', function(){
-// 	    splashScreen.remove();
-// 	});
-// });
+
+function addHoverBehavior(element) {
+
+	element.addEventListener('touchstart', function(){
+		element.classList.toggle('hover');
+	});
+
+	element.addEventListener('mouseenter', function mouseenterListener(e){
+		element.removeEventListener('mouseenter', mouseenterListener);
+		element.classList.add('hover');
+
+		element.addEventListener('mouseleave', function mouseleaveListener(){
+			element.removeEventListener('mouseleave', mouseleaveListener);
+			element.classList.remove('hover');
+
+			element.addEventListener('mouseenter', mouseenterListener);
+		})
+	});
+}
+
+addHoverBehavior(mailButton);
+addHoverBehavior(townButton);
 
 menuButton.addEventListener('click', function(){
 	menu.classList.toggle('active');
@@ -61,6 +78,7 @@ function findPage() {
 		tabs[2].className = 'tab'; 
 		tabs[3].className = 'tab'; 
 		tabs[4].className = 'tab'; 
+		tabs[5].className = 'tab'; 
 	}
 	else if (i >= 0 && tabs[i].className != 'tab active') {
 		tabs[0].className = 'tab'; 
@@ -68,6 +86,7 @@ function findPage() {
 		tabs[2].className = 'tab'; 
 		tabs[3].className = 'tab'; 
 		tabs[4].className = 'tab'; 
+		tabs[5].className = 'tab'; 
 		tabs[i].className += ' active';
 
 		currentPage.innerHTML = tabs[i].innerHTML;
@@ -75,21 +94,21 @@ function findPage() {
 }
 
 var body = document.body;
-// var header = document.getElementById("header");
+var home = document.getElementById("home");
 var about = document.getElementById("about");
 var spirit = document.getElementById("spirit");
 var projects = document.getElementById("projects");
 var team = document.getElementById("team");
 var contact = document.getElementById("contact");
 
-// var headerRect = header.getBoundingClientRect();
+var homeRect = home.getBoundingClientRect();
 var aboutRect = about.getBoundingClientRect();
 var spiritRect = spirit.getBoundingClientRect();
 var projectsRect = projects.getBoundingClientRect();
 var teamRect = team.getBoundingClientRect();
 var contactRect = contact.getBoundingClientRect();
 
-var rects = [/*headerRect,*/ aboutRect, spiritRect, projectsRect, teamRect, contactRect];
+var rects = [homeRect, aboutRect, spiritRect, projectsRect, teamRect, contactRect];
 var tabs = document.getElementsByClassName('tab');
 
 var pages = rects.map(function(rect){
