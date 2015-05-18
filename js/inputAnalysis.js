@@ -1,6 +1,5 @@
 'use strict';
 
-var _antColony = require('AntColony');
 var defaultOptions = require('./defaultOptions.js');
 
 function checkLength(array, nb){

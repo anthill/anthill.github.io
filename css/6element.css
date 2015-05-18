@@ -1,4 +1,12 @@
 
+body > header h2 {
+	display: inline-block;
+}
+
+body > header span, strong {
+	color: #448042;
+}
+
 p, li {
 	text-align: justify;
 }
@@ -8,7 +16,7 @@ section {
 	padding-top: 10vh;
 	min-height: 90vh;
 	position: relative;
-	font-size: 1rem;
+	font-size: 1em;
 }
 
 section h2 {
@@ -24,12 +32,12 @@ section[id="title"] div {
 }
 
 section[id="title"] h1 {
-	padding: 20% 0;
-	font-family: "RemingtonNoiseless"; text-align: center; font-size: 1.7rem;
+	padding: 0; padding-top: 30vh; padding-bottom: 10%;
+	font-family: "RemingtonNoiseless"; text-align: center; font-size: 1.7em;
 }
 
 section[id="title"] h1 strong{
-	font-size: 3rem;
+	font-size: 2em;
 }
 
 section[id="title"] p {
@@ -43,16 +51,19 @@ section[id="problems"] {
 }
 
 section[id="problems"] > * {
-	font-size: 1.4rem;
+	font-size: 1.4em;
 }
 
 section[id="problems"] li {
 	margin:2rem 0;
 }
 
+section[id="strategy"] strong{
+	font-weight: bold;
+}
 
 section[id="partners"] > * {
-	font-size: 1rem;
+	font-size: 1em;
 }
 
 section[id="partners"] {
@@ -76,7 +87,7 @@ section[id="partners"] iframe {
 
 section[id="step1"] {
 	color: white;
-	font-size: 1.1rem; text-shadow: 0 0 10px yellow;
+	text-shadow: 0 0 10px yellow;
 	background: center bottom no-repeat url(../images/6element/odroid.jpg); background-size: cover;
 }
 
@@ -86,9 +97,50 @@ section[id="step1"] a {
 }
 
 section[id="step1"] strong {
-	color: white; font-size: 1.2rem;
+	color: white; font-size: 1.2em;
 }
 
 section[id="step1"] p:last-child {
 	position: absolute; bottom: 0; padding: 10% 10% 10% 0;
 }	
+
+
+@media only screen and (min-width: 1200px) {
+	
+	body > header h2 {
+		width: auto; left: 8rem;
+		font-size: 1.8em;
+	}
+
+	section {
+		font-size: 1.5em;
+	}
+
+	section[id="title"] h1 {
+		padding-top: 10vh; padding-bottom: 2vh;
+		font-size: 2.5em;
+	}
+
+	section[id="title"] p{
+		margin-top: 1rem;
+		font-size: .8em;
+	}
+
+	section[id="problems"]{
+		padding-top: 12vh;
+		font-size: 1.4em;
+	}
+
+	section[id="strategy"]{
+		/*font-size: 1.5em;*/
+	}
+
+	section[id="strategy"] h2{
+		margin-top: 2em;
+	}
+
+	section[id="strategy"] p{
+		margin: 3rem 0;
+	}
+
+}

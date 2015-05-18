@@ -1,54 +1,48 @@
 'use strict';
-// var _antColony = require('AntColony');
-// var isCanvasAvailable = require('./canvas-detect.js');
-// var terminal = require('./terminal.js');
 
-// var container = document.querySelector('.colony');
-
-// if(isCanvasAvailable()){
-// 	terminal(document.querySelector('main header'));
-// }
-// else{
-// 	var fallback = document.querySelector('main header img[hidden]');
-// 	fallback.removeAttribute('hidden');
-// }
-
-// var splashScreen = document.getElementById('splashScreen');
-// var enterButton = document.getElementById('enter');
-
+var body = document.querySelector('body');
 var menuButton = document.querySelector('body > header img');
 var menu = document.body.querySelector('nav');
 var currentPage = document.querySelector('body > header h2');
 var mailButton = document.querySelector('#mail');
 var townButton = document.querySelector('#town');
-// var menu = querySelector('body');
+var colonySection = document.querySelector('#colony');
 
+var isCanvasAvailable = require('./canvas-detect.js');
+var terminal = require('./terminal.js');
+var antColony;
+
+if(isCanvasAvailable()){
+	antColony = terminal(document.querySelector('#colony'));
+	antColony.togglePlayPause();
+}
+else {
+	var fallback = document.querySelector('#colony img[hidden]');
+	fallback.removeAttribute('hidden');
+}
 
 function addHoverBehavior(element) {
 
 	element.addEventListener('touchstart', function(){
 		element.classList.toggle('hover');
 	});
+}
 
-	element.addEventListener('mouseenter', function mouseenterListener(e){
-		element.removeEventListener('mouseenter', mouseenterListener);
-		element.classList.add('hover');
-
-		element.addEventListener('mouseleave', function mouseleaveListener(){
-			element.removeEventListener('mouseleave', mouseleaveListener);
-			element.classList.remove('hover');
-
-			element.addEventListener('mouseenter', mouseenterListener);
-		})
-	});
+function toggleAnimation(){
+	body.classList.toggle('noscroll');
+	colonySection.classList.toggle('visible');
+	antColony.togglePlayPause();
 }
 
 addHoverBehavior(mailButton);
 addHoverBehavior(townButton);
 
+// displaying menu AND antColony (for now both at the same time)
 menuButton.addEventListener('click', function(){
 	menu.classList.toggle('active');
 	menuButton.classList.toggle('active');
+	
+	toggleAnimation();
 });
 
 menu.addEventListener('click', function(){

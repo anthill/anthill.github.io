@@ -9,7 +9,7 @@ module.exports = function(container){
 
 	// launch animation
 	var antColony = _antColony(container, defaultOptions);
-	container.addEventListener('click', antColony.togglePlayPause);
+	// container.addEventListener('click', antColony.togglePlayPause);
 
 	var terminal = document.getElementById('terminal');
 
@@ -184,5 +184,7 @@ module.exports = function(container){
 
 	terminal.addEventListener('mouseover', activateTerminal);
 	terminal.addEventListener('mouseout', deactivateTerminal);
+
+	return antColony;
 };
 
