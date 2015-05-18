@@ -39,6 +39,7 @@ body > header span {
 }
 
 body > header div{
+	display: -webkit-flex; -webkit-flex-direction: column; -webkit-justify-content: center;
 	display: flex; flex-direction: column; justify-content:center; position: absolute; top: 0; bottom:0; left: 0; margin: 0; margin-left: .6rem;
 }
 
@@ -103,8 +104,8 @@ strong{
 }
 
 main > section > header {
-	display: flex; flex-direction: column; justify-content: center; width: 30%;
 	display: -webkit-flex; -webkit-flex-direction: column; -webkit-justify-content: center;
+	display: flex; flex-direction: column; justify-content: center; width: 30%;
 }
 
 main > section > header h2{
@@ -155,10 +156,6 @@ section[class="page"] {
 
 section[class="page"] p {
 	font-size: .8em; text-align: justify;
-}
-
-section[class="page"] img {
-	/*display: block; width: 100%;*/
 }
 
 section[class="page"] h3 {
@@ -251,8 +248,8 @@ section[id="about"] aside{
 }
 
 .column{
-	display: flex; flex-direction: column; justify-content: center; position: relative; min-height: 90vh; width: 80%; padding: 0 10%;
 	display: -webkit-flex; -webkit-flex-direction: column; -webkit-justify-content: center;
+	display: flex; flex-direction: column; justify-content: center; position: relative; min-height: 90vh; width: 80%; padding: 0 10%;
 }
 
 section[id="about"] .column{
@@ -260,8 +257,8 @@ section[id="about"] .column{
 }
 
 .row{
-	display: flex; flex-direction: column; justify-content: center; margin: 0;
 	display: -webkit-flex; -webkit-flex-direction: column; -webkit-justify-content: center;
+	display: flex; flex-direction: column; justify-content: center; margin: 0;
 }
 
 section[id="spirit"] p{
@@ -319,8 +316,8 @@ section[id="team"] ul header {
 }
 
 section[id="team"] aside{
-	display: flex; flex-direction: column; justify-content: center; position: absolute; right: 0; top: 0; margin: 1em 0;
 	display: -webkit-flex; -webkit-flex-direction: column; -webkit-justify-content: center; position: absolute;
+	display: flex; flex-direction: column; justify-content: center; position: absolute; right: 0; top: 0; margin: 1em 0;
 }
 
 section[id="team"] p {
@@ -401,8 +398,8 @@ section[id='contact'] i[class^='icon']{
 }
 
 section[id='contact'] .back{
-	display: flex; flex-direction: column; justify-content: center; position: absolute; top: 0; bottom: 0; right: 0; left: 0; z-index: 0; margin: 0 auto;
 	display: -webkit-flex; -webkit-flex-direction: column; -webkit-justify-content: center;
+	display: flex; flex-direction: column; justify-content: center; position: absolute; top: 0; bottom: 0; right: 0; left: 0; z-index: 0; margin: 0 auto;
 }
 
 div[id="town"] .back {
@@ -473,8 +470,8 @@ footer {
 	}
 
 	.row{
-		flex-direction: row; justify-content: space-around;
 		-webkit-flex-direction: row; -webkit-justify-content: space-around;
+		flex-direction: row; justify-content: space-around;
 	}
 
 	.row section{
@@ -510,8 +507,8 @@ footer {
 	}
 
 	section[class='page'] {
-		display: flex; flex-direction: row; padding: 1rem; padding-top: 10vh; padding-bottom: 0;
 		display: -webkit-flex; -webkit-flex-direction: row;
+		display: flex; flex-direction: row; padding: 1rem; padding-top: 10vh; padding-bottom: 0;
 		font-size: .9em;
 	}
 
@@ -569,8 +566,8 @@ footer {
 	}
 
 	section[id="projects"] .row{
-		flex-direction: row;
 		-webkit-flex-direction: row;
+		flex-direction: row;
 	}
 
 	section[id="team"] .column {
@@ -610,8 +607,9 @@ footer {
 	}
 
 	section[id='contact'] .row{
-		position: relative; flex-direction: row; justify-content: center; width: 100%; margin: 3em 0;
 		-webkit-flex-direction: row; -webkit-justify-content: center;
+		position: relative; flex-direction: row; justify-content: center; width: 100%; margin: 3em 0;
+		
 	}
 
 	section[id='contact'] .row > *{
