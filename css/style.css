@@ -33,7 +33,7 @@ body > header div{
 
 body > header h1{
 	margin: 0;
-	font-family: 'Remington Noiseless'; font-size: 2em; line-height: .8em;
+	font-family: 'Remington Noiseless', 'Raleway'; font-size: 2em; line-height: .8em;
 }
 
 body > header em{
@@ -250,7 +250,7 @@ section[id="about"] .column{
 
 .row{
 	display: flex; flex-direction: column; justify-content: center; margin: 0;
-	display: -webkit-flex; webkit-flex-direction: column; webkit-justify-content: center;
+	display: -webkit-flex; -webkit-flex-direction: column; -webkit-justify-content: center;
 }
 
 section[id="spirit"] p{
