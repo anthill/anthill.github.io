@@ -13,6 +13,17 @@
 
 // 7. le reste
 */
+@font-face {
+  font-family: 'RemingtonNoiseless';
+  src: url('./fonts/Remington-Noiseless-webfont.eot'); /* IE9 Compat Modes */
+  src: url('./fonts/Remington-Noiseless-webfont.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/Remington-Noiseless-webfont.woff2') format('woff2'),
+       url('./fonts/Remington-Noiseless-webfont.woff') format('woff'),
+       url('./fonts/Remington-Noiseless-webfont.ttf')  format('truetype'),
+       url('./fonts/Remington-Noiseless-webfont.svg#svgFontName') format('svg');
+}
+
+
 body {
 	font-family: 'Raleway';
 }
@@ -33,7 +44,7 @@ body > header div{
 
 body > header h1{
 	margin: 0;
-	font-family: 'Remington Noiseless', 'Raleway'; font-size: 2em; line-height: .8em;
+	font-family: 'RemingtonNoiseless', 'Raleway'; font-size: 2em; line-height: .8em;
 }
 
 body > header em{
@@ -78,7 +89,7 @@ img.super{
 }
 
 h3 {
-	font-family: 'Remington Noiseless', 'Raleway';
+	font-family: 'RemingtonNoiseless', 'Raleway';
 }
 
 h4{
@@ -722,8 +733,8 @@ footer {
 }
 /* flip the pane when hovered */
 .flip-container.hover .flipper {
-	transform: rotateX(180deg);
 	-webkit-transform:rotateX(180deg);
+	transform: rotateX(180deg);
 }
 
 /* flip speed goes here */
@@ -736,21 +747,21 @@ footer {
 
 /* hide back of pane during swap */
 .front, .back {
-	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 
 /* front pane, placed above back */
 .front {
 	/*z-index: 2;*/
 	/* for firefox 31 */
-	transform: rotateX(0deg);
 	-webkit-transform:rotateX(0deg);
+	transform: rotateX(0deg);
 }
 
 /* back, initially hidden pane */
 .back {
-	transform: rotateX(180deg);
 	-webkit-transform:rotateX(180deg);
+	transform: rotateX(180deg);
 }
