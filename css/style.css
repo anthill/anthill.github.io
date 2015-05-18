@@ -714,6 +714,7 @@ footer {
 
 
 
+/* Flipper */
 
 /* entire container, keeps perspective */
 .flip-container {
@@ -722,6 +723,7 @@ footer {
 /* flip the pane when hovered */
 .flip-container.hover .flipper {
 	transform: rotateX(180deg);
+	-webkit-transform:rotateX(180deg);
 }
 
 /* flip speed goes here */
@@ -735,9 +737,8 @@ footer {
 /* hide back of pane during swap */
 .front, .back {
 	backface-visibility: hidden;
-
-	/*position: absolute;
-	top: 0; bottom: 0; left: 0; right: 0;*/
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
 }
 
 /* front pane, placed above back */
@@ -745,9 +746,11 @@ footer {
 	/*z-index: 2;*/
 	/* for firefox 31 */
 	transform: rotateX(0deg);
+	-webkit-transform:rotateX(0deg);
 }
 
 /* back, initially hidden pane */
 .back {
 	transform: rotateX(180deg);
+	-webkit-transform:rotateX(180deg);
 }
