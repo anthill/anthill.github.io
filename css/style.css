@@ -15,12 +15,12 @@
 */
 @font-face {
   font-family: 'RemingtonNoiseless';
-  src: url('./fonts/Remington-Noiseless-webfont.eot'); /* IE9 Compat Modes */
-  src: url('./fonts/Remington-Noiseless-webfont.eot?#iefix') format('embedded-opentype'),
-       url('./fonts/Remington-Noiseless-webfont.woff2') format('woff2'),
-       url('./fonts/Remington-Noiseless-webfont.woff') format('woff'),
-       url('./fonts/Remington-Noiseless-webfont.ttf')  format('truetype'),
-       url('./fonts/Remington-Noiseless-webfont.svg#svgFontName') format('svg');
+  src: url('../fonts/Remington-Noiseless-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Remington-Noiseless-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Remington-Noiseless-webfont.woff2') format('woff2'),
+       url('../fonts/Remington-Noiseless-webfont.woff') format('woff'),
+       url('../fonts/Remington-Noiseless-webfont.ttf')  format('truetype'),
+       url('../fonts/Remington-Noiseless-webfont.svg#svgFontName') format('svg');
 }
 
 
