@@ -461,7 +461,12 @@ div[id="town"] aside a:hover {
 }
 
 footer {
-	font-size: 0.5rem; text-align: center;
+	font-size: 0.5rem; text-align: center; padding: 1em;
+	background-color: white; opacity: 1;
+}
+
+footer p {
+	margin: 0;
 }
 
 @media only screen and (min-width: 660px){
