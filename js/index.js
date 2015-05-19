@@ -47,6 +47,11 @@ if (!isMobile){
 		main.classList.toggle('hidden');
 		// antColony.togglePlayPause();
 	}
+
+	// put colony on top
+	menuButton.addEventListener('click', function(){
+		toggleAnimation();
+	});
 }
 
 function addHoverBehavior(element) {
@@ -59,13 +64,10 @@ function addHoverBehavior(element) {
 addHoverBehavior(mailButton);
 addHoverBehavior(townButton);
 
-// displaying menu (and antColony if desktop)
+// displaying menu
 menuButton.addEventListener('click', function(){
 	menu.classList.toggle('active');
 	menuButton.classList.toggle('active');
-	
-	if (!isMobile)
-		toggleAnimation();
 });
 
 menu.addEventListener('click', function(){
