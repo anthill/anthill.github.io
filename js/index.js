@@ -50,7 +50,6 @@ if (!isMobile){
 	}
 
 	main.addEventListener('transitionend', function(){
-		console.log('yeah');
 		colonySection.classList.toggle('over');
 	});
 
@@ -79,17 +78,6 @@ menu.addEventListener('click', function(){
 	menu.classList.toggle('active');
 	menuButton.classList.toggle('active');
 });
-
-// menuButton.addEventListener('touchstart', function(){
-// 	menu.classList.toggle('active');
-// 	menuButton.classList.toggle('active');
-// });
-
-// menu.addEventListener('touchstart', function(){
-// 	menu.classList.toggle('active');
-// 	menuButton.classList.toggle('active');
-// });
-
 
 function findPage() {
 	var currentY = window.scrollY;
