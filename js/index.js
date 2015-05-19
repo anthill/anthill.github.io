@@ -65,6 +65,7 @@ addHoverBehavior(townButton);
 
 // displaying menu
 menuButton.addEventListener('click', function(){
+	console.log('yeah');
 	menu.classList.toggle('active');
 	menuButton.classList.toggle('active');
 });
@@ -74,15 +75,15 @@ menu.addEventListener('click', function(){
 	menuButton.classList.toggle('active');
 });
 
-menuButton.addEventListener('touchstart', function(){
-	menu.classList.toggle('active');
-	menuButton.classList.toggle('active');
-});
+// menuButton.addEventListener('touchstart', function(){
+// 	menu.classList.toggle('active');
+// 	menuButton.classList.toggle('active');
+// });
 
-menu.addEventListener('touchstart', function(){
-	menu.classList.toggle('active');
-	menuButton.classList.toggle('active');
-});
+// menu.addEventListener('touchstart', function(){
+// 	menu.classList.toggle('active');
+// 	menuButton.classList.toggle('active');
+// });
 
 
 function findPage() {
