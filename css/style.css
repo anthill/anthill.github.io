@@ -166,6 +166,10 @@ main.hidden {
 	opacity: 0;
 }
 
+section[id='colony'].over {
+	z-index: 0;
+}
+
 section[class="page"] {
 	position: relative; min-height: 90vh; padding-top: 10vh;
 	font-size: 1em;

@@ -7,6 +7,7 @@ var menu = document.body.querySelector('nav');
 var currentPage = document.querySelector('body > header h2');
 var mailButton = document.querySelector('#mail');
 var townButton = document.querySelector('#town');
+var colonySection = document.querySelector('#colony');
 
 var isMobile = false;
 
@@ -47,6 +48,11 @@ if (!isMobile){
 		main.classList.toggle('hidden');
 		// antColony.togglePlayPause();
 	}
+
+	main.addEventListener('transitionend', function(){
+		console.log('yeah');
+		colonySection.classList.toggle('over');
+	});
 
 	// put colony on top
 	menuButton.addEventListener('click', function(){
