@@ -101,47 +101,47 @@ var pages = rects.map(function(rect){
 window.addEventListener("scroll", findPage);
 
 
-// don't run colony on mobiles
-if (isDesktop){
-	// when clicking on menu tab, back to normal view if colony was on top
-	NodeList.prototype.forEach = Array.prototype.forEach;
+// // don't run colony on mobiles
+// if (isDesktop){
+// 	// when clicking on menu tab, back to normal view if colony was on top
+// 	NodeList.prototype.forEach = Array.prototype.forEach;
 
-	document.querySelectorAll('nav a').forEach(function(element){
-	    element.addEventListener('click', function(){
-	    	if (main.classList.contains('hidden')){
-	    		body.classList.remove('noscroll');
-	    		main.classList.remove('hidden');
-	    	}	
-		});
-	});
+// 	document.querySelectorAll('nav a').forEach(function(element){
+// 	    element.addEventListener('click', function(){
+// 	    	if (main.classList.contains('hidden')){
+// 	    		body.classList.remove('noscroll');
+// 	    		main.classList.remove('hidden');
+// 	    	}	
+// 		});
+// 	});
 
-	var isCanvasAvailable = require('./canvas-detect.js');
-	var terminal = require('./terminal.js');
-	var antColony;
+// 	var isCanvasAvailable = require('./canvas-detect.js');
+// 	var terminal = require('./terminal.js');
+// 	var antColony;
 
-	if(isCanvasAvailable()){
-		antColony = terminal(document.querySelector('#colony'));
-		// antColony.togglePlayPause();
-	}
-	else {
-		var fallback = document.querySelector('#colony img[hidden]');
-		fallback.removeAttribute('hidden');
-	}
+// 	if(isCanvasAvailable()){
+// 		antColony = terminal(document.querySelector('#colony'));
+// 		// antColony.togglePlayPause();
+// 	}
+// 	else {
+// 		var fallback = document.querySelector('#colony img[hidden]');
+// 		fallback.removeAttribute('hidden');
+// 	}
 
-	function toggleAnimation(){
-		body.classList.toggle('noscroll');
-		main.classList.toggle('hidden');
-		// antColony.togglePlayPause();
-	}
+// 	function toggleAnimation(){
+// 		body.classList.toggle('noscroll');
+// 		main.classList.toggle('hidden');
+// 		// antColony.togglePlayPause();
+// 	}
 
-	main.addEventListener('transitionend', function(){
-		colonySection.classList.toggle('over');
-	});
+// 	main.addEventListener('transitionend', function(){
+// 		colonySection.classList.toggle('over');
+// 	});
 
-	// put colony on top
-	menuButton.addEventListener('click', function(){
-		toggleAnimation();
-	});
-}
+// 	// put colony on top
+// 	menuButton.addEventListener('click', function(){
+// 		toggleAnimation();
+// 	});
+// }
 
 
