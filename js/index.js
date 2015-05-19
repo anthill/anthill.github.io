@@ -55,7 +55,6 @@ if (!isMobile){
 }
 
 function addHoverBehavior(element) {
-
 	element.addEventListener('touchstart', function(){
 		element.classList.toggle('hover');
 	});
@@ -74,6 +73,17 @@ menu.addEventListener('click', function(){
 	menu.classList.toggle('active');
 	menuButton.classList.toggle('active');
 });
+
+menuButton.addEventListener('touchstart', function(){
+	menu.classList.toggle('active');
+	menuButton.classList.toggle('active');
+});
+
+menu.addEventListener('touchstart', function(){
+	menu.classList.toggle('active');
+	menuButton.classList.toggle('active');
+});
+
 
 function findPage() {
 	var currentY = window.scrollY;

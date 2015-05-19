@@ -771,10 +771,6 @@ footer p {
 	position: relative;
 }
 
-.flip-container:hover .front {
-	visibility: hidden;
-}
-
 /* hide back of pane during swap */
 .front, .back {
 	-webkit-backface-visibility: hidden;
