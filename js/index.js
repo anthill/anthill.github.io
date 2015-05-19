@@ -27,6 +27,7 @@ addHoverBehavior(townButton);
 
 // displaying menu
 menuButton.addEventListener('click', function(){
+	console.log('yeah');
 	menu.classList.toggle('active');
 	menuButton.classList.toggle('active');
 });
