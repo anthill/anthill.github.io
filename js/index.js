@@ -9,55 +9,12 @@ var mailButton = document.querySelector('#mail');
 var townButton = document.querySelector('#town');
 var colonySection = document.querySelector('#colony');
 
-var isMobile = false;
+var isDesktop = true;
 
 // check if the device is mobile
 var ua = window.navigator.userAgent;
 if (ua.match(/Mobi/))
-	isMobile = true;
-
-// don't run colony on mobiles
-if (!isMobile){
-	// when clicking on menu tab, back to normal view if colony was on top
-	NodeList.prototype.forEach = Array.prototype.forEach;
-
-	document.querySelectorAll('nav a').forEach(function(element){
-	    element.addEventListener('click', function(){
-	    	if (main.classList.contains('hidden')){
-	    		body.classList.remove('noscroll');
-	    		main.classList.remove('hidden');
-	    	}	
-		});
-	});
-
-	var isCanvasAvailable = require('./canvas-detect.js');
-	var terminal = require('./terminal.js');
-	var antColony;
-
-	if(isCanvasAvailable()){
-		antColony = terminal(document.querySelector('#colony'));
-		// antColony.togglePlayPause();
-	}
-	else {
-		var fallback = document.querySelector('#colony img[hidden]');
-		fallback.removeAttribute('hidden');
-	}
-
-	function toggleAnimation(){
-		body.classList.toggle('noscroll');
-		main.classList.toggle('hidden');
-		// antColony.togglePlayPause();
-	}
-
-	main.addEventListener('transitionend', function(){
-		colonySection.classList.toggle('over');
-	});
-
-	// put colony on top
-	menuButton.addEventListener('click', function(){
-		toggleAnimation();
-	});
-}
+	isDesktop = false;
 
 function addHoverBehavior(element) {
 	element.addEventListener('touchstart', function(){
@@ -142,3 +99,49 @@ var pages = rects.map(function(rect){
 });
 
 window.addEventListener("scroll", findPage);
+
+
+// don't run colony on mobiles
+if (isDesktop){
+	// when clicking on menu tab, back to normal view if colony was on top
+	NodeList.prototype.forEach = Array.prototype.forEach;
+
+	document.querySelectorAll('nav a').forEach(function(element){
+	    element.addEventListener('click', function(){
+	    	if (main.classList.contains('hidden')){
+	    		body.classList.remove('noscroll');
+	    		main.classList.remove('hidden');
+	    	}	
+		});
+	});
+
+	var isCanvasAvailable = require('./canvas-detect.js');
+	var terminal = require('./terminal.js');
+	var antColony;
+
+	if(isCanvasAvailable()){
+		antColony = terminal(document.querySelector('#colony'));
+		// antColony.togglePlayPause();
+	}
+	else {
+		var fallback = document.querySelector('#colony img[hidden]');
+		fallback.removeAttribute('hidden');
+	}
+
+	function toggleAnimation(){
+		body.classList.toggle('noscroll');
+		main.classList.toggle('hidden');
+		// antColony.togglePlayPause();
+	}
+
+	main.addEventListener('transitionend', function(){
+		colonySection.classList.toggle('over');
+	});
+
+	// put colony on top
+	menuButton.addEventListener('click', function(){
+		toggleAnimation();
+	});
+}
+
+
