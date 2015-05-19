@@ -1,12 +1,25 @@
 'use strict';
 
 var body = document.querySelector('body');
+var main = document.querySelector('main');
 var menuButton = document.querySelector('body > header img');
 var menu = document.body.querySelector('nav');
 var currentPage = document.querySelector('body > header h2');
 var mailButton = document.querySelector('#mail');
 var townButton = document.querySelector('#town');
-var colonySection = document.querySelector('#colony');
+
+
+// when clicking on menu tab, back to normal view if colony was on top
+NodeList.prototype.forEach = Array.prototype.forEach;
+
+document.querySelectorAll('nav a').forEach(function(element){
+    element.addEventListener('click', function(){
+    	if (main.classList.contains('hidden')){
+    		body.classList.remove('noscroll');
+    		main.classList.remove('hidden');
+    	}	
+	});
+});
 
 var isCanvasAvailable = require('./canvas-detect.js');
 var terminal = require('./terminal.js');
@@ -14,7 +27,7 @@ var antColony;
 
 if(isCanvasAvailable()){
 	antColony = terminal(document.querySelector('#colony'));
-	antColony.togglePlayPause();
+	// antColony.togglePlayPause();
 }
 else {
 	var fallback = document.querySelector('#colony img[hidden]');
@@ -30,8 +43,8 @@ function addHoverBehavior(element) {
 
 function toggleAnimation(){
 	body.classList.toggle('noscroll');
-	colonySection.classList.toggle('visible');
-	antColony.togglePlayPause();
+	main.classList.toggle('hidden');
+	// antColony.togglePlayPause();
 }
 
 addHoverBehavior(mailButton);

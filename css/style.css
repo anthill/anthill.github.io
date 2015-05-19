@@ -153,6 +153,19 @@ input{
 	text-align: right; color: #CCC;
 }
 
+section[id='spirit'], section[id='home'], section[id='team']  {
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+main {
+	opacity: 1;
+	transition: opacity .5s ease-in-out;
+}
+
+main.hidden {
+	opacity: 0;
+}
+
 section[class="page"] {
 	position: relative; min-height: 90vh; padding-top: 10vh;
 	font-size: 1em;
