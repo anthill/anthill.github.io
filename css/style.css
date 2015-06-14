@@ -391,11 +391,12 @@ section[id='contact']{
 
 section[id='contact'] .row {
 	justify-content: space-around;
+	margin: .5em;
 	text-align: center;
 }
 
 section[id='contact'] .row > * {
-	margin: .2em 0;
+	margin: .5em 0;
 }
 
 .front, .back {
@@ -418,50 +419,53 @@ section[id='contact'] i[class^='icon']{
 	color: #EEE; font-size: 5em;
 }
 
-section[id='contact'] .back{
+/*section[id='contact'] .test{
 	display: -webkit-flex; -webkit-flex-direction: column; -webkit-justify-content: center;
-	display: flex; flex-direction: column; justify-content: center; position: absolute; top: 0; bottom: 0; right: 0; left: 0; z-index: 0; margin: 0 auto;
-}
+	display: flex; flex-direction: column; justify-content: center; position: absolute; margin: 0 auto;
+}*/
 
-div[id="town"] .back {
+div[id="town"] {
 	border-radius: 10px;
 	background-image: url("../images/localisation.png"); background-size: cover; background-position: center center;
 }
 
-div[id="town"] aside {
-	height: 100%; border-radius: 10px; padding: .5em 0;
-	background-color: rgba(255, 255, 255, 0.4);
-	color: #111; 
-}
-
-div[id="town"] aside p, div[id="town"] aside a {
+div[id="town"] > div {
+	height: 100%; padding: 1em .5em;
+	border-radius: 10px;
 	text-align: right;
+	background-color: rgba(255, 255, 255, 0.6);
 }
 
-div[id="town"] aside p{
-	margin-top: .5em;
+div[id="town"] > div a{
+	/*display: block;*/
+	color: black; font-size: 1.3em; 
 }
 
-/*div[id="town"] aside a {
-	margin: 0 .5em;
-}*/
-
-div[id="town"] aside a:first-child {
-	display: block;
-	font-weight: bold;
-}
-
-div[id="mail"] aside > a{
-	color: #CCC;
-	font-size: 1em;
-}
-
-div[id="mail"] aside > a:hover {
+div[id="town"] > div a:hover{
 	color: #005BAE; text-decoration: underline;
 }
 
-div[id="town"] aside a:hover {
-	color: #005BAE;
+div[id="town"] > div a:first-child{
+	margin: .2em 0;
+	font-size: 2em; font-weight: bold;
+}
+
+div[id="town"] > div p{
+	margin: 0;
+	text-align: right;
+}
+
+div[id="mail"]{
+	display: flex; flex-direction: column; justify-content: space-around;
+	color: #CCC; font-size: 1.5em; text-align: center;
+}
+
+div[id="mail"] a {
+	color: #CCC;
+}
+
+div[id="mail"] a:hover {
+	color: #005BAE; text-decoration: underline;
 }
 
 footer {

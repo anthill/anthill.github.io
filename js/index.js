@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict'; // This wouldn't allow js to be run in Safari :/
 
 var body = document.querySelector('body');
 var main = document.querySelector('main');
@@ -16,6 +16,51 @@ var ua = window.navigator.userAgent;
 if (ua.match(/Mobi/))
 	isDesktop = false;
 
+// don't run colony on mobiles
+if (isDesktop){
+
+	// when clicking on menu tab, back to normal view if colony was on top
+	NodeList.prototype.forEach = Array.prototype.forEach;
+
+	document.querySelectorAll('nav a').forEach(function(element){
+	    element.addEventListener('click', function(){
+	    	if (main.classList.contains('hidden')){
+	    		body.classList.remove('noscroll');
+	    		main.classList.remove('hidden');
+	    	}	
+		});
+	});
+
+	var isCanvasAvailable = require('./canvas-detect.js');
+	var terminal = require('./terminal.js');
+	var antColony;
+
+	if(isCanvasAvailable()){
+		antColony = terminal(document.querySelector('#colony'));
+		// antColony.togglePlayPause();
+	}
+	else {
+		var fallback = document.querySelector('#colony img[hidden]');
+		fallback.removeAttribute('hidden');
+	}
+
+	function toggleAnimation(){
+		body.classList.toggle('noscroll');
+		main.classList.toggle('hidden');
+		// antColony.togglePlayPause();
+	}
+
+	main.addEventListener('transitionend', function(){
+		colonySection.classList.toggle('over');
+	});
+
+	// put colony on top
+	menuButton.addEventListener('click', function(){
+		toggleAnimation();
+	});
+}
+
+
 function addHoverBehavior(element) {
 	element.addEventListener('touchstart', function(){
 		element.classList.toggle('hover');
@@ -27,7 +72,6 @@ addHoverBehavior(townButton);
 
 // displaying menu
 menuButton.addEventListener('click', function(){
-	console.log('yeah');
 	menu.classList.toggle('active');
 	menuButton.classList.toggle('active');
 });
@@ -100,49 +144,3 @@ var pages = rects.map(function(rect){
 });
 
 window.addEventListener("scroll", findPage);
-
-
-// // don't run colony on mobiles
-// if (isDesktop){
-// 	// when clicking on menu tab, back to normal view if colony was on top
-// 	NodeList.prototype.forEach = Array.prototype.forEach;
-
-// 	document.querySelectorAll('nav a').forEach(function(element){
-// 	    element.addEventListener('click', function(){
-// 	    	if (main.classList.contains('hidden')){
-// 	    		body.classList.remove('noscroll');
-// 	    		main.classList.remove('hidden');
-// 	    	}	
-// 		});
-// 	});
-
-// 	var isCanvasAvailable = require('./canvas-detect.js');
-// 	var terminal = require('./terminal.js');
-// 	var antColony;
-
-// 	if(isCanvasAvailable()){
-// 		antColony = terminal(document.querySelector('#colony'));
-// 		// antColony.togglePlayPause();
-// 	}
-// 	else {
-// 		var fallback = document.querySelector('#colony img[hidden]');
-// 		fallback.removeAttribute('hidden');
-// 	}
-
-// 	function toggleAnimation(){
-// 		body.classList.toggle('noscroll');
-// 		main.classList.toggle('hidden');
-// 		// antColony.togglePlayPause();
-// 	}
-
-// 	main.addEventListener('transitionend', function(){
-// 		colonySection.classList.toggle('over');
-// 	});
-
-// 	// put colony on top
-// 	menuButton.addEventListener('click', function(){
-// 		toggleAnimation();
-// 	});
-// }
-
-
