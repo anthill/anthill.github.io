@@ -1,4 +1,5 @@
-'use strict';
+// 'use strict'; // This wouldn't allow js to be run in Safari :/
+
 var _antColony = require('AntColony');
 var inputAnalysis = require('./inputAnalysis.js');
 var defaultOptions = require('./defaultOptions.js');
