@@ -67,10 +67,12 @@ body > header img {
 	
 
 body > header img:hover{
+	-webkit-tranform: rotate(360deg);
 	transform: rotate(360deg);
 }
 
 body > header img.active {
+	-webkit-transform: scale(0.7);
 	transform: scale(0.7);
 }
 
