@@ -359,6 +359,10 @@ section[id="team"] h3 {
 	margin: 1em 0;
 }
 
+section[id="team"] i[class^='icon'] {
+	font-size: 1em;
+}
+
 [id|="display"]:checked ~ p { /* Check my handsome teacher there -> http://twikito.com/ */
 	height: 11em;
 }
