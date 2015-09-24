@@ -402,6 +402,14 @@ section[id="team"] li header::before{
 	background-image: url('https://avatars3.githubusercontent.com/u/12696017'); 
 }
 
+[id="serge"] header::before {
+	background-image: url('https://avatars3.githubusercontent.com/u/11908390'); 
+}
+
+[id="max"] header::before {
+	background-image: url('https://avatars3.githubusercontent.com/u/9220115'); 
+}
+
 [id="fabien"] header::before {
 	background-image: url('https://avatars3.githubusercontent.com/u/7871295?'); 
 }
