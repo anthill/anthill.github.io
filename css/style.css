@@ -407,7 +407,7 @@ section[id="team"] li header::before{
 }
 
 [id="max"] header::before {
-	background-image: url('https://avatars3.githubusercontent.com/u/9220115'); 
+	background-image: url('https://avatars3.githubusercontent.com/u/9220115?'); 
 }
 
 [id="fabien"] header::before {
