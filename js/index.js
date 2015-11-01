@@ -104,7 +104,8 @@ function findPage() {
 		tabs[3].className = 'tab'; 
 		tabs[4].className = 'tab'; 
 		tabs[5].className = 'tab'; 
-		tabs[6].className = 'tab'; 
+		tabs[6].className = 'tab';
+		tabs[7].className = 'tab';
 	}
 	else if (i >= 0 && tabs[i].className != 'tab active') {
 		tabs[0].className = 'tab'; 
@@ -113,7 +114,8 @@ function findPage() {
 		tabs[3].className = 'tab'; 
 		tabs[4].className = 'tab'; 
 		tabs[5].className = 'tab'; 
-		tabs[6].className = 'tab'; 
+		tabs[6].className = 'tab';
+		tabs[7].className = 'tab';
 		tabs[i].className += ' active';
 
 		currentPage.innerHTML = tabs[i].innerHTML;
@@ -128,6 +130,7 @@ var projects = document.getElementById("projects");
 var team = document.getElementById("team");
 var contact = document.getElementById("contact");
 var references = document.getElementById("references");
+var blog = document.getElementById("blog");
 
 var homeRect = home.getBoundingClientRect();
 var aboutRect = about.getBoundingClientRect();
@@ -136,8 +139,9 @@ var projectsRect = projects.getBoundingClientRect();
 var teamRect = team.getBoundingClientRect();
 var contactRect = contact.getBoundingClientRect();
 var referencesRect = references.getBoundingClientRect();
+var blogRect = blog.getBoundingClientRect();
 
-var rects = [homeRect, aboutRect, spiritRect, projectsRect, teamRect, contactRect, referencesRect];
+var rects = [homeRect, aboutRect, spiritRect, projectsRect, teamRect, contactRect, referencesRect, blogRect];
 var tabs = document.getElementsByClassName('tab');
 
 var pages = rects.map(function(rect){

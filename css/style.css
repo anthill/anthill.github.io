@@ -82,7 +82,7 @@ body > header h2{
 }
 
 nav {
-	position: fixed; right: 0; top: -15em; z-index: 1;
+	position: fixed; right: 0; top: -20em; z-index: 1;
 	font-size: 0.9em; text-align: right;
 	background-color: rgba(255, 255, 255, 0.9);
 	transition: top 0.5s ease-in-out;
@@ -501,6 +501,22 @@ section[id="references"] .row{
 	align-items: center;
 }
 
+section[id="references"] a img {
+	max-width: 6rem;
+}
+
+section[id='blog']{
+	background-color: #111; padding-bottom: 0;
+}
+
+section[id='blog'] .column{
+	width: 70vw;
+}
+
+section[id='blog'] iframe{
+	margin: .5rem 1rem;
+}
+
 footer {
 	font-size: 0.5rem; text-align: center; padding: 1em;
 	background-color: white; opacity: 1;
@@ -571,7 +587,7 @@ footer p {
 
 	section[class='page'] {
 		display: -webkit-flex; -webkit-flex-direction: row;
-		display: flex; flex-direction: row; padding: 1rem; padding-top: 10vh; padding-bottom: 0;
+		display: flex; flex-direction: row; padding: 1rem; padding-top: 10vh; padding-bottom: 10vh;
 		font-size: .9em;
 	}
 
@@ -687,6 +703,19 @@ footer p {
 	section[id='contact'] aside {
 		font-size: 1.6em;
 	}
+
+	section[id="references"] a img {
+		max-width: 10rem;
+	}
+
+	section[id='blog'] .row {
+		width: 90%; margin: 0 auto;
+	}
+
+	section[id='blog'] .m-profile {
+	    width: 400px;
+	}
+
 
 	footer {
 		font-size: 0.7rem; text-align: center;
