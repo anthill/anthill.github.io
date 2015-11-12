@@ -340,6 +340,11 @@ section[id="team"] li {
 	position: relative; margin: .2em 0;
 }
 
+section[id="team"] #alumni{
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
 section[id="team"] ul header {
 	display: inline-block; position: relative; margin-left: 4em;
 }
@@ -657,6 +662,11 @@ footer p {
 		width: 6em; height: 6em; left: -8em; border-radius: 10px;
 	}
 
+	section[id="team"] #alumni{
+		margin-left:  -6em;
+		font-size: 1.5em; 
+	}
+
 	section[id="team"] aside i{
 		font-size: 2em;
 	}
@@ -803,6 +813,11 @@ footer p {
 	section[id="team"] p {
 		height: auto;
 		font-size: .8em;
+	}
+
+	section[id="team"] #alumni{
+		margin-left:  -4em;
+		font-size: 2em; 
 	}
 
 	[id|="display"]:checked ~ p { /* Check my handsome teacher there -> http://twikito.com/ */
