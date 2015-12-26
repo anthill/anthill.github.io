@@ -26,10 +26,11 @@
 
 body {
 	font-family: 'Raleway';
+	overflow: hidden;
 }
 
-body.noscroll {
-	overflow: hidden;
+main {
+	transition: margin-top .5s ease-in-out;
 }
 
 body > header {
@@ -82,10 +83,15 @@ body > header h2{
 }
 
 nav {
-	position: fixed; right: 0; top: -20em; z-index: 1;
+	/*position: fixed; right: 0; top: -8rem; z-index: 1;
 	font-size: 0.9em; text-align: right;
 	background-color: rgba(255, 255, 255, 0.9);
-	transition: top 0.5s ease-in-out;
+	transition: top 0.5s ease-in-out;*/
+}
+
+nav li {
+	display: inline-block; padding: .7rem .5rem;
+	font-size: .8rem;
 }
 
 nav.active{
@@ -139,6 +145,11 @@ a {
 	color: #005BAE;
 }
 
+.tab:first-child{
+	background-color: white;
+	color: black;
+}
+
 section  {
 	position: relative;
 	min-height: 90vh; margin: 0 1rem;
@@ -153,7 +164,7 @@ section  {
 
 .row{
 	display: -webkit-flex; -webkit-flex-direction: column; -webkit-justify-content: center;
-	display: flex; flex-direction: column; justify-content: center; margin: 0;
+	display: flex; flex-direction: row; justify-content: space-around; margin: 0;
 }
 
 .desktop {
@@ -208,6 +219,9 @@ div[id='companies'] p {
 }
 
 /* OPEN */
+/*main {
+	margin-top: -174vh;
+}*/
 
 section[id='open'] ul {
 	/*height: 90vh;*/align-items: middle;
@@ -227,9 +241,9 @@ section[id='open'] p {
 /* TEAM */
 
 /*main {
-	margin-top: -175vh;
-}
-*/
+	margin-top: -264vh;
+}*/
+
 section[id="team"] ul {
 	margin: 0 auto;
 }
@@ -342,6 +356,9 @@ ul[id='alumni'] h3 {
 }
 
 /* CONTACT */
+/*main {
+	margin-top: -354vh;
+}*/
 
 section[id='contact'] ul {
 	height: 90vh;
