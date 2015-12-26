@@ -10,6 +10,7 @@
 		<link rel="stylesheet" href="./css/normalize.css">
 		<link rel="stylesheet" href="./css/style.css">
 		<link rel="stylesheet" href="./css/antColony.css">
+		<link rel="stylesheet" href="./fonts/icons/flaticon.css"> 
 		<link rel="stylesheet" href="./fonts/icons/icomoon.css">
 		<link href='http://fonts.googleapis.com/css?family=Raleway:400,700,900' rel='stylesheet' type='text/css'>
 
@@ -103,31 +104,38 @@
 		</nav>
 
 		<main>
-			<section id='home'>
-				<img src='./images/Logo_Rom_nospace.png' alt='ants logo'/>
-				<p><strong>Civic hackers</strong> company working <strong>openly</strong> on <strong>data</strong> science, design, open hardware</p>
-				<div>
-					<p>For companies</p><!--
-				 --><p>For public infrastructures</p><!--
-				 --></div>
-			</section><!--
-		 --><section id='offers'>
-				<div id='companies'>
+			<section id='home' class='page'>
+				<div class='column'>
+						<!-- <div id='logo'> -->
+							<img src='./images/Logo_Rom_nospace.png' alt='ants logo'/>
+							<p><strong>Civic hackers</strong> company working <strong>openly</strong> on <strong>data</strong> science, design, open hardware</p>
+							<div>
+								<p>For companies</p>
+								<p>For public infrastructures</p>
+							</div>
+							
+						<!-- </div> -->
+				</div>
+			</section>
+
+			<section id='offers' class='page'>
+				<div id='companies' class='column'>
 					<p>Your company has too heavy processes ? Want to bypass traditional cycles and be inspired with Hacking culture ?</p>
 					<p>We bring to life your datascience projects, from a simple prototype to a full-integrate solution.</p>
 					<div></div>
 					<p>You want to improve your team technical skills (Javascript, Docker,  IoT) and enhance your working environment ? We share our expertise, good practices, and provide state-of-the-art tools.</p>
 					<p>Feel free to consult our training catalog or call us for a taylor-made session.</p>
 				</div>
-				<div id='public'>
+				<div id='public' class='column'>
 					<h2>6element</h2>
 					<h3>Waste is valuable</h3>
-					<p>We work with recycling centers to make people realize the potent value of their waste, and help them find a solution to make the most of it.</p>
+					<p>It is about making people realize the potent value of their waste and helping them find a solution to make the most of it.</p>
+					<h3>Our solution is</h3>
 					<div id='data'>
 						<h4>Get data</h4>
 						We have designed sensors capable of
 						<ul>
-							<li>estimating affluence <span class='desktop'>based on smartphones wi-fi signatures while respecting privacy</span></li>
+							<li>estimating affluence based on smartphones wi-fi signatures while respecting privacy</li>
 							<li>knowing the availability of bins in recycling centers</li>
 						</ul>
 					</div>
@@ -145,36 +153,15 @@
 						<p>We aim at enhancing the reuse by connecting waste producers and waste consumers, whoever they may be.</p>
 					</div>
 				</div>
+
 			</section>
 
-			<section id="open">
-				<ul class='column'>
-					<li>
-						<h2>We work openly</h2>
-						<p>open-source</p>
-						<p>open-data</p>
-						<p>open-hardware</p>
-					</li>
-					<li>
-						<h2>for Impact</h2>
-						<p>see our spirit</p>
-						<p>to team up</p>
-					</li>
-					<li>
-						<h2>and Trust</h2>
-						<p>in our skills</p>
-						<p>in our privacy by design</p>
-					</li>
-				</ul>
-				
-			</section><!--
-
-		 --><section id='team'>
+			<section id='team' class='page'>
 				<ul class='column'>
 					<li id='alex'>
 						<label for='display-alex'>
 							<input type="checkbox" id="display-alex">
-							<header><h2>Alexandre Vallette</h2></header>
+							<header><h3>Alexandre Vallette</h3></header>
 							<aside>
 								<div>
 									<a href="https://github.com/vallettea" target="_blank"><i class="icon-github"></i></a>
@@ -190,7 +177,7 @@
 					<li id='davidB'>
 						<label for='display-davidB'>
 							<input type="checkbox" id="display-davidB">
-							<header><h2>David Bruant</h2></header>
+							<header><h3>David Bruant</h3></header>
 							<aside>
 								<div>
 									<a href="https://github.com/DavidBruant" target="_blank"><i class="icon-github"></i></a>
@@ -205,7 +192,7 @@
 					<li id='romain'>
 						<label for='display-romain'>
 							<input type="checkbox" id="display-romain">
-							<header><h2>Romain Crestey</h2></header>
+							<header><h3>Romain Crestey</h3></header>
 							<aside>
 								<div>
 									<a href="https://github.com/iOiurson" target="_blank"><i class="icon-github"></i></a>
@@ -220,7 +207,7 @@
 					<li id='serge'>
 						<label for='display-serge'>
 							<input type="checkbox" id="display-serge">
-							<header><h2>Serge Bredin</h2></header>
+							<header><h3>Serge Bredin</h3></header>
 							<aside>
 								<div>
 									<a href="https://github.com/SergeBredin" target="_blank"><i class="icon-github"></i></a>
@@ -235,63 +222,65 @@
 						</label>
 					</li>
 				</ul>
-				<div>
-					<h2>With a little help from our friends ... </h2>
-					<ul id='alumni'>
-						<li id='max'>
-							<a href="https://twitter.com/4rzael" target="_blank">
-								<img src='https://avatars3.githubusercontent.com/u/9220115?' alt='max'>
-								<h3>Max</h3>
-							</a>
-						</li>
-						<li id='armand'>
-							<a href="https://twitter.com/arm_gilles" target="_blank">
-								<img src='https://avatars1.githubusercontent.com/u/8374843?' alt='david'>
-								<h3>Armand</h3>
-							</a>	
-						</li>
-						<li id='roxane'>
-							<a href="https://twitter.com/dbr_roxane" target="_blank">
-								<img src='https://avatars3.githubusercontent.com/u/12696017' alt='david'>
-								<h3>Roxane</h3>
-							</a>
-						</li>
-						<li id='fabien'>
-							<a href="https://twitter.com/thefabiendurand" target="_blank">
-								<img src='https://avatars3.githubusercontent.com/u/7871295?' alt='fabien'>
-								<h3>Fabien</h3>
-							</a>
-						</li>
-						<li id='davidS'>
-							<a href="https://github.com/CIaviCI" target="_blank">
-								<img src='https://avatars.githubusercontent.com/u/7767926?' alt='david'>
-								<h3>David</h3>
-							</a>
-						</li>
-					</ul>
-				</div>
+				<p>With a little help from our friends ...</p>
+				<ul id='alumni'></ul>
+					<li id='max'>
+						<a href="https://twitter.com/4rzael" target="_blank"><h3>Maxime Agor</h3></a>
+					</li>
+					<li id='armand'>
+						<a href="https://twitter.com/arm_gilles" target="_blank"><h3>Armand Gilles</h3></a>	
+					</li>
+					<li id='roxane'>
+						<a href="https://twitter.com/dbr_roxane" target="_blank"><h3>Roxane Debruyker</h3></a>
+					</li>
+					<li id='fabien'>
+						<a href="https://twitter.com/thefabiendurand" target="_blank"><h3>Fabien Durand</h3></a>
+					</li>
+					<li id='davidS'>
+						<a href="https://github.com/CIaviCI" target="_blank"><h3>David Schwandt</h3></a>
+					</li>
+				</ul>
 				
 			</section>
 
-			<section id='contact'>
-				<ul class='column'>
-					<li><a href="https://twitter.com/beingAnts" target="_blank"><i class="icon-twitter"></i>@beingAnts</a></li>
-					<li><a href="https://twitter.com/beingAnts" target="_blank"><i class="icon-medium"></i>
-						<div id='test'>
-							<p>How we feel</p>
-							<p>How we code</p>
+			<section id='contact' class='page'>
+				<div class='column'>
+					<div class='row'>
+						<a href="https://twitter.com/beingAnts" target="_blank"><i class="icon-twitter"></i></a>
+						<a href="https://github.com/anthill" target="_blank"><i class="icon-github"></i></a>
+					</div>
+					<div class='row'>
+						<div id="mail">
+							<a href="mailto:contact@ants.builders">contact@ants.builders</a>
 						</div>
-						
-					</a></li>
-					<li><a href="https://github.com/anthill" target="_blank"><i class="icon-github"></i>anthill</a></li>
-					<li><a href="mailto:contact@ants.builders"><i class="icon-envelop"></i>contact@ants.builders</a></li>
-					<li><a href="http://bxno.de"><i class="icon-location"></i>Le Node</a></li>
-				</ul>
+						<div id="town">
+							<div>
+								<!-- <i class="flaticon-location54"></i> -->
+								<a href="http://bxno.de" target="_blank">Le Node<br></a>
+								<a href="https://www.google.com/maps/place/12+Rue+des+Faussets,+33000+Bordeaux,+France/@44.8403734,-0.5703114,17z/data=!3m1!4b1!4m2!3m1!1s0xd5527d1ce269143:0x555b04d8816b9bed" target="_blank">
+									12 rue des Faussets<br>
+									33000 Bordeaux<br>
+									France<br>
+								</a>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<header><h2 class='right'>Where we work at</h2></header>
+			</section>
+
+			<section id='blog' class='page'>
+				<div class='column'><div class='row'>
+					<a class="m-collection" data-collapsed="true" href="https://medium.com/ants-blog">Ants’ playground</a>
+					<a class="m-collection" data-collapsed="true" href="https://medium.com/code-feelings">Ants’ code feelings</a>
+				</div></div>
+				<header><h2 class='right'>What we think about the world</h2></header>
 			</section>
 
 		</main>
 
-		<section id="colony">
+		<section id="colony" class="page">
 			<div id="terminal" tabindex="-1">
 				<div id="currentLine"><span class="prompt">ants&gt;&nbsp;</span><span class="cursor">&nbsp;</span></div>
 			</div>
@@ -300,11 +289,11 @@
 			<div id="warning" class="invisible">WARNING ! ANT NUMBER WILL ADAPT TO ASSURE FPS IS SUPERIOR TO 25</div>
 		</section>
 
-		<!-- <footer>
+		<footer>
 			<p class="discrete">
 				This website uses Google Analytics. If that makes you uncomfortable, feel free to install <a href="https://tools.google.com/dlpage/gaoptout?hl=fr">Google's own blocker</a> or use <a href="https://disconnect.me/disconnect">disconnect</a>.
 			</p>
-		</footer> -->
+		</footer>
 
 		<!-- Font generated by <a href="http://www.flaticon.com">flaticon.com</a> and <a href="http://www.icomoon.com">icomoon.com</a>
  under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY</a>. The authors are: <a href="http://www.finest.graphics">Designerz Base</a>, <a href="http://fontawesome.io">Dave Gandy</a>, <a href="http://www.freepik.com">Freepik</a>, <a href="http://www.icomoon.io">Icomoon</a>, <a href="http://www.elegantthemes.com">Elegant Themes</a>. -->

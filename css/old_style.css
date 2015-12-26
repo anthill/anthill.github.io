@@ -101,18 +101,13 @@ img.super{
 	position: absolute; top:-.5em; right: 0; width: 3em;
 }
 
-/*h3 {
+h3 {
 	font-family: 'RemingtonNoiseless', 'Raleway'; font-weight: normal;
-}
-*/
-
-h2 {
-	font-size: 1rem;
 }
 
 h4{
 	margin: 1em 0;
-	font-size: 0.8rem; font-weight: normal;
+	font-size: 0.8em; font-weight: normal;
 }
 
 strong{
@@ -120,14 +115,37 @@ strong{
 	color: #005BAE;
 }
 
+main > section > header {
+	display: -webkit-flex; -webkit-flex-direction: column; -webkit-justify-content: center;
+	display: flex; flex-direction: column; justify-content: center; width: 30%;
+}
+
+main > section > header h2{
+	display: none;
+	font-size: 3em; font-weight: lighter;
+}
+
+section div {
+	/*margin: 0 auto;*/
+	text-align: justify;
+}
+
 ul {
-	margin: 0; padding: 0;
-	list-style: none;
+	margin: 0; padding: 0; list-style-type: none;
 }
 
 a {
 	color: #005BAE; text-decoration: none;
 	cursor: pointer;
+}
+
+aside a {
+	color: black;
+}
+
+input{
+	position: absolute; top: 0; left: 0;
+	opacity: 0;
 }
 
 .tab:hover{
@@ -139,15 +157,108 @@ a {
 	color: #005BAE;
 }
 
-section  {
-	position: relative;
-	min-height: 90vh; margin: 0 1rem;
+.right{
+	text-align: right; color: #CCC;
+}
+
+section[id='offers'], section[id='home'], section[id='team'], section[id="references"]  {
 	background-color: rgba(255, 255, 255, 0.8);
 }
 
+main {
+	margin-top: 10vh;
+	opacity: 1;
+	transition: opacity .5s ease-in-out;
+}
+
+main.hidden {
+	opacity: 0;
+}
+
+section[id='colony'].over {
+	z-index: 0;
+}
+
+section[class="page"] {
+	position: relative; min-height: 90vh;
+	font-size: 1em;
+}
+
+section[class="page"] p {
+	font-size: .8em; text-align: justify;
+}
+
+section[class="page"] h3 {
+	margin: .5em 0;
+	font-size: 1em;
+}
+
+section[id="home"]{
+	display: block;
+}
+
+section[id="home"] .column{
+	width: 90%; padding: 0 5%;
+}
+
+section[id="home"] strong {
+	color: black; font-weight: bold;
+}
+
+section[id="home"] h2 {
+	width: 100%; display: block; position: absolute; top: -2em; margin: 0 auto;
+	font-size: 2em; font-weight: lighter; text-align: center;
+}
+
+section[id="home"] h2 strong {
+	font-weight: lighter; 
+}
+
+section[id="home"] a {
+	color: #005BAE;
+}
+
+section[id="home"] a:hover {
+	text-decoration: underline;
+}
+
+div[id="logo"] {
+	display: inline-block; width: 100%; position: relative;
+}
+
+section[id="home"] > div p {
+	width: 100%; margin: 0;
+	font-size: 1rem; text-align: center;
+}
+
+section[id="home"] > div img{
+	width: 50%; margin: 2rem auto; margin-top: 6rem;
+}
+
+section[id="home"] > div span{
+	font-weight: bold;
+}
+
+section[id="home"] > div > div {
+	display: -webkit-flex; -webkit-flex-direction: column; -webkit-justify-content: center;
+	display: flex; flex-direction: column; justify-content: center;
+}
+
+section[id="home"] > div > div:last-child p {
+	align-self: flex-start;
+	color: #DDD;
+	background-color: #222;
+}
+
+[id="wiki-credits"]{
+	display: none; width: 100%; position: absolute; bottom: 0; right: 0; margin-bottom: .5em;
+	font-size: 0.7em; text-align: right;
+}
+
+
 .column{
 	display: -webkit-flex; -webkit-flex-direction: column; -webkit-justify-content: center;
-	display: flex; flex-direction: column; justify-content: center; position: relative;
+	display: flex; flex-direction: column; justify-content: center; position: relative; min-height: 80vh; width: 80%; padding: 0 10%;
 }
 
 
@@ -156,86 +267,14 @@ section  {
 	display: flex; flex-direction: column; justify-content: center; margin: 0;
 }
 
-.desktop {
-	display: none;
+section[id="offers"] div p{
+	margin: 0;
+	font-size: .8rem; text-align: center;
 }
-
-input{
-	position: absolute; top: 0; left: 0;
-	opacity: 0;
-}
-
-/* HOME */
-
-section[id='home']{
-	margin-top: 10vh;
-}
-
-section[id='home'] img {
-	display: block; width: 50%; margin: 2rem auto; padding-top: 6rem;
-}
-
-section[id='home'] p {
-	text-align: center; margin: .5rem 0;
-}
-
-section[id='home'] div {
-	display: flex; flex-direction: row; height: 10vh; position: absolute; bottom: 0;
-}
-
-section[id='home'] div p {
-	display: inline-block; width: 50%; /*height: 5vh;*/ align-self: flex-top; margin: 0;
-}
-
-/* OFFERS */
-
-/*main {
-	margin-top: -80vh;
-}*/
-
-section[id='offers']{
-	min-height: 80vh;
-	font-size: .7rem;
-}
-
-section[id='offers'] h2, section[id='offers'] h3{
-	margin: .5rem 0;
-	text-align: center;
-}
-
-div[id='companies'] p {
-	margin: 0; display: none;
-}
-
-/* OPEN */
-
-section[id='open'] ul {
-	/*height: 90vh;*/align-items: middle;
-}
-
-section[id='open'] li {
-	width: 50%; margin: 1rem auto;
-	text-align: center;
-}
-
-section[id='open'] p {
-	margin: .2rem auto;
-	font-size: .7rem;
-}
-
-
-/* TEAM */
-
-/*main {
-	margin-top: -175vh;
-}
-*/
+	
 section[id="team"] ul {
-	margin: 0 auto;
-}
-
-section[id="team"] > ul:first-child {
-	height: 70vh;
+	margin: 0 auto; 
+	list-style: none;
 }
 
 section[id="team"] i {
@@ -243,32 +282,31 @@ section[id="team"] i {
 }
 
 section[id="team"] li {
-	position: relative; padding: .5em 0;
+	position: relative; margin: .2em 0;
+}
+
+section[id="team"] #alumni{
+	margin-top: 1em;
+	margin-bottom: 1em;
 }
 
 section[id="team"] ul header {
 	display: inline-block; position: relative; margin-left: 4em;
 }
 
-section[id="team"] aside {
+section[id="team"] aside{
 	display: -webkit-flex; -webkit-flex-direction: column; -webkit-justify-content: center; position: absolute;
 	display: flex; flex-direction: column; justify-content: center; position: absolute; right: 0; top: 0; margin: 1em 0;
 }
 
-section[id="team"] aside a {
-	color: black;
-}
-
 section[id="team"] p {
-	display: block; position: absolute; height: 0rem; margin-top: .2rem; z-index: 1; padding: 0 .5rem;
-	font-size: .7rem; color: #DDD; text-align: justify;
-	background-color: rgba(0, 0, 0, 0.7);
+	display: block; height: 0; margin: 0; z-index: -2;
 	overflow: hidden; text-overflow: ellipsis;
 	transition: height .5s ease-in-out;
 }
 
 section[id="team"] h3 {
-	margin: 1rem 0;
+	margin: 1em 0;
 }
 
 section[id="team"] a {
@@ -277,53 +315,18 @@ section[id="team"] a {
 
 section[id="team"] i[class^='icon'] {
 	margin: 0em;
-	font-size: 1rem;
+	font-size: 1em;
 }
 
 [id|="display"]:checked ~ p { /* Check my handsome teacher there -> http://twikito.com/ */
-	height: 7rem;
+	height: 11em;
 }
 
 section[id="team"] li header::before{
-	position: absolute; width: 3rem; height: 3rem; left: -4rem; top: -.5rem; margin: .3rem;
-	border-radius: 20%;
+	position: absolute; width: 3em; height: 3em; left: -4em; border-radius: 50%;
 	content: '';
 	background-size: cover;
 }
-
-section[id='team'] > div:last-child {
-	position: absolute; bottom: 0; width: 100%;
-}
-
-section[id='team'] > div:last-child h2 {
-	font-size: .7rem;
-}
-
-ul[id="alumni"]{
-	display: flex; flex-direction: row; justify-content: space-around;
-}
-
-ul[id="alumni"] li {
-	width: 2.5rem;
-}
-
-ul[id="alumni"] a {
-	display: block;
-}
-
-ul[id="alumni"] img {
-	width: 2.5rem;
-	border-radius: 20%;
-} 
-
-ul[id="alumni"] header, ul[id="alumni"] h3 {
-	width: 100%; margin: 0;
-	text-align: center; font-weight: normal; color: black;
-}
-
-ul[id='alumni'] h3 {
-	font-size: .7rem;
-} 
 
 [id="alex"] header::before {
 	background-image: url('https://avatars.githubusercontent.com/u/371303?'); 
@@ -333,38 +336,138 @@ ul[id='alumni'] h3 {
 	background-image: url('https://avatars.githubusercontent.com/u/165829?'); 
 }
 
+[id="davidS"] header::before {
+	background-image: url('https://avatars.githubusercontent.com/u/7767926?'); 
+}
+
 [id="romain"] header::before {
 	background-image: url('https://avatars2.githubusercontent.com/u/8417814?'); 
+}
+
+[id="armand"] header::before {
+	background-image: url('https://avatars1.githubusercontent.com/u/8374843?'); 
+}
+
+[id="roxane"] header::before {
+	background-image: url('https://avatars3.githubusercontent.com/u/12696017'); 
 }
 
 [id="serge"] header::before {
 	background-image: url('https://avatars3.githubusercontent.com/u/11908390'); 
 }
 
-/* CONTACT */
-
-section[id='contact'] ul {
-	height: 90vh;
+[id="max"] header::before {
+	background-image: url('https://avatars3.githubusercontent.com/u/9220115?'); 
 }
 
-section[id='contact'] li {
-	margin: 1rem auto;
+[id="fabien"] header::before {
+	background-image: url('https://avatars3.githubusercontent.com/u/7871295?'); 
 }
 
-section[id='contact'] i::before {
-	position: relative; left: -1rem; top: .5rem;
-	font-size: 2rem; color: black;
+section[id='contact']{
+	background-color: #111;
 }
 
-#test{ /* couldnt find a way to select it properly, will do for now */
-	position: relative; top: .7rem; display: inline-block;
+section[id='contact'] .row {
+	justify-content: space-around;
+	margin: .5em;
+	text-align: center;
 }
 
-section[id='contact'] li:nth-child(2) div p{
-	margin: .3rem 0;
+section[id='contact'] .row > * {
+	margin: .5em 0;
 }
 
-/*footer {
+.front, .back {
+	text-align: center;
+}
+
+.back{
+	position: absolute;
+}
+
+section[id='contact'] .row > *:hover i::before{
+	color: #005BAE;
+}
+
+section[id='contact'] i[class^='flaticon']{
+	color: #EEE; font-size: 5em;
+}
+
+section[id='contact'] i[class^='icon']{
+	color: #EEE; font-size: 5em;
+}
+
+/*section[id='contact'] .test{
+	display: -webkit-flex; -webkit-flex-direction: column; -webkit-justify-content: center;
+	display: flex; flex-direction: column; justify-content: center; position: absolute; margin: 0 auto;
+}*/
+
+div[id="town"] {
+	border-radius: 10px;
+	background-image: url("../images/localisation.png"); background-size: cover; background-position: center center;
+}
+
+div[id="town"] > div {
+	height: 100%; padding: 1em .5em;
+	border-radius: 10px;
+	text-align: right;
+	background-color: rgba(255, 255, 255, 0.6);
+}
+
+div[id="town"] > div a{
+	/*display: block;*/
+	color: black; font-size: 1.3em; 
+}
+
+div[id="town"] > div a:hover{
+	color: #005BAE; text-decoration: underline;
+}
+
+div[id="town"] > div a:first-child{
+	margin: .2em 0;
+	font-size: 2em; font-weight: bold;
+}
+
+div[id="town"] > div p{
+	margin: 0;
+	text-align: right;
+}
+
+div[id="mail"]{
+	display: flex; flex-direction: column; justify-content: space-around;
+	color: #CCC; font-size: 1.5em; text-align: center;
+}
+
+div[id="mail"] a {
+	color: #CCC;
+}
+
+div[id="mail"] a:hover {
+	color: #005BAE; text-decoration: underline;
+}
+
+section[id="references"] .row{
+	align-items: center;
+}
+
+section[id="references"] a img {
+	max-width: 6rem;
+}
+
+section[id='blog']{
+	background-color: #111; padding-bottom: 0;
+}
+
+section[id='blog'] .column{
+	width: 70vw;
+}
+
+section[id='blog'] iframe{
+	margin: .5rem 1rem;
+}
+
+footer {
 	font-size: 0.5rem; text-align: center; padding: 1em;
 	background-color: white; opacity: 1;
 }
@@ -372,7 +475,7 @@ section[id='contact'] li:nth-child(2) div p{
 footer p {
 	margin: 0;
 }
-*/
+
 @media only screen and (min-width: 660px){
 
 	main > section > header h2 {
