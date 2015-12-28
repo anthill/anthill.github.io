@@ -81,16 +81,15 @@
 	</head>
 
 	<body>
-
 		<header>
 			<h2></h2>
 			<nav>
 				<ul class='row'>
-					<li id='home-button' class='tab'><h1>ant<span>s</span></h1></li><!--
-				 --><li id='offers-button' class='tab'>Offers</li><!--
-				 --><li id='open-button' class='tab'>Open</li><!--
-				 --><li id='team-button' class='tab'>Team</li><!--
-				 --><li id='contact-button' class='tab'>Contact</li>
+					<li id='home-button' class='tab'><h1><a href="#home">ant<span>s</span></a></h1></li><!--
+				 --><li id='offers-button' class='tab'><a href="#offers">Offers</a></li><!--
+				 --><li id='open-button' class='tab'><a href="#open">Open</a></li><!--
+				 --><li id='team-button' class='tab'><a href="team">Team</a></li><!--
+				 --><li id='contact-button' class='tab'><a href="#contact">Contact</a></li>
 				</ul>
 				
 			</nav>
@@ -105,19 +104,12 @@
 				<img src='./images/Logo_Rom_nospace.png' alt='ants logo'/>
 				<p><strong>Civic hackers</strong> company working <strong>openly</strong> on <strong>data</strong> science, design, open hardware</p>
 				<div>
-					<p>For companies</p><!--
-				 --><p>For public infrastructures</p><!--
+					<p id='public-button'>For public infrastructures</p><!--
+				 --><p id='companies-button'>For companies</p><!--
 				 --></div>
 			</section><!--
 		 --><section id='offers'>
-				<div id='companies'>
-					<p>Your company has too heavy processes ? Want to bypass traditional cycles and be inspired with Hacking culture ?</p>
-					<p>We bring to life your datascience projects, from a simple prototype to a full-integrate solution.</p>
-					<div></div>
-					<p>You want to improve your team technical skills (Javascript, Docker,  IoT) and enhance your working environment ? We share our expertise, good practices, and provide state-of-the-art tools.</p>
-					<p>Feel free to consult our training catalog or call us for a taylor-made session.</p>
-				</div>
-				<div id='public'>
+				<div id='publicInfra'>
 					<h2>6element</h2>
 					<h3>Waste is valuable</h3>
 					<p>We work with recycling centers to make people realize the potent value of their waste, and help them find a solution to make the most of it.</p>
@@ -142,6 +134,13 @@
 						<h4>Organize reuse</h4>
 						<p>We aim at enhancing the reuse by connecting waste producers and waste consumers, whoever they may be.</p>
 					</div>
+				</div>
+				<div id='companies'>
+					<p>Your company has too heavy processes ? Want to bypass traditional cycles and be inspired with Hacking culture ?</p>
+					<p>We bring to life your datascience projects, from a simple prototype to a full-integrate solution.</p>
+					<div></div>
+					<p>You want to improve your team technical skills (Javascript, Docker,  IoT) and enhance your working environment ? We share our expertise, good practices, and provide state-of-the-art tools.</p>
+					<p>Feel free to consult our training catalog or call us for a taylor-made session.</p>
 				</div>
 			</section>
 

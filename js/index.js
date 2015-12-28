@@ -12,6 +12,9 @@ var colonySection = document.querySelector('#colony');
 
 var isDesktop = true;
 
+
+body.style.overflow = 'hidden';
+
 // check if the device is mobile
 var ua = window.navigator.userAgent;
 if (ua.match(/Mobi/))

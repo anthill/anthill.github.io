@@ -9,6 +9,12 @@ var openButton = document.querySelector('#open-button');
 var teamButton = document.querySelector('#team-button');
 var contactButton = document.querySelector('#contact-button');
 
+var companies = document.querySelector('#companies');
+var publicInfra = document.querySelector('#public');
+var companiesButton = document.querySelector('#companies-button');
+var publicButton = document.querySelector('#public-button');
+
+
 var marginMap = new Map();
 
 marginMap.set(homeButton, 0);
@@ -24,9 +30,10 @@ marginMap.set(contactButton, -354);
 
 module.exports = function(){
 	marginMap.forEach(function(margin, button){
-		button.addEventListener('click', function(){
+		button.addEventListener('click', function(event){
+			event.preventDefault();
 			console.log('Click on menu');
-			main.style.marginTop = margin + 'vh';
+			main.style.transform = 'translateY(' + margin + 'vh)';
 		});
 	});
 };

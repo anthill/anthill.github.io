@@ -26,15 +26,15 @@
 
 body {
 	font-family: 'Raleway';
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 
 main {
-	transition: margin-top .5s ease-in-out;
+	transition: transform .5s ease-in-out;
 }
 
 body > header {
-	position: fixed; top: 0; width: 100%; height: 10vh; z-index: 2;
+	position: fixed; top: 0; width: 100vw; height: 10vh; z-index: 2;
 	box-shadow: 0px 1px 10px 0px rgba(0,0,0,1);
 	background-color: white;
 }
@@ -99,8 +99,8 @@ nav.active{
 }
 
 nav a {
-	display: block; padding: .7em 1em;
-	color: black; text-decoration: none;
+	/*display: block; padding: .7em 1em;
+*/	color: black; text-decoration: none;
 }
 
 img.super{
@@ -136,7 +136,7 @@ a {
 	cursor: pointer;
 }
 
-.tab:hover{
+/*.tab:hover{
 	background-color: #111;
 	color: #EEE;
 }
@@ -148,7 +148,7 @@ a {
 .tab:first-child{
 	background-color: white;
 	color: black;
-}
+}*/
 
 section  {
 	position: relative;
@@ -205,8 +205,13 @@ section[id='home'] div p {
 }*/
 
 section[id='offers']{
-	min-height: 80vh;
+	min-height: 80vh; margin: 0;
 	font-size: .7rem;
+}
+
+section[id='offers'] > div {
+	display: inline-block; width: 90vw; padding: 0 1rem; position: absolute; top:0; bottom: 0; z-index: 1;
+	background-color: white;
 }
 
 section[id='offers'] h2, section[id='offers'] h3{
@@ -214,9 +219,14 @@ section[id='offers'] h2, section[id='offers'] h3{
 	text-align: center;
 }
 
-div[id='companies'] p {
-	margin: 0; display: none;
+div[id='companies'] {
+	right: 100vw;
 }
+
+div[id='publicInfra'] {
+	right: 0;
+}
+
 
 /* OPEN */
 /*main {
