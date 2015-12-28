@@ -78,11 +78,10 @@
 		</script>
 		<script async src="https://static.medium.com/embed.js"></script>
 		<script defer src="app.js"></script>
-	</head>
+	</head><!--
 
-	<body>
+	--><body>
 		<header>
-			<h2></h2>
 			<nav>
 				<ul class='row'>
 					<li id='home-button' class='tab'><h1><a href="#home">ant<span>s</span></a></h1></li><!--
@@ -93,7 +92,7 @@
 				</ul>
 				
 			</nav>
-			<!-- <img src="./images/Logo_simple.png" alt='logo ants'> -->
+			<img src="./images/Logo_simple.png" alt='logo ants' class='desktop'>
 			<!-- <i class="icon-LogoPointsPetit"></i>  -->
 		</header>
 
@@ -103,12 +102,12 @@
 			<section id='home'>
 				<img src='./images/Logo_Rom_nospace.png' alt='ants logo'/>
 				<p><strong>Civic hackers</strong> company working <strong>openly</strong> on <strong>data</strong> science, design, open hardware</p>
-				<div>
-					<p id='public-button'>For public infrastructures</p><!--
-				 --><p id='companies-button'>For companies</p><!--
-				 --></div>
 			</section><!--
 		 --><section id='offers'>
+		 		<div id='switch'>
+					<p id='public-button'><a href='#publicInfra'>For public infrastructures</a></p><!--
+				 --><p id='companies-button'><a href='#companies'>For companies</a></p><!--
+			 --></div>
 				<div id='publicInfra'>
 					<h2>6element</h2>
 					<h3>Waste is valuable</h3>
@@ -273,16 +272,15 @@
 			<section id='contact'>
 				<ul class='column'>
 					<li><a href="https://twitter.com/beingAnts" target="_blank"><i class="icon-twitter"></i>@beingAnts</a></li>
-					<li><a href="https://twitter.com/beingAnts" target="_blank"><i class="icon-medium"></i>
-						<div id='test'>
-							<p>How we feel</p>
-							<p>How we code</p>
+					<li><i class="icon-medium"></i>
+						<div id='medium'>
+							<a href="https://twitter.com/beingAnts" target="_blank">How we feel</a>
+							<a href="https://twitter.com/beingAnts" target="_blank">How we code</a>
 						</div>
-						
-					</a></li>
+					</li>
 					<li><a href="https://github.com/anthill" target="_blank"><i class="icon-github"></i>anthill</a></li>
 					<li><a href="mailto:contact@ants.builders"><i class="icon-envelop"></i>contact@ants.builders</a></li>
-					<li><a href="http://bxno.de"><i class="icon-location"></i>Le Node</a></li>
+					<li><a href="http://bxno.de" target="_blank"><i class="icon-location"></i>Le Node</a></li>
 				</ul>
 			</section>
 

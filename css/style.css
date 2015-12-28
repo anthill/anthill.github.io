@@ -26,15 +26,21 @@
 
 body {
 	font-family: 'Raleway';
-	/*overflow: hidden;*/
 }
 
 main {
-	transition: transform .5s ease-in-out;
+	background-color: rgba(255, 255, 255, 0.8);
+	transition: 
+	opacity: 1;
+	transition: opacity .5s ease-in-out, transform .5s ease-in-out;
+}
+
+main.hidden {
+	opacity: 0;
 }
 
 body > header {
-	position: fixed; top: 0; width: 100vw; height: 10vh; z-index: 2;
+	position: fixed; top: 0; width: 100vw; z-index: 2;
 	box-shadow: 0px 1px 10px 0px rgba(0,0,0,1);
 	background-color: white;
 }
@@ -60,7 +66,7 @@ body > header em{
 }
 
 body > header img {
-	position: fixed; top: 2vh; bottom: 2vh; right: .6rem; height: 6vh;
+	position: fixed; top: 1vh; bottom: 2vh; right: .6rem; height: 6vh;
 	color: black; font-size: 2rem;
 	cursor: pointer;
 	transition: transform .5s ease-in-out;
@@ -77,40 +83,43 @@ body > header img.active {
 	transform: scale(0.7);
 }
 
-body > header h2{
-	margin: 0; margin-top: 1.5em; width: 100%; position: absolute; bottom: .5rem;
-	font-size: 1em; font-weight: normal; text-align: center;
+.column{
+	display: -webkit-flex; -webkit-flex-direction: column; -webkit-justify-content: center;
+	display: flex; flex-direction: column; justify-content: center; position: relative;
+}
+
+
+.row{
+	display: -webkit-flex; -webkit-flex-direction: column; -webkit-justify-content: center;
+	display: flex; flex-direction: row; justify-content: space-around; margin: 0;
 }
 
 nav {
-	/*position: fixed; right: 0; top: -8rem; z-index: 1;
-	font-size: 0.9em; text-align: right;
-	background-color: rgba(255, 255, 255, 0.9);
-	transition: top 0.5s ease-in-out;*/
+	width: 50%; margin: 0 auto;
+} 
+
+nav ul {
+	justify-content: center; margin: 0 1rem;
 }
 
 nav li {
 	display: inline-block; padding: .7rem .5rem;
 	font-size: .8rem;
+	cursor: pointer;
 }
 
-nav.active{
-	top: 10vh;
+nav li:hover a {
+	color: #005BAE;;
 }
 
 nav a {
-	/*display: block; padding: .7em 1em;
-*/	color: black; text-decoration: none;
+	color: black; text-decoration: none;
 }
 
 img.super{
 	position: absolute; top:-.5em; right: 0; width: 3em;
 }
 
-/*h3 {
-	font-family: 'RemingtonNoiseless', 'Raleway'; font-weight: normal;
-}
-*/
 
 h2 {
 	font-size: 1rem;
@@ -118,12 +127,7 @@ h2 {
 
 h4{
 	margin: 1em 0;
-	font-size: 0.8rem; font-weight: normal;
-}
-
-strong{
-	font-weight: lighter;
-	color: #005BAE;
+	font-size: 0.8rem; font-weight: bold;
 }
 
 ul {
@@ -136,39 +140,23 @@ a {
 	cursor: pointer;
 }
 
-/*.tab:hover{
-	background-color: #111;
-	color: #EEE;
-}
-
 .tab.active {
-	color: #005BAE;
+	box-shadow: 0px -25px 50px 0px #005BAE;
 }
 
 .tab:first-child{
+	box-shadow: none;
 	background-color: white;
 	color: black;
-}*/
+}
 
 section  {
 	position: relative;
-	min-height: 90vh; margin: 0 1rem;
-	background-color: rgba(255, 255, 255, 0.8);
-}
-
-.column{
-	display: -webkit-flex; -webkit-flex-direction: column; -webkit-justify-content: center;
-	display: flex; flex-direction: column; justify-content: center; position: relative;
-}
-
-
-.row{
-	display: -webkit-flex; -webkit-flex-direction: column; -webkit-justify-content: center;
-	display: flex; flex-direction: row; justify-content: space-around; margin: 0;
+	height: 100vh; margin: 0 1rem;
 }
 
 .desktop {
-	display: none;
+	visibility: hidden;
 }
 
 input{
@@ -176,26 +164,22 @@ input{
 	opacity: 0;
 }
 
+#home-button a:hover {
+	color: black;
+}
+
 /* HOME */
 
-section[id='home']{
-	margin-top: 10vh;
+section[id='home'] {
+	height: 80vh;
 }
 
 section[id='home'] img {
-	display: block; width: 50%; margin: 2rem auto; padding-top: 6rem;
+	display: block; width: 50%; margin: 0 auto; padding-top: 8rem;
 }
 
 section[id='home'] p {
 	text-align: center; margin: .5rem 0;
-}
-
-section[id='home'] div {
-	display: flex; flex-direction: row; height: 10vh; position: absolute; bottom: 0;
-}
-
-section[id='home'] div p {
-	display: inline-block; width: 50%; /*height: 5vh;*/ align-self: flex-top; margin: 0;
 }
 
 /* OFFERS */
@@ -205,36 +189,59 @@ section[id='home'] div p {
 }*/
 
 section[id='offers']{
-	min-height: 80vh; margin: 0;
+	padding-top: 23vh; height: 77vh;
 	font-size: .7rem;
 }
 
+section[id='offers'] div[id='switch'] {
+	display: flex; flex-direction: row; justify-content: space-around; height: 10vh; position: absolute; top: 10.5vh; margin: 0 auto;
+	text-align: center;
+}
+
+section[id='offers'] div[id='switch'] p:hover {
+	background-color: white
+}
+
+section[id='offers'] div[id='switch'] p:hover a {
+	color: #005BAE;
+}
+
+section[id='offers'] div[id='switch'] p {
+	display: flex; flex-direction: column; justify-content: center; width: 45%; margin: 0;
+	font-size: .9rem;
+	border-radius: 10px; border: 1px solid black;
+}
+
+section[id='offers'] div[id='switch'] p.active {
+	border: 2px solid #005BAE;
+}
+
 section[id='offers'] > div {
-	display: inline-block; width: 90vw; padding: 0 1rem; position: absolute; top:0; bottom: 0; z-index: 1;
-	background-color: white;
+	display: inline-block; width: 90vw; position: absolute; z-index: 1;
+	transition: transform .5s ease-in-out;
 }
 
 section[id='offers'] h2, section[id='offers'] h3{
-	margin: .5rem 0;
+	margin: 0;
 	text-align: center;
 }
 
 div[id='companies'] {
-	right: 100vw;
+	left: 100vw;
 }
 
 div[id='publicInfra'] {
 	right: 0;
 }
 
-
 /* OPEN */
+
 /*main {
-	margin-top: -174vh;
+	margin-top: -180vh;
 }*/
 
 section[id='open'] ul {
-	/*height: 90vh;*/align-items: middle;
+	height: 100vh; align-items: middle;
 }
 
 section[id='open'] li {
@@ -251,7 +258,7 @@ section[id='open'] p {
 /* TEAM */
 
 /*main {
-	margin-top: -264vh;
+	margin-top: -280vh;
 }*/
 
 section[id="team"] ul {
@@ -259,7 +266,7 @@ section[id="team"] ul {
 }
 
 section[id="team"] > ul:first-child {
-	height: 70vh;
+	height: 90vh;
 }
 
 section[id="team"] i {
@@ -283,10 +290,14 @@ section[id="team"] aside a {
 	color: black;
 }
 
+section[id="team"] aside a:hover{
+	color: #005BAE;
+}
+
 section[id="team"] p {
 	display: block; position: absolute; height: 0rem; margin-top: .2rem; z-index: 1; padding: 0 .5rem;
 	font-size: .7rem; color: #DDD; text-align: justify;
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(0, 0, 0, 0.8);
 	overflow: hidden; text-overflow: ellipsis;
 	transition: height .5s ease-in-out;
 }
@@ -320,7 +331,7 @@ section[id='team'] > div:last-child {
 }
 
 section[id='team'] > div:last-child h2 {
-	font-size: .7rem;
+	font-size: .7rem; text-align: center;
 }
 
 ul[id="alumni"]{
@@ -328,7 +339,7 @@ ul[id="alumni"]{
 }
 
 ul[id="alumni"] li {
-	width: 2.5rem;
+	width: auto;
 }
 
 ul[id="alumni"] a {
@@ -366,12 +377,21 @@ ul[id='alumni'] h3 {
 }
 
 /* CONTACT */
+
 /*main {
-	margin-top: -354vh;
+	margin-top: -380vh;
 }*/
 
+section[id='contact'] {
+	height: 100vh;
+}
+
+section[id='contact'] a {
+	display: block;
+}
+
 section[id='contact'] ul {
-	height: 90vh;
+	height: 100vh;
 }
 
 section[id='contact'] li {
@@ -383,7 +403,7 @@ section[id='contact'] i::before {
 	font-size: 2rem; color: black;
 }
 
-#test{ /* couldnt find a way to select it properly, will do for now */
+#medium{ /* couldnt find a way to select it properly, will do for now */
 	position: relative; top: .7rem; display: inline-block;
 }
 
@@ -391,45 +411,7 @@ section[id='contact'] li:nth-child(2) div p{
 	margin: .3rem 0;
 }
 
-/*footer {
-	font-size: 0.5rem; text-align: center; padding: 1em;
-	background-color: white; opacity: 1;
-}
-
-footer p {
-	margin: 0;
-}
-*/
 @media only screen and (min-width: 660px){
-
-	main > section > header h2 {
-		display: block;
-	}
-
-	img.super{
-		top: 0;
-	}
-
-	.column{
-		padding: 0;
-	}
-
-	.row{
-		-webkit-flex-direction: row; -webkit-justify-content: space-around;
-		flex-direction: row; justify-content: space-around;
-	}
-
-	.row section{
-		width: 40%; /*margin: 0 5%;*/
-	}
-
-	h4 {
-		font-size: .9em;
-	}
-
-	section[class="page"] p {
-		font-size: .9em;
-	}
 
 	body > header h1{
 		font-size: 3em;
@@ -451,188 +433,163 @@ footer p {
 		font-size: 1.5em;
 	}
 
-	section[class='page'] {
-		display: -webkit-flex; -webkit-flex-direction: row;
-		display: flex; flex-direction: row; padding-left: 1rem; padding-right: 1rem;/*padding: auto 1rem; padding-top: 10vh; padding-bottom: 10vh;*/
-		font-size: .9em;
+	h2 {
+		font-size: 2rem;
 	}
 
-	section[class='page'] h3{
-		font-size: 2em;
+	h4 {
+		font-size: 1.4rem;
 	}
 
-	section[id="home"] > div > div {
-		width: auto; margin: 0;
+	.desktop {
+		visibility: visible;
 	}
 
-	section[id="home"] h2 {
-		width: auto; position: absolute; top: auto; bottom: 0; left: -4em;
-		font-size: 5em; font-weight: lighter;
+	/* HOME */
+
+	section[id='home'] {
+		font-size: 1.5rem;
 	}
 
-	div[id="logo"]{
-		width: 30%;
+	section[id='home'] img {
+		width: 25%;
+		padding-top: 24vh; margin-bottom: 4rem;
 	}
 
-	[id="wiki-credits"]{
-		display: inline-block;
+	/* OFFERS */
+
+	section[id='offers'] div[id='switch'] {
+		top: 8.5vh;
 	}
 
-	section[id="offers"] p{
-		display: block;
+	section[id='offers'] div[id='switch'] p {
+		font-size: 1.5rem;
 	}
 
-	section[id="offers"] h3{
-		font-size: 2em;
+	section[id='offers'] > div {
+		width: 90vw; padding: 0 5vw;
+		font-size: 1.2rem;
 	}
 
-	section[id="team"] .column {
-		width: 50%; margin-left: 15%;
+	/* OPEN */
+
+	section[id='open'] p {
+		font-size: 1.5rem;
+	}
+
+	/* TEAM */
+
+	section[id='team'] ul:first-child{
+		width: 70vw;
+	}
+
+	section[id="team"] > ul:first-child {
+		height: 90vh;
+	}
+
+	section[id="team"] li header::before{
+		width: 6rem; height: 6rem; left: -8rem;
+	}
+
+	section[id='team'] li p {
+		font-size: 1.3rem;
 	}
 	
-	section[id="team"] li header::before{
-		width: 6em; height: 6em; left: -8em; border-radius: 10px;
-	}
-
-	section[id="team"] #alumni{
-		margin-left:  -6em;
-		font-size: 1.5em; 
-	}
-
-	section[id="team"] aside i{
-		font-size: 2em;
-	}
-
-	section[id="team"] aside{
-		margin: 2em 0;
-	}
-
 	[id|="display"]:checked ~ p { /* Check my handsome teacher there -> http://twikito.com/ */
 		height: 6em;
 	}
 
-	section[id="team"] ul header {
-		margin-left: 0em;
+	section[id="team"] aside {
+		top: 1rem;
 	}
 
 	section[id="team"] i[class^='icon'] {
-		margin: .2em;
-		font-size: 1.3em;
+		font-size: 2rem;
 	}
 
-	section[id='contact'] i[class^='icon']{
-		font-size: 9em;
+	section[id="team"] a {
+		margin: 1rem;
 	}
 
-	section[id='contact'] i[class^='flaticon']{
-		font-size: 9em;
+	section[id='team'] > div:last-child h2 {
+		margin: .2rem;
+		font-size: 1rem;
 	}
 
-	section[id='contact'] .column {
-		width: 90%; margin: 0 auto;
+	ul[id="alumni"]{
+		justify-content: center;
 	}
 
-	section[id='contact'] .row{
-		-webkit-flex-direction: row; -webkit-justify-content: center;
-		position: relative; flex-direction: row; justify-content: center; width: 100%; margin: 3em 0;
-		
+	ul[id='alumni'] h3 {
+		font-size: 1.5rem;
+	}
+	
+	ul[id="alumni"] img {
+		width: 3.5rem;
 	}
 
-	section[id='contact'] .row > *{
-		width: 40%; 
+	section[id='contact'] ul{
+		font-size: 1.8rem;
 	}
 
-	section[id='contact'] aside {
-		font-size: 1.6em;
+	section[id='contact'] li {
+		margin: 1.5rem auto; 
 	}
 
-	section[id="references"] a img {
-		max-width: 10rem;
-	}
-
-	section[id='blog'] .row {
-		width: 90%; margin: 0 auto;
-	}
-
-	section[id='blog'] .m-profile {
-	    width: 400px;
-	}
-
-
-	footer {
-		font-size: 0.7rem; text-align: center;
+	section[id='contact'] i::before {
+		font-size: 3rem;
 	}
 
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1100px) {
 
-	section[id="home"]{
-		display: block;
+	a {
+		color: black;
 	}
 
-	body > header {
-		height: 8vh;
+	a:hover {
+		color: #005BAE;
 	}
 
-	body > header h2 {
-		display: none;
+	/* HOME */
+
+	section[id='home'] img {
+		width: 20%; padding-top: 10rem; padding-bottom: 3rem;
 	}
 
-	body > header img {
-		top: 1vh;
-		cursor: pointer;
+	section[id='home'] div {
+		bottom: 1.5rem;
 	}
 
-	section[class="page"] p {
-		font-size: .9em; line-height: 1.3em;
+	/* TEAM */
+
+	section[id="team"] > ul:first-child {
+		height: 80vh;
 	}
 
-	nav {
-		height: 8vh; width: 85%; margin:0 auto; left:0; right: 0; top: 0; z-index:2;
-		background-color: transparent;
+	section[id="team"] ul header {
+		display: inline-block; position: relative; margin-left: 6rem;
 	}
 
-	nav a {
-		display: inline-block; height: 4vh; margin: 0; padding: 0 1em; padding-top: 4vh; 
-		font-size: 1.2em; vertical-align: bottom;
+	section[id="team"] h2 {
+		font-weight: normal; font-size: 1.5rem;
 	}
 
-	nav.active{
-		top: 0vh;
+	section[id="team"] li {
+		margin: .7rem 0;
 	}
 
-	div[id="logo"]{
-		width: 20%;
+	section[id='team'] li p {
+		font-size: 1rem;
 	}
 
-	section[id="team"] .column {
-		width: 45%;
+	section[id='team'] > div:last-child h2 {
+		font-size: 1rem;
 	}
 
-	section[id="team"] p {
-		margin-bottom: 1.2rem;
+	ul[id='alumni'] h3 {
+		font-size: 1rem;
 	}
 
-	section[id="team"] p {
-		height: auto;
-		font-size: .8em;
-	}
-
-	section[id="team"] #alumni{
-		margin-left:  -4em;
-		font-size: 2em; 
-	}
-
-	[id|="display"]:checked ~ p { /* Check my handsome teacher there -> http://twikito.com/ */
-		height: auto;
-	}
-
-	section[id="team"] h3 {
-		margin: 0; margin-bottom: .5rem;
-	}
-
-	section[id="team"] aside {
-		margin: 0;
-	}
 }
