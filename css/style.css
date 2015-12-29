@@ -89,12 +89,12 @@ body > header img.active {
 
 
 .row{
-	display: -webkit-flex; -webkit-flex-direction: column; -webkit-justify-content: center;
+	display: -webkit-flex; -webkit-flex-direction: row; -webkit-justify-content: space-around;
 	display: flex; flex-direction: row; justify-content: space-around; margin: 0;
 }
 
 nav {
-	width: 50%; margin: 0 auto;
+	width: 70%; margin: 0 auto;
 } 
 
 nav ul {
@@ -102,7 +102,7 @@ nav ul {
 }
 
 nav li {
-	display: inline-block; padding: .7rem .5rem;
+	display: inline-block; padding: .7rem .5rem; width: auto;
 	font-size: .8rem;
 	cursor: pointer;
 }
@@ -178,7 +178,7 @@ section[id='home'] {
 }
 
 section[id='home'] img {
-	display: block; width: 30vh; margin: 0 auto; padding-top: 8rem;
+	display: block; width: 30vh; margin: 0 auto; padding-top: 25vh;
 }
 
 section[id='home'] p {
@@ -531,12 +531,12 @@ section[id='contact'] li:nth-child(2) div p{
 	/* HOME */
 
 	section[id='home'] {
-		font-size: 1.5rem;
+		font-size: 3.5vh;
 	}
 
 	section[id='home'] img {
 		width: 25%;
-		padding-top: 24vh; margin-bottom: 4rem;
+		padding-top: 18vh; margin-bottom: 4rem;
 	}
 
 	/* PROJECTS */
