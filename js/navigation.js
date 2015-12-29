@@ -17,12 +17,6 @@ var publicButton = document.querySelector('#public-button');
 
 companies.style.position = 'absolute';
 
-document.body.addEventListener("touchmove", function(event){
-	console.log('youhou');
-	event.preventDefault();
-	event.stopPropagation();
-});
-
 var marginMap = new Map();
 
 marginMap.set(homeButton, 0);
@@ -72,7 +66,7 @@ module.exports = function(){
 		publicInfra.style.transform = 'translateX(0vw)';
 		publicInfra.style['-webkit-transform'] = 'translateX(0vw)';
 
-		// companiesButton.className = '';
+		companiesButton.className = '';
 		publicButton.className = 'active';
 
 		tabs[1].className = 'tab active';
