@@ -171,15 +171,15 @@ input{
 /* HOME */
 
 section[id='home'] {
-	height: 80vh;
+	position: relative; height: 80vh;
 }
 
 section[id='home'] img {
-	display: block; width: 50%; margin: 0 auto; padding-top: 8rem;
+	display: block; width: 30vh; margin: 0 auto; padding-top: 8rem;
 }
 
 section[id='home'] p {
-	text-align: center; margin: .5rem 0;
+	text-align: center; margin: .5rem 0; position: absolute; left: 0; right: 0; bottom: -3.5vh;
 }
 
 /* OFFERS */
@@ -395,7 +395,8 @@ section[id='contact'] ul {
 }
 
 section[id='contact'] li {
-	margin: 1rem auto;
+	display: block; margin: 1rem auto;
+	text-align: center;
 }
 
 section[id='contact'] i::before {
