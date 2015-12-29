@@ -17,6 +17,12 @@ var publicButton = document.querySelector('#public-button');
 
 companies.style.position = 'absolute';
 
+document.body.addEventListener("touchmove", function(event){
+	console.log('youhou');
+	event.preventDefault();
+	event.stopPropagation();
+});
+
 var marginMap = new Map();
 
 marginMap.set(homeButton, 0);
