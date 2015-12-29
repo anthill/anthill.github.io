@@ -85,9 +85,9 @@
 			<nav>
 				<ul class='row'>
 					<li id='home-button' class='tab'><h1><a href="#home">ant<span>s</span></a></h1></li><!--
-				 --><li id='offers-button' class='tab'><a href="#offers">Offers</a></li><!--
-				 --><li id='open-button' class='tab'><a href="#open">Open</a></li><!--
-				 --><li id='team-button' class='tab'><a href="team">Team</a></li><!--
+				 --><li id='projects-button' class='tab'><a href="#projects">Projects</a></li><!--
+				 --><li id='culture-button' class='tab'><a href="#culture">Culture</a></li><!--
+				 --><li id='team-button' class='tab'><a href="#team">Team</a></li><!--
 				 --><li id='contact-button' class='tab'><a href="#contact">Contact</a></li>
 				</ul>
 				
@@ -103,25 +103,27 @@
 				<img src='./images/Logo_Rom_nospace.png' alt='ants logo'/>
 				<p><strong>Civic hackers</strong> company working <strong>openly</strong> on <strong>data</strong> science, design, open hardware</p>
 			</section><!--
-		 --><section id='offers'>
+		 --><section id='projects'>
 		 		<div id='switch'>
-					<p id='public-button'><a href='#publicInfra'>For public infrastructures</a></p><!--
+					<p id='public-button' class='active'><a href='#publicInfra'>For public infrastructures</a></p><!--
 				 --><p id='companies-button'><a href='#companies'>For companies</a></p><!--
 			 --></div>
 				<div id='publicInfra'>
 					<h2>6element</h2>
 					<h3>Waste is valuable</h3>
-					<p>We work with recycling centers to make people realize the potent value of their waste, and help them find a solution to make the most of it.</p>
+					<p>We work with recycling centers to <strong>make people realize the potent value of their waste</strong>, and help them find a solution to <strong>make the most of it</strong>.</p>
 					<div id='data'>
 						<h4>Get data</h4>
 						We have designed sensors capable of
 						<ul>
-							<li>estimating affluence <span class='desktop'>based on smartphones wi-fi signatures while respecting privacy</span></li>
-							<li>knowing the availability of bins in recycling centers</li>
+							<li>estimating <strong>affluence</strong> <span class='desktop'>based on smartphones wi-fi signatures while respecting privacy</span></li>
+							<li>knowing the <strong>availability</strong> of bins in recycling centers</li>
 						</ul>
+						<img src="images/projects_public/affluence.png" alt='affluence'>
 					</div>
 					<div id='inform'>
 						<h4>Inform people</h4>
+						<img src="images/projects_public/dispo.png" alt='bins'>
 						Our application answers these questions:
 						<ul>
 							<li>how can my waste be useful ?</li>
@@ -131,30 +133,52 @@
 					</div>
 					<div id='organize'>
 						<h4>Organize reuse</h4>
-						<p>We aim at enhancing the reuse by connecting waste producers and waste consumers, whoever they may be.</p>
+						<p>We aim at enhancing the reuse by <strong>connecting waste producers and waste consumers</strong>, whoever they may be.</p>
+						<img src="images/projects_public/map.png" alt='map'>
 					</div>
 				</div>
 				<div id='companies'>
 					<p>Your company has too heavy processes ? Want to bypass traditional cycles and be inspired with Hacking culture ?</p>
-					<p>We bring to life your datascience projects, from a simple prototype to a full-integrate solution.</p>
-					<div></div>
-					<p>You want to improve your team technical skills (Javascript, Docker,  IoT) and enhance your working environment ? We share our expertise, good practices, and provide state-of-the-art tools.</p>
+					<p>We bring to life <strong>datascience</strong> projects, from a <strong>simple</strong> prototype to a <strong>fully integrated solutions</strong>.</p>
+					<ul>
+						<li>
+							<img src="images/projects_companies/bouygues.png" alt='project bouygues'>
+							<img src="images/logos/BouyguesImmo.jpg" alt='logo bouygues'>
+						</li>
+						<li>
+							<img src="images/projects_companies/thales.png" alt='project thales'>
+							<img src="images/logos/Thales.jpg" alt='logo thales'>
+						</li>
+						<li>
+							<img src="images/projects_companies/vinci.png" alt='project vinci'>
+							<img src="images/logos/Vinci.png" alt='logo vinci'>
+						</li>
+						<li>
+							<img src="images/projects_companies/engie.jpg" alt='project engie'>
+							<img src="images/logos/Engie.png" alt='logo engie'>
+						</li>
+					</ul>
+					<p>You want to <strong>improve your team technical skills</strong> (Javascript, Docker,  IoT) and <strong>enhance your working environment</strong> ? We <strong>share our expertise</strong>, good practices, and provide state-of-the-art tools.</p>
 					<p>Feel free to consult our training catalog or call us for a taylor-made session.</p>
 				</div>
 			</section>
 
-			<section id="open">
+			<section id="culture">
 				<ul class='column'>
 					<li>
 						<h2>We work openly</h2>
+						<a id='github' href="https://github.com/anthill"><img src="images/logos/github.png" alt='github'></a>
+						<a id='etalab' href="https://www.etalab.gouv.fr"><img  src="images/logos/etalab.png" alt='etalab'></a>
+						<a id='ODI' href="http://theodi.org"><img  src="images/logos/ODI.png" alt='ODI logo'></a>
+						<a id='raspberry' href="https://www.raspberrypi.org"><img  src="images/logos/raspberry.png" alt='raspberry logo'></a>
 						<p>open-source</p>
 						<p>open-data</p>
 						<p>open-hardware</p>
 					</li>
 					<li>
 						<h2>for Impact</h2>
-						<p>see our spirit</p>
-						<p>to team up</p>
+						<p>game-changing projects</p>
+						<p>for the community</p>
 					</li>
 					<li>
 						<h2>and Trust</h2>
@@ -274,8 +298,8 @@
 					<li><a href="https://twitter.com/beingAnts" target="_blank"><i class="icon-twitter"></i>@beingAnts</a></li>
 					<li><i class="icon-medium"></i>
 						<div id='medium'>
-							<a href="https://twitter.com/beingAnts" target="_blank">How we feel</a>
-							<a href="https://twitter.com/beingAnts" target="_blank">How we code</a>
+							<a href="https://medium.com/ants-blog" target="_blank">How we feel</a>
+							<a href="https://medium.com/code-feelings" target="_blank">How we code</a>
 						</div>
 					</li>
 					<li><a href="https://github.com/anthill" target="_blank"><i class="icon-github"></i>anthill</a></li>

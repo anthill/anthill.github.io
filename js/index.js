@@ -29,7 +29,6 @@ if (isDesktop){
 	document.querySelectorAll('nav a').forEach(function(element){
 	    element.addEventListener('click', function(){
 	    	if (main.classList.contains('hidden')){
-	    		body.classList.remove('noscroll');
 	    		main.classList.remove('hidden');
 	    	}	
 		});
@@ -49,13 +48,13 @@ if (isDesktop){
 	}
 
 	function toggleAnimation(){
-		body.classList.toggle('noscroll');
 		main.classList.toggle('hidden');
 		// antColony.togglePlayPause();
 	}
 
-	main.addEventListener('transitionend', function(){
-		colonySection.classList.toggle('over');
+	main.addEventListener('transitionend', function(event){
+		if (event.propertyName === 'opacity')
+			colonySection.classList.toggle('over');
 	});
 
 	// put colony on top

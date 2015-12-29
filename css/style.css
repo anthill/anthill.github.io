@@ -29,8 +29,7 @@ body {
 }
 
 main {
-	background-color: rgba(255, 255, 255, 0.8);
-	transition: 
+	background-color: rgba(255, 255, 255, 1);
 	opacity: 1;
 	transition: opacity .5s ease-in-out, transform .5s ease-in-out;
 }
@@ -140,8 +139,8 @@ a {
 	cursor: pointer;
 }
 
-.tab.active {
-	box-shadow: 0px -25px 50px 0px #005BAE;
+.tab.active{
+	box-shadow: 0px 10px 50px 0px #005BAE; border-radius: 0 0 10px 10px;
 }
 
 .tab:first-child{
@@ -168,6 +167,10 @@ input{
 	color: black;
 }
 
+section[id='colony'].over {
+	z-index: 0;
+}
+
 /* HOME */
 
 section[id='home'] {
@@ -182,57 +185,103 @@ section[id='home'] p {
 	text-align: center; margin: .5rem 0; position: absolute; left: 0; right: 0; bottom: -3.5vh;
 }
 
-/* OFFERS */
+/* PROJECTS */
 
 /*main {
 	margin-top: -80vh;
 }*/
 
-section[id='offers']{
+section[id='projects']{
 	padding-top: 23vh; height: 77vh;
 	font-size: .7rem;
 }
 
-section[id='offers'] div[id='switch'] {
+section[id='projects'] ul {
+	padding: 0 1rem;
+	list-style: disc; 
+}
+
+section[id='projects'] div[id='switch'] {
 	display: flex; flex-direction: row; justify-content: space-around; height: 10vh; position: absolute; top: 10.5vh; margin: 0 auto;
 	text-align: center;
 }
 
-section[id='offers'] div[id='switch'] p:hover {
-	background-color: white
+section[id='projects'] div[id='switch'] p:hover {
+	background-color: white;
+	cursor: pointer
 }
 
-section[id='offers'] div[id='switch'] p:hover a {
+section[id='projects'] div[id='switch'] p:hover a {
 	color: #005BAE;
 }
 
-section[id='offers'] div[id='switch'] p {
+section[id='projects'] div[id='switch'] p {
 	display: flex; flex-direction: column; justify-content: center; width: 45%; margin: 0;
 	font-size: .9rem;
 	border-radius: 10px; border: 1px solid black;
 }
 
-section[id='offers'] div[id='switch'] p.active {
+section[id='projects'] div[id='switch'] p.active {
 	border: 2px solid #005BAE;
 }
 
-section[id='offers'] > div {
+section[id='projects'] > div {
 	display: inline-block; width: 90vw; position: absolute; z-index: 1;
 	transition: transform .5s ease-in-out;
 }
 
-section[id='offers'] h2, section[id='offers'] h3{
+section[id='projects'] > div div {
+	position: relative;
+}
+
+section[id='projects'] h2, section[id='projects'] h3{
 	margin: 0;
 	text-align: center;
 }
 
 div[id='companies'] {
-	left: 100vw;
+	left: 100vw; height: 77vh;
+}
+
+div[id='companies'] ul {
+	display: flex; flex-direction: row; justify-content: center; align-items: flex-start;
+	list-style: none;
+}
+
+div[id='companies'] li {
+	margin: 0 1rem; position: relative;
+}
+
+
+div[id='companies'] img {
+	width: 5rem; display: block; margin: auto;
+}
+
+div[id='companies'] img:first-child {
+	width: 20vw;
+}
+
+div[id='companies'] img:last-child {
+	position: absolute; top: 0; border: 1px solid black;
 }
 
 div[id='publicInfra'] {
-	right: 0;
+	right: 0; height: 77vh;
 }
+
+div[id='publicInfra'] > div p {
+	width: 60vw;
+}
+
+div[id='publicInfra'] img {
+	position: absolute; top: 0; right: 0; width: 20vw;
+}
+
+div[id='inform'] img {
+	top: auto; bottom: 0;
+}
+
+
 
 /* OPEN */
 
@@ -240,20 +289,54 @@ div[id='publicInfra'] {
 	margin-top: -180vh;
 }*/
 
-section[id='open'] ul {
+section[id='culture'] ul {
 	height: 100vh; align-items: middle;
 }
 
-section[id='open'] li {
-	width: 50%; margin: 1rem auto;
+section[id='culture'] li {
+	width: 50%; margin: 0 auto; position: relative;
 	text-align: center;
 }
 
-section[id='open'] p {
-	margin: .2rem auto;
+section[id='culture'] div {
+	display: inline-block;
+}
+
+section[id='culture'] p {
+	margin: 1.2rem auto;
 	font-size: .7rem;
 }
 
+section[id='culture'] p::before {
+    position: absolute; width: 3rem; height: 3rem; /*left: -4rem; top: -.5rem; margin: .3rem;*/
+	border-radius: 20%;
+	content: '';
+	background-size: cover;
+}
+
+section[id='culture'] img {
+	position: absolute; width: 4rem;
+}
+
+section[id='culture'] a {
+	position: absolute;
+}
+
+section[id='culture'] [id='github']{
+	left: -3rem; top: 2rem;
+}
+
+section[id='culture'] [id='etalab']{
+	right: 0; top: 3.5rem;
+}
+
+section[id='culture'] [id='ODI']{
+	right: .5rem; top: 5.5rem;
+}
+
+section[id='culture'] [id='raspberry']{
+	left: -3rem; bottom: 3rem;
+}
 
 /* TEAM */
 
@@ -300,6 +383,10 @@ section[id="team"] p {
 	background-color: rgba(0, 0, 0, 0.8);
 	overflow: hidden; text-overflow: ellipsis;
 	transition: height .5s ease-in-out;
+}
+
+section[id='team'] h2 {
+	cursor: pointer; font-weight: normal;
 }
 
 section[id="team"] h3 {
@@ -439,11 +526,7 @@ section[id='contact'] li:nth-child(2) div p{
 	}
 
 	h4 {
-		font-size: 1.4rem;
-	}
-
-	.desktop {
-		visibility: visible;
+		font-size: 1.4rem; margin: 2vh 0;
 	}
 
 	/* HOME */
@@ -457,25 +540,45 @@ section[id='contact'] li:nth-child(2) div p{
 		padding-top: 24vh; margin-bottom: 4rem;
 	}
 
-	/* OFFERS */
+	/* PROJECTS */
 
-	section[id='offers'] div[id='switch'] {
+	section[id='projects'] div[id='switch'] {
 		top: 8.5vh;
 	}
 
-	section[id='offers'] div[id='switch'] p {
+	section[id='projects'] div[id='switch'] p {
 		font-size: 1.5rem;
 	}
 
-	section[id='offers'] > div {
+	section[id='projects'] > div {
 		width: 90vw; padding: 0 5vw;
-		font-size: 1.2rem;
+		font-size: 2.5vh;
 	}
 
 	/* OPEN */
 
-	section[id='open'] p {
-		font-size: 1.5rem;
+	section[id='culture'] p {
+		font-size: 2.5vh;
+	}
+
+	section[id='culture'] img {
+		position: absolute; width: 5rem;
+	}
+
+	section[id='culture'] [id='github']{
+		left: 4rem; top: 5rem;
+	}
+
+	section[id='culture'] [id='etalab']{
+		right: 9rem; top: 7.5rem;
+	}
+
+	section[id='culture'] [id='ODI']{
+		right: 4rem; top: 8rem;
+	}
+
+	section[id='culture'] [id='raspberry']{
+		left: 4rem; bottom: 4rem;
 	}
 
 	/* TEAM */
@@ -492,8 +595,12 @@ section[id='contact'] li:nth-child(2) div p{
 		width: 6rem; height: 6rem; left: -8rem;
 	}
 
+	section[id="team"] h2 {
+		font-size: 4.5vh;
+	}
+
 	section[id='team'] li p {
-		font-size: 1.3rem;
+		font-size: 2.5vh;
 	}
 	
 	[id|="display"]:checked ~ p { /* Check my handsome teacher there -> http://twikito.com/ */
@@ -522,7 +629,7 @@ section[id='contact'] li:nth-child(2) div p{
 	}
 
 	ul[id='alumni'] h3 {
-		font-size: 1.5rem;
+		font-size: 2vh;
 	}
 	
 	ul[id="alumni"] img {
@@ -543,14 +650,42 @@ section[id='contact'] li:nth-child(2) div p{
 
 }
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 660px) and (min-height: 700px) {
 
+	section[id='culture'] [id='github']{
+		left: 0; top: 5rem;
+	}
+
+	section[id='culture'] [id='etalab']{
+		right: 5rem; top: 7.5rem;
+	}
+
+	section[id='culture'] [id='ODI']{
+		right: -1rem; top: 8rem;
+	}
+
+	section[id='culture'] [id='raspberry']{
+		left: 0; bottom: 4rem;
+	}
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+	main {
+		background-color: rgba(255, 255, 255, 0.9);
+	}
+	
 	a {
 		color: black;
 	}
 
 	a:hover {
 		color: #005BAE;
+	}
+
+	.desktop {
+		visibility: visible;
 	}
 
 	/* HOME */
@@ -563,10 +698,34 @@ section[id='contact'] li:nth-child(2) div p{
 		bottom: 1.5rem;
 	}
 
+	/* PROJECTS */
+
+	/*section[id='projects'] > div p {
+		font-size: 1rem;
+	}*/
+
+	/* OPEN */
+
+	section[id='culture'] [id='github']{
+		left: 10rem; top: 5rem;
+	}
+
+	section[id='culture'] [id='etalab']{
+		right: 10rem; top: 7.5rem;
+	}
+
+	section[id='culture'] [id='ODI']{
+		right: 15rem; top: 8rem;
+	}
+
+	section[id='culture'] [id='raspberry']{
+		left: 10rem; bottom: 4rem;
+	}
+
 	/* TEAM */
 
 	section[id="team"] > ul:first-child {
-		height: 80vh;
+		height: 90vh;
 	}
 
 	section[id="team"] ul header {
@@ -574,7 +733,7 @@ section[id='contact'] li:nth-child(2) div p{
 	}
 
 	section[id="team"] h2 {
-		font-weight: normal; font-size: 1.5rem;
+		font-size: 4.5vh;
 	}
 
 	section[id="team"] li {

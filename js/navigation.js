@@ -4,8 +4,8 @@ var main = document.querySelector('main');
 
 var menu = document.body.querySelector('nav');
 var homeButton = document.querySelector('#home-button');
-var offersButton = document.querySelector('#offers-button');
-var openButton = document.querySelector('#open-button');
+var projectsButton = document.querySelector('#projects-button');
+var cultureButton = document.querySelector('#culture-button');
 var teamButton = document.querySelector('#team-button');
 var contactButton = document.querySelector('#contact-button');
 var tabs = document.getElementsByClassName('tab');
@@ -20,8 +20,8 @@ companies.style.position = 'absolute';
 var marginMap = new Map();
 
 marginMap.set(homeButton, 0);
-marginMap.set(offersButton, -80);
-marginMap.set(openButton, -180);
+marginMap.set(projectsButton, -80);
+marginMap.set(cultureButton, -180);
 marginMap.set(teamButton, -280);
 marginMap.set(contactButton, -380);
 
@@ -43,7 +43,7 @@ module.exports = function(){
 
 	companiesButton.addEventListener('click', function(event){
 		event.preventDefault();
-		main.style.transform = 'translateY(' + marginMap.get(offersButton) + 'vh)';
+		main.style.transform = 'translateY(' + marginMap.get(projectsButton) + 'vh)';
 		companies.style.transform = 'translateX(-100vw)';
 		publicInfra.style.transform = 'translateX(-100vw)';
 
@@ -55,7 +55,7 @@ module.exports = function(){
 
 	publicButton.addEventListener('click', function(event){
 		event.preventDefault();
-		main.style.transform = 'translateY(' + marginMap.get(offersButton) + 'vh)';
+		main.style.transform = 'translateY(' + marginMap.get(projectsButton) + 'vh)';
 		companies.style.transform = 'translateX(0vw)';
 		publicInfra.style.transform = 'translateX(0vw)';
 
