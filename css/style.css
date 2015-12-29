@@ -94,7 +94,7 @@ body > header img.active {
 }
 
 nav {
-	width: 70%; margin: 0 auto;
+	width: 100%; margin: 0 auto;
 } 
 
 nav ul {
@@ -125,7 +125,7 @@ h2 {
 }
 
 h4{
-	margin: 1em 0;
+	margin: .8rem 0;
 	font-size: 0.8rem; font-weight: bold;
 }
 
@@ -150,8 +150,8 @@ a {
 }
 
 section  {
-	position: relative;
-	height: 100vh; margin: 0 1rem;
+	position: relative; height: 100vh; margin: 0 1rem;
+	overflow: hidden;
 }
 
 .wide-screen {
@@ -182,7 +182,8 @@ section[id='home'] img {
 }
 
 section[id='home'] p {
-	text-align: center; margin: .5rem 0; position: absolute; left: 0; right: 0; bottom: -3.5vh;
+	text-align: center; margin: .5rem 0; position: absolute; left: 0; right: 0; bottom: 0;
+	font-size: .8rem;
 }
 
 /* PROJECTS */
@@ -202,6 +203,7 @@ section[id='projects'] ul {
 }
 
 section[id='projects'] div[id='switch'] {
+	display: -webkit-flex; -webkit-flex-direction: row; -webkit-justify-content: space-around;
 	display: flex; flex-direction: row; justify-content: space-around; height: 10vh; position: absolute; top: 10.5vh; margin: 0 auto;
 	text-align: center;
 }
@@ -216,6 +218,7 @@ section[id='projects'] div[id='switch'] p:hover a {
 }
 
 section[id='projects'] div[id='switch'] p {
+	display: -webkit-flex; -webkit-flex-direction: column; -webkit-justify-content: center;
 	display: flex; flex-direction: column; justify-content: center; width: 45%; margin: 0;
 	font-size: .9rem;
 	border-radius: 10px; border: 1px solid black;
@@ -226,7 +229,7 @@ section[id='projects'] div[id='switch'] p.active {
 }
 
 section[id='projects'] > div {
-	display: inline-block; width: 90vw; position: absolute; z-index: 1;
+	width: 90vw; position: absolute; z-index: 1;
 	transition: transform .5s ease-in-out;
 }
 
@@ -244,6 +247,7 @@ div[id='companies'] {
 }
 
 div[id='companies'] ul {
+	display: -webkit-flex; -webkit-flex-direction: row; -webkit-justify-content: center;
 	display: flex; flex-direction: row; justify-content: center; align-items: flex-start;
 	list-style: none;
 }
@@ -269,7 +273,7 @@ div[id='publicInfra'] {
 }
 
 div[id='publicInfra'] > div p {
-	width: 60vw;
+	width: auto;
 }
 
 div[id='publicInfra'] img {
@@ -421,6 +425,7 @@ section[id='team'] > div:last-child h2 {
 }
 
 ul[id="alumni"]{
+	display: -webkit-flex; -webkit-flex-direction: row; -webkit-justify-content: space-around;
 	display: flex; flex-direction: row; justify-content: space-around;
 }
 
@@ -513,7 +518,7 @@ section[id='contact'] li:nth-child(2) div p{
 	}
 
 	nav {
-		top: -24em;
+		width: 70%; top: -24em;
 	}
 
 	nav a {
@@ -552,6 +557,10 @@ section[id='contact'] li:nth-child(2) div p{
 	section[id='projects'] > div {
 		width: 90vw; padding: 0 5vw;
 		font-size: 2.5vh;
+	}
+
+	div[id='publicInfra'] > div p {
+		width: 60vw;
 	}
 
 	div[id='companies'] li {
@@ -687,6 +696,10 @@ section[id='contact'] li:nth-child(2) div p{
 		background-color: rgba(255, 255, 255, 0.9);
 	}
 	
+	nav {
+		width: 50%;
+	}
+
 	a {
 		color: black;
 	}
