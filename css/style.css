@@ -154,7 +154,7 @@ section  {
 	height: 100vh; margin: 0 1rem;
 }
 
-.desktop {
+.wide-screen {
 	visibility: hidden;
 }
 
@@ -249,12 +249,11 @@ div[id='companies'] ul {
 }
 
 div[id='companies'] li {
-	margin: 0 1rem; position: relative;
+	margin: 0; position: relative;
 }
 
-
 div[id='companies'] img {
-	width: 5rem; display: block; margin: auto;
+	width: 4rem; display: block; margin: auto;
 }
 
 div[id='companies'] img:first-child {
@@ -262,7 +261,7 @@ div[id='companies'] img:first-child {
 }
 
 div[id='companies'] img:last-child {
-	position: absolute; top: 0; border: 1px solid black;
+	position: absolute; top: 0;
 }
 
 div[id='publicInfra'] {
@@ -555,6 +554,18 @@ section[id='contact'] li:nth-child(2) div p{
 		font-size: 2.5vh;
 	}
 
+	div[id='companies'] li {
+		margin: 0 1rem;
+	}
+
+	div[id='companies'] img {
+		width: 5rem;
+	}
+
+	div[id='companies'] img:last-child {
+		border: 1px solid black;
+	}
+
 	/* OPEN */
 
 	section[id='culture'] p {
@@ -684,7 +695,7 @@ section[id='contact'] li:nth-child(2) div p{
 		color: #005BAE;
 	}
 
-	.desktop {
+	.wide-screen {
 		visibility: visible;
 	}
 
