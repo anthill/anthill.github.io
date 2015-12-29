@@ -306,7 +306,7 @@ section[id='culture'] div {
 }
 
 section[id='culture'] p {
-	margin: 1.2rem auto;
+	margin: 2.5vh auto;
 	font-size: .7rem;
 }
 
@@ -326,19 +326,19 @@ section[id='culture'] a {
 }
 
 section[id='culture'] [id='github']{
-	left: -3rem; top: 2rem;
+	left: -7vh; top: 7vh;
 }
 
 section[id='culture'] [id='etalab']{
-	right: 0; top: 3.5rem;
+	right: 3vh; top: 11vh;
 }
 
 section[id='culture'] [id='ODI']{
-	right: .5rem; top: 5.5rem;
+	right: 3vh; bottom: 7vh;
 }
 
 section[id='culture'] [id='raspberry']{
-	left: -3rem; bottom: 3rem;
+	left: -11vh; bottom: 10vh;
 }
 
 /* TEAM */
@@ -585,7 +585,7 @@ section[id='contact'] li:nth-child(2) div p{
 		position: absolute; width: 5rem;
 	}
 
-	section[id='culture'] [id='github']{
+	/*section[id='culture'] [id='github']{
 		left: 4rem; top: 5rem;
 	}
 
@@ -599,7 +599,7 @@ section[id='contact'] li:nth-child(2) div p{
 
 	section[id='culture'] [id='raspberry']{
 		left: 4rem; bottom: 4rem;
-	}
+	}*/
 
 	/* TEAM */
 
@@ -672,7 +672,7 @@ section[id='contact'] li:nth-child(2) div p{
 
 @media only screen and (min-width: 660px) and (min-height: 700px) {
 
-	section[id='culture'] [id='github']{
+	/*section[id='culture'] [id='github']{
 		left: 0; top: 5rem;
 	}
 
@@ -686,7 +686,7 @@ section[id='contact'] li:nth-child(2) div p{
 
 	section[id='culture'] [id='raspberry']{
 		left: 0; bottom: 4rem;
-	}
+	}*/
 
 }
 
@@ -730,7 +730,7 @@ section[id='contact'] li:nth-child(2) div p{
 
 	/* OPEN */
 
-	section[id='culture'] [id='github']{
+	/*section[id='culture'] [id='github']{
 		left: 10rem; top: 5rem;
 	}
 
@@ -744,7 +744,7 @@ section[id='contact'] li:nth-child(2) div p{
 
 	section[id='culture'] [id='raspberry']{
 		left: 10rem; bottom: 4rem;
-	}
+	}*/
 
 	/* TEAM */
 

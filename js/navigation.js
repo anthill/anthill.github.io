@@ -30,6 +30,7 @@ module.exports = function(){
 		button.addEventListener('click', function(event){
 			event.preventDefault();
 			main.style.transform = 'translateY(' + margin + 'vh)';
+			main.style['-webkit-transform'] = 'translateY(' + margin + 'vh)'; // for dear ol' Safari
 
 			tabs[0].className = 'tab';
 			tabs[1].className = 'tab';
@@ -44,8 +45,11 @@ module.exports = function(){
 	companiesButton.addEventListener('click', function(event){
 		event.preventDefault();
 		main.style.transform = 'translateY(' + marginMap.get(projectsButton) + 'vh)';
+		main.style['-webkit-transform'] = 'translateY(' + marginMap.get(projectsButton) + 'vh)';
 		companies.style.transform = 'translateX(-100vw)';
+		companies.style['-webkit-transform'] = 'translateX(-100vw)';
 		publicInfra.style.transform = 'translateX(-100vw)';
+		publicInfra.style['-webkit-transform'] = 'translateX(-100vw)';
 
 		companiesButton.className = 'active';
 		publicButton.className = '';
@@ -56,10 +60,13 @@ module.exports = function(){
 	publicButton.addEventListener('click', function(event){
 		event.preventDefault();
 		main.style.transform = 'translateY(' + marginMap.get(projectsButton) + 'vh)';
+		main.style['-webkit-transform'] = 'translateY(' + marginMap.get(projectsButton) + 'vh)';
 		companies.style.transform = 'translateX(0vw)';
+		companies.style['-webkit-transform'] = 'translateX(0vw)';
 		publicInfra.style.transform = 'translateX(0vw)';
+		publicInfra.style['-webkit-transform'] = 'translateX(0vw)';
 
-		companiesButton.className = '';
+		// companiesButton.className = '';
 		publicButton.className = 'active';
 
 		tabs[1].className = 'tab active';
